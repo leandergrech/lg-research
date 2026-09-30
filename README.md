@@ -56,6 +56,22 @@ flowchart LR
 ```
 100 trains on 100×100: OR 95.7 % arrival vs best RL 16.0 %
 
+## Aviation & particle accelerators (code not public)
+
+| Project | Domain | Status | Highlights |
+|---|---|---|---|
+| **TADA** — RL arrival sequencing into Milan Malpensa | Air traffic control | Active · lead researcher | 92.7 % of flights within ±60 s of AMAN target · 63/100 twenty-flight streams solved · 3/100 with a loss of separation |
+| **AICRYSCON** — autonomous crystal alignment for TWOCRYST | CERN LHC | Beam-tested · paper submitted to EPJ-RI | PPO agent on a data-driven surrogate of LHC beam-test data; replaces 2–4 h manual sweeps with 1–3 min recoveries |
+| **RL in the LHC tune feedback** | CERN LHC | Published 2022 | [Frontiers in Physics, doi:10.3389/fphy.2022.929064](https://doi.org/10.3389/fphy.2022.929064) |
+
+```mermaid
+flowchart LR
+    AMAN[AMAN queue] --> A1[RL agent, 45 s] -->|aircraft → clearance| MXP[MXP trombone arrival]
+    MXP -->|window of next 10 flights| A1
+    PIX[PIX + BLM] --> A2[PPO agent] -->|Δθ µrad| TCCP[TCCP goniometer]
+    TCCP --> PIX
+```
+
 ## Site
 
 A single static `index.html` (no build step), served by GitHub Pages from `main`.

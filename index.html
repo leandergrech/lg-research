@@ -160,6 +160,14 @@ svg text.t-big { font-size: 13px; }
   @keyframes blink { 50% { opacity: .35; } }
 }
 
+/* Applied (private-code) projects */
+.section-note { display: flex; gap: 10px; align-items: center; background: var(--panel); border: 1px dashed var(--line); border-radius: var(--radius); padding: 12px 16px; color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+.section-note b { color: var(--ink); }
+.chip.lock { border-style: dashed; }
+.points { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; }
+.points li { position: relative; padding-left: 20px; font-size: 14.5px; }
+.points li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 8px; height: 8px; border-radius: 2px; background: var(--c, var(--accent)); transform: rotate(45deg); }
+
 /* Also */
 .also { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .mini { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
@@ -206,6 +214,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     <a class="brand" href="#"><span class="dot"></span>LG · Research</a>
     <nav class="links">
       <a href="#projects">Projects</a>
+      <a href="#applied">Aviation &amp; accelerators</a>
       <a href="#teaching">Teaching</a>
       <a href="https://github.com/leandergrech">GitHub</a>
     </nav>
@@ -228,16 +237,17 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       <div class="eyebrow">Leander Grech · Malta</div>
       <h1>Reinforcement learning for <em>physical control</em>.</h1>
       <p class="lead">I train agents to steer real machines: shaping microwave pulses for superconducting qubits,
-        ramping up plasma current in a tokamak, throttling a rocket engine and rescheduling trains on a broken network.
-        Each project below is an open, reproducible codebase with a written review of its field.</p>
+        ramping up plasma current in a tokamak, throttling a rocket engine, rescheduling trains on a broken network,
+        sequencing arrivals into a busy airport and aligning bent crystals in the LHC.
+        Open projects come with a reproducible codebase and a written review of their field.</p>
       <div class="btns">
         <a class="btn primary" href="#projects">Explore the work</a>
         <a class="btn" href="https://github.com/leandergrech"><svg><use href="#i-gh"/></svg>github.com/leandergrech</a>
       </div>
       <div class="stats">
-        <div class="stat"><b>4</b><span>open control domains</span></div>
-        <div class="stat"><b>1</b><span>peer-reviewed paper (QST 2026)</span></div>
-        <div class="stat"><b>CPU</b><span>every baseline runs on a laptop</span></div>
+        <div class="stat"><b>6</b><span>physical control domains</span></div>
+        <div class="stat"><b>2</b><span>journal papers, more submitted</span></div>
+        <div class="stat"><b>LHC</b><span>agent tested on live beam</span></div>
       </div>
     </div>
 
@@ -249,31 +259,31 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       </g>
       <g style="--c: var(--accent)">
         <line x1="210" y1="190" x2="210" y2="60" class="d-acc flow"/>
-        <line x1="210" y1="190" x2="333" y2="150" class="d-acc flow"/>
-        <line x1="210" y1="190" x2="286" y2="296" class="d-acc flow"/>
-        <line x1="210" y1="190" x2="134" y2="296" class="d-acc flow"/>
-        <line x1="210" y1="190" x2="87" y2="150" class="d-acc flow"/>
+        <line x1="210" y1="190" x2="312" y2="109" class="d-acc flow"/>
+        <line x1="210" y1="190" x2="337" y2="219" class="d-acc flow"/>
+        <line x1="210" y1="190" x2="266" y2="307" class="d-acc flow"/>
+        <line x1="210" y1="190" x2="154" y2="307" class="d-acc flow"/>
+        <line x1="210" y1="190" x2="83" y2="219" class="d-acc flow"/>
+        <line x1="210" y1="190" x2="108" y2="109" class="d-acc flow"/>
       </g>
       <circle cx="210" cy="190" r="42" class="d-boxa"/>
       <text x="210" y="186" text-anchor="middle" class="t-ink t-big">RL</text>
       <text x="210" y="202" text-anchor="middle">agent</text>
 
-      <g><circle cx="210" cy="60" r="30" class="d-box"/><circle cx="210" cy="60" r="5" class="d-fa3 pulse-dot"/>
-        <text x="210" y="20" text-anchor="middle" class="t-ink">Quantum gates</text></g>
-      <g><circle cx="333" cy="150" r="30" class="d-box"/><circle cx="333" cy="150" r="5" class="d-fa2 pulse-dot"/>
-        <text x="333" y="199" text-anchor="middle" class="t-ink">Fusion plasma</text></g>
-      <g><circle cx="286" cy="296" r="30" class="d-box"/><circle cx="286" cy="296" r="5" class="d-fa pulse-dot"/>
-        <text x="286" y="345" text-anchor="middle" class="t-ink">Rocket engines</text></g>
-      <g><circle cx="134" cy="296" r="30" class="d-box"/><circle cx="134" cy="296" r="5" class="d-fa3 pulse-dot"/>
-        <text x="134" y="345" text-anchor="middle" class="t-ink">Railway ops</text></g>
-      <g><circle cx="87" cy="150" r="30" class="d-box"/><circle cx="87" cy="150" r="5" class="d-fa2 pulse-dot"/>
-        <text x="87" y="199" text-anchor="middle" class="t-ink">Teaching RL</text></g>
-      <!-- tiny glyphs -->
-      <path d="M192,60 q4,-12 9,0 t9,0 t9,0" class="d-ink" transform="translate(-2,0)"/>
-      <path d="M333,136 c-14,0 -14,28 0,28 c9,0 13,-8 13,-14 c0,-6 -4,-14 -13,-14z" class="d-ink"/>
-      <path d="M279,282 h14 l-3,12 l7,14 h-22 l7,-14z" class="d-ink"/>
-      <path d="M116,290 h36 M116,302 h36 M122,284 v24 M134,284 v24 M146,284 v24" class="d-ink"/>
-      <path d="M72,150 a15,15 0 0 1 30,0" class="d-ink"/><line x1="87" y1="150" x2="97" y2="138" class="d-ink"/>
+      <g transform="translate(210,60)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
+        <path d="M-12,0 q3,-10 6,0 t6,0 t6,0 t6,0" class="d-ink"/><text y="-38" text-anchor="middle" class="t-ink">Quantum gates</text></g>
+      <g transform="translate(312,109)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa2 pulse-dot"/>
+        <path d="M-3,-12 c12,0 14,6 14,12 c0,6 -2,12 -14,12 c-4,-6 -5,-8 -5,-12 c0,-4 1,-6 5,-12z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Fusion plasma</text></g>
+      <g transform="translate(337,219)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa pulse-dot"/>
+        <path d="M-7,-12 h14 l-3,10 l7,14 h-22 l7,-14z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Rocket engines</text></g>
+      <g transform="translate(266,307)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
+        <path d="M-16,-5 h32 M-16,5 h32 M-10,-10 v20 M0,-10 v20 M10,-10 v20" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Railway ops</text></g>
+      <g transform="translate(154,307)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa2 pulse-dot"/>
+        <path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Air traffic</text></g>
+      <g transform="translate(83,219)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa pulse-dot"/>
+        <circle r="11" class="d-ink"/><path d="M-4,-16 q6,6 0,12" class="d-acc2"/><text y="44" text-anchor="middle" class="t-ink">Accelerators</text></g>
+      <g transform="translate(108,109)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
+        <path d="M-15,5 a15,15 0 0 1 30,0" class="d-ink"/><line x1="0" y1="5" x2="10" y2="-7" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Teaching RL</text></g>
     </svg>
   </section>
 
@@ -488,6 +498,167 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
           </g>
         </svg>
         <figcaption>The OR–RL gap widens as the network grows (no malfunctions, held-out seeds).</figcaption>
+      </figure>
+    </article>
+  </section>
+
+  <!-- ───────────── Applied: aviation & accelerators ───────────── -->
+  <section class="block" id="applied">
+    <div class="sec-head">
+      <h2>Aviation &amp; particle accelerators</h2>
+      <p>Collaborative projects on real operational systems.</p>
+    </div>
+    <div class="section-note"><b>Code not public.</b> These projects run on partner infrastructure; the summaries below are drawn from project reports and publications.</div>
+
+    <!-- TADA -->
+    <article class="project" style="--c: var(--accent2)">
+      <div>
+        <div class="chips"><span class="status">Active · lead researcher</span><span class="chip lock">private codebase</span><span class="chip">air traffic control</span><span class="chip">RLlib</span></div>
+        <h3>TADA: RL arrival sequencing</h3>
+        <div class="sub">One agent sequencing arrival traffic into Milan Malpensa</div>
+        <p>An arrival manager (AMAN) gives every flight a target landing time. The agent works the MXP trombone arrival like a
+          controller: every 45 s it picks an aircraft, then a clearance (speed, route shortcut, trombone extension, vectors to the ILS),
+          so that each flight lands on time without two aircraft ever losing separation. It flies a stream of 20 flights through a window of the next 10 in the queue.</p>
+        <ul class="points">
+          <li><b>Lexicographic objective:</b> safety first (3 NM / 500 ft), then landing precision, then fewest clearances.</li>
+          <li><b>Autoregressive policy:</b> aircraft first, then a clearance conditioned on it, over a permutation-equivariant window.</li>
+          <li><b>Reselection:</b> allowing a second clearance per step roughly doubled solved streams; precision had been bandwidth-limited.</li>
+        </ul>
+        <div class="kpis">
+          <div class="kpi"><b>92.7 %</b><span>flights land within ±60 s of target</span></div>
+          <div class="kpi"><b>63 / 100</b><span>20-flight streams fully solved</span></div>
+          <div class="kpi"><b>3 / 100</b><span>streams with a loss of separation</span></div>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Agent picks an aircraft and a clearance each 45 seconds to sequence arrivals through a trombone arrival onto the runway">
+          <rect x="8" y="12" width="112" height="44" rx="8" class="d-boxa"/>
+          <text x="64" y="31" text-anchor="middle" class="t-ink">RL agent</text>
+          <text x="64" y="46" text-anchor="middle">every 45 s</text>
+          <text x="8" y="74">aircraft → clearance</text>
+          <text x="8" y="100">AMAN queue</text>
+          <rect x="8" y="106" width="112" height="15" rx="3" class="d-box"/><text x="14" y="117">#1 → t₁</text>
+          <rect x="8" y="124" width="112" height="15" rx="3" class="d-box"/><text x="14" y="135">#2 → t₂</text>
+          <rect x="8" y="142" width="112" height="15" rx="3" class="d-box"/><text x="14" y="153">#3 → t₃</text>
+          <rect x="8" y="160" width="112" height="15" rx="3" class="d-box"/><text x="14" y="171">… next 10</text>
+          <!-- trombone -->
+          <path d="M392,40 H190" class="d-ink"/>
+          <path d="M190,40 H150 V150 H190" class="d-line d-dash"/>
+          <path d="M230,40 V150" class="d-line d-dash"/>
+          <path d="M190,40 V150 H330" class="d-acc"/>
+          <rect x="330" y="144" width="62" height="12" rx="2" class="d-box"/>
+          <path d="M336,150 H386" class="d-line d-dash"/>
+          <text x="300" y="30" class="t-ink">downwind</text>
+          <text x="152" y="186">lengthen / shorten trombone</text>
+          <text x="262" y="170">final</text>
+          <text x="361" y="172" text-anchor="middle">RWY</text>
+          <!-- aircraft -->
+          <g transform="translate(350,40) rotate(-90) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa3"/></g>
+          <g transform="translate(262,40) rotate(-90) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa"/></g>
+          <g transform="translate(190,98) rotate(180) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa3"/></g>
+          <g transform="translate(270,150) rotate(90) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa3"/></g>
+          <circle cx="262" cy="40" r="15" class="d-acc2 d-dash"/>
+          <text x="262" y="72" text-anchor="middle">3 NM</text>
+          <path d="M120,34 C170,14 220,14 246,32" class="d-acc d-dash" marker-end="url(#arrA)"/>
+        </svg>
+        <figcaption>Arrivals are delayed on the trombone's downwind leg and released onto final in AMAN order.</figcaption>
+      </figure>
+    </article>
+
+    <!-- AICRYSCON -->
+    <article class="project" style="--c: var(--accent3)">
+      <div>
+        <div class="chips"><span class="status">Beam-tested · paper submitted</span><span class="chip lock">private codebase</span><span class="chip">CERN LHC</span><span class="chip">TWOCRYST</span></div>
+        <h3>AICRYSCON: autonomous crystal alignment</h3>
+        <div class="sub">Deep RL for bent-crystal double channeling in the LHC</div>
+        <p>TWOCRYST steers LHC halo protons through two bent silicon crystals, paving the way for measuring the dipole moments of
+          short-lived charm baryons. The second crystal (TCCP) must sit within a ~13 µrad angular acceptance, and experts find it with
+          manual sweeps that can take 2–4 hours. AICRYSCON replaces the sweep with a PPO agent that reads the pixel detector and beam
+          loss monitors and rotates the goniometer.</p>
+        <ul class="points">
+          <li><b>Data-driven surrogate:</b> MDHaloEnv synthesises PIX and BLM data recorded in LHC beam tests from 450 GeV to 3 TeV, with no physics simulator.</li>
+          <li><b>Grounded MDP:</b> a current-frame reward, convergence thresholds derived from the detector's salt-and-pepper noise, and a noise-scaled smoothness penalty.</li>
+          <li><b>On the machine:</b> in the April 2026 live beam test the agent recovered double channeling on the real LHC.</li>
+        </ul>
+        <div class="kpis">
+          <div class="kpi"><b>~13 µrad</b><span>TCCP angular acceptance</span></div>
+          <div class="kpi"><b>2–4 h</b><span>per manual sweep, 30–50 % of beam time</span></div>
+          <div class="kpi"><b>1–3 min</b><span>per agent recovery (~30–40 steps)</span></div>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Halo protons channeled by the TCCS crystal onto the rotating TCCP crystal; the pixel detector shows the double-channeled spot; the agent adjusts the TCCP angle">
+          <line x1="8" y1="70" x2="86" y2="70" class="d-line"/>
+          <text x="8" y="60">LHC halo p⁺</text>
+          <!-- TCCS -->
+          <path d="M88,60 q6,10 0,20" class="d-acc2" style="stroke-width:5"/>
+          <text x="90" y="98" text-anchor="middle" class="t-ink">TCCS</text>
+          <path d="M92,70 Q150,68 196,62" class="d-acc2 flow"/>
+          <!-- TCCP on goniometer -->
+          <path d="M200,52 q16,12 10,26" class="d-acc" style="stroke-width:6"/>
+          <path d="M184,44 a26,26 0 0 1 40,4" class="d-ink" marker-end="url(#arr)"/>
+          <text x="206" y="34" text-anchor="middle" class="t-acc">θ</text>
+          <text x="205" y="98" text-anchor="middle" class="t-ink">TCCP</text>
+          <path d="M212,62 Q280,48 326,40" class="d-acc flow"/>
+          <!-- PIX detector -->
+          <rect x="328" y="18" width="64" height="84" rx="4" class="d-box"/>
+          <circle cx="360" cy="40" r="7" class="d-fa pulse-dot"/>
+          <ellipse cx="360" cy="78" rx="14" ry="6" class="d-fm"/>
+          <text x="360" y="116" text-anchor="middle" class="t-ink">PIX</text>
+          <text x="398" y="44" text-anchor="end" class="t-acc">DC</text>
+          <!-- agent loop -->
+          <rect x="150" y="140" width="110" height="40" rx="8" class="d-boxa"/>
+          <text x="205" y="158" text-anchor="middle" class="t-ink">PPO agent</text>
+          <text x="205" y="172" text-anchor="middle">PIX + BLM stack</text>
+          <path d="M360,122 V160 H262" class="d-line" marker-end="url(#arr)"/>
+          <path d="M205,140 V108" class="d-acc" marker-end="url(#arrA)"/>
+          <text x="214" y="126">Δθ (µrad)</text>
+          <text x="8" y="160">BLMs at TCCS,</text>
+          <text x="8" y="174">TCCP and TCLA</text>
+        </svg>
+        <figcaption>When the TCCP angle is right, the double-channeled spot lights up on the pixel detector.</figcaption>
+      </figure>
+    </article>
+
+    <!-- LHC tune feedback -->
+    <article class="project" style="--c: var(--accent)">
+      <div>
+        <div class="chips"><span class="status">Published · 2022</span><span class="chip">CERN LHC</span><span class="chip">beam feedback</span><span class="chip">NAF · PPO</span></div>
+        <h3>RL in the LHC tune feedback</h3>
+        <div class="sub">Replacing a classical feedback controller with a learned policy</div>
+        <p>The LHC tune feedback keeps the betatron tunes on target by trimming quadrupole circuits from measured tunes, a job done by a
+          PI controller. A simulation environment of the loop was built to train and compare RL agents against it, including under
+          noise and actuator failures.</p>
+        <ul class="points">
+          <li>RL agents exceeded the controller-based paradigm in simulated tests.</li>
+          <li>The best agents (NAF2 and PPO) were the most robust to external noise.</li>
+          <li>They generalised to conditions unseen in training, such as actuator failures, better than the classical controller.</li>
+        </ul>
+        <div class="btns" style="margin-top:20px">
+          <a class="btn primary" href="https://doi.org/10.3389/fphy.2022.929064"><svg><use href="#i-doc"/></svg>Paper · Frontiers in Physics</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Feedback loop: tune measurement feeds the RL agent, which trims quadrupoles acting on the LHC beam">
+          <circle cx="72" cy="100" r="54" class="d-ink"/>
+          <circle cx="72" cy="100" r="46" class="d-line d-dash"/>
+          <circle cx="72" cy="46" r="5" class="d-fa pulse-dot"/>
+          <text x="72" y="104" text-anchor="middle" class="t-ink">LHC</text>
+          <rect x="160" y="22" width="100" height="34" rx="8" class="d-box"/>
+          <text x="210" y="43" text-anchor="middle" class="t-ink">tune meas.</text>
+          <rect x="270" y="82" width="120" height="40" rx="8" class="d-boxa"/>
+          <text x="330" y="100" text-anchor="middle" class="t-ink">RL agent</text>
+          <text x="330" y="114" text-anchor="middle">NAF2 · PPO</text>
+          <rect x="160" y="146" width="100" height="34" rx="8" class="d-box"/>
+          <text x="210" y="167" text-anchor="middle" class="t-ink">trim quads</text>
+          <path d="M112,64 L158,42" class="d-line" marker-end="url(#arr)"/>
+          <path d="M260,42 Q320,44 326,80" class="d-line" marker-end="url(#arr)"/>
+          <path d="M326,124 Q320,162 262,163" class="d-acc" marker-end="url(#arrA)"/>
+          <path d="M158,163 L114,138" class="d-acc" marker-end="url(#arrA)"/>
+          <text x="210" y="72" text-anchor="middle">Q_x, Q_y</text>
+          <text x="330" y="60">vs PI</text>
+        </svg>
+        <figcaption>The agent closes the loop between measured tunes and quadrupole trims.</figcaption>
       </figure>
     </article>
   </section>
