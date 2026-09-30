@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en" data-theme="control-room">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leander Grech · Research</title>
+<meta name="description" content="Curated research portfolio of Leander Grech: reinforcement learning for physical control systems — quantum gates, fusion plasmas, rocket engines, railway networks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<script>
+  // Apply the saved theme before first paint.
+  try { var t = localStorage.getItem('lg-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<style>
+/* ───────────── Themes ───────────── */
+:root, [data-theme="control-room"] {
+  --bg: #07090c; --bg2: #0c1015; --panel: #10151c; --panel2: #161d27;
+  --ink: #e6edf3; --muted: #8b98a8; --line: #2a3441;
+  --accent: #39d98a; --accent2: #ffb547; --accent3: #5cc8ff;
+  --glow: 0 0 24px rgba(57,217,138,.18);
+  --font-head: 'Space Grotesk', system-ui, sans-serif; --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 14px; --grid: rgba(57,217,138,.05);
+}
+[data-theme="transmon"] {
+  --bg: #0b0718; --bg2: #120c26; --panel: #171031; --panel2: #21184a;
+  --ink: #efeafd; --muted: #a79cc9; --line: #352a63;
+  --accent: #b18cff; --accent2: #3ee6e0; --accent3: #ff7ad9;
+  --glow: 0 0 28px rgba(177,140,255,.22);
+  --font-head: 'Space Grotesk', system-ui, sans-serif; --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 18px; --grid: rgba(177,140,255,.06);
+}
+[data-theme="plasma"] {
+  --bg: #050a1a; --bg2: #0a1230; --panel: #0e1838; --panel2: #152250;
+  --ink: #eef2ff; --muted: #97a3c9; --line: #26356b;
+  --accent: #ff8a3d; --accent2: #ff5fb8; --accent3: #ffd866;
+  --glow: 0 0 30px rgba(255,138,61,.22);
+  --font-head: 'Space Grotesk', system-ui, sans-serif; --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 16px; --grid: rgba(255,138,61,.05);
+}
+[data-theme="limestone"] {
+  --bg: #f6efe3; --bg2: #efe4d2; --panel: #fffaf2; --panel2: #f1e6d3;
+  --ink: #2a2118; --muted: #76685a; --line: #dccdb5;
+  --accent: #1f5f9e; --accent2: #c4552d; --accent3: #3e8a6e;
+  --glow: 0 8px 28px rgba(95,70,40,.10);
+  --font-head: 'Fraunces', Georgia, serif; --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 10px; --grid: rgba(31,95,158,.05);
+}
+[data-theme="blueprint"] {
+  --bg: #0f3a66; --bg2: #124478; --panel: #134a82; --panel2: #185593;
+  --ink: #f2f7ff; --muted: #b7cdea; --line: #4d7fb8;
+  --accent: #ffffff; --accent2: #ffd24a; --accent3: #9fe3ff;
+  --glow: none;
+  --font-head: 'JetBrains Mono', monospace; --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 4px; --grid: rgba(255,255,255,.08);
+}
+
+/* ───────────── Base ───────────── */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  transition: background-color .3s, color .3s;
+}
+a { color: var(--accent); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; margin: 0; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+/* Header */
+header.top { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--bg) 82%, transparent); border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 60px; }
+.brand { font-family: var(--font-head); font-weight: 700; letter-spacing: .02em; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+nav.links { display: flex; gap: 18px; font-size: 14px; }
+nav.links a { color: var(--muted); text-decoration: none; }
+nav.links a:hover { color: var(--ink); }
+.themes { display: flex; gap: 6px; align-items: center; }
+.themes button { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--line); cursor: pointer; padding: 0; }
+.themes button[aria-pressed="true"] { border-color: var(--ink); transform: scale(1.12); }
+.themes .lbl { font-size: 12px; color: var(--muted); margin-right: 4px; }
+
+/* Hero */
+.hero { padding: 72px 0 40px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+.eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); letter-spacing: .08em; text-transform: uppercase; }
+.hero h1 { font-size: clamp(36px, 5.4vw, 60px); margin: 12px 0 18px; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero p.lead { color: var(--muted); font-size: 18px; max-width: 34em; margin: 0 0 24px; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+.stat { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
+.stat b { font-family: var(--font-head); font-size: 26px; display: block; color: var(--accent); }
+.stat span { font-size: 13px; color: var(--muted); }
+.map { width: 100%; height: auto; }
+
+/* Buttons */
+.btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px;
+  font-weight: 600; font-size: 14px; text-decoration: none; border: 1px solid var(--line); color: var(--ink); background: var(--panel2);
+  transition: transform .15s, box-shadow .15s, border-color .15s; }
+.btn:hover { transform: translateY(-1px); border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); box-shadow: var(--glow); }
+[data-theme="limestone"] .btn.primary, [data-theme="blueprint"] .btn.primary { color: var(--bg); }
+.btn svg { width: 16px; height: 16px; }
+
+/* Section */
+section.block { padding: 40px 0; }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+.sec-head h2 { font-size: 30px; }
+.sec-head p { color: var(--muted); margin: 0; }
+
+/* Project cards */
+.project { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; background: var(--panel); border: 1px solid var(--line);
+  border-radius: calc(var(--radius) + 4px); padding: 28px; margin-bottom: 24px; box-shadow: var(--glow); position: relative; overflow: hidden; }
+.project::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--c, var(--accent)); }
+.project:nth-of-type(even) .viz { order: -1; }
+.project h3 { font-size: 26px; margin: 8px 0 6px; }
+.project .sub { color: var(--muted); font-size: 15px; margin-bottom: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.status { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; padding: 3px 9px; border-radius: 999px; font-weight: 600;
+  background: color-mix(in srgb, var(--c) 18%, transparent); color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 45%, transparent); }
+.project p { margin: 12px 0; }
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0 20px; }
+.kpi { background: var(--panel2); border-radius: var(--radius); padding: 10px 12px; border: 1px solid var(--line); }
+.kpi b { font-family: var(--font-head); font-size: 20px; display: block; color: var(--c, var(--accent)); line-height: 1.2; }
+.kpi span { font-size: 12px; color: var(--muted); line-height: 1.35; display: block; margin-top: 2px; }
+.viz { background: var(--bg2); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; display: flex; flex-direction: column; justify-content: center; }
+.viz svg { width: 100%; height: auto; display: block; }
+.viz figcaption { font-size: 12.5px; color: var(--muted); margin-top: 8px; text-align: center; }
+
+/* SVG diagram styling (theme-aware) */
+.d-line { stroke: var(--line); fill: none; stroke-width: 1.5; }
+.d-ink { stroke: var(--ink); fill: none; stroke-width: 1.6; }
+.d-acc { stroke: var(--c, var(--accent)); fill: none; stroke-width: 2.2; }
+.d-acc2 { stroke: var(--accent2); fill: none; stroke-width: 2; }
+.d-acc3 { stroke: var(--accent3); fill: none; stroke-width: 2; }
+.d-box { fill: var(--panel2); stroke: var(--line); stroke-width: 1.5; }
+.d-boxa { fill: color-mix(in srgb, var(--c, var(--accent)) 16%, var(--panel2)); stroke: var(--c, var(--accent)); stroke-width: 1.6; }
+.d-fa { fill: var(--c, var(--accent)); }
+.d-fa2 { fill: var(--accent2); }
+.d-fa3 { fill: var(--accent3); }
+.d-fm { fill: var(--muted); }
+.d-dash { stroke-dasharray: 4 4; }
+svg text { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; fill: var(--muted); }
+svg text.t-ink { fill: var(--ink); font-weight: 600; }
+svg text.t-acc { fill: var(--c, var(--accent)); font-weight: 600; }
+svg text.t-big { font-size: 13px; }
+
+/* Pulse animation */
+@media (prefers-reduced-motion: no-preference) {
+  .flow { stroke-dasharray: 6 6; animation: flow 1.4s linear infinite; }
+  @keyframes flow { to { stroke-dashoffset: -24; } }
+  .pulse-dot { animation: blink 2s ease-in-out infinite; }
+  @keyframes blink { 50% { opacity: .35; } }
+}
+
+/* Also */
+.also { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.mini { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.mini h4 { margin: 0 0 4px; font-family: var(--font-head); font-size: 17px; }
+.mini p { margin: 0; color: var(--muted); font-size: 14px; }
+
+footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: 14px; margin-top: 40px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+/* Responsive */
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; padding-top: 40px; }
+  .project { grid-template-columns: 1fr; padding: 20px; }
+  .project:nth-of-type(even) .viz { order: 0; }
+  nav.links { display: none; }
+  .also { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .wrap { padding: 0 16px; }
+  .kpis, .stats { grid-template-columns: 1fr 1fr; }
+  .themes .lbl { display: none; }
+  .mini { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--muted)"/>
+    </marker>
+    <marker id="arrA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill: var(--c, var(--accent))"/>
+    </marker>
+    <symbol id="i-web" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-9.5 10h19M12 2c2.8 3 4 6.4 4 10s-1.2 7-4 10c-2.8-3-4-6.4-4-10s1.2-7 4-10z"/></symbol>
+    <symbol id="i-gh" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h8"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><span class="dot"></span>LG · Research</a>
+    <nav class="links">
+      <a href="#projects">Projects</a>
+      <a href="#teaching">Teaching</a>
+      <a href="https://github.com/leandergrech">GitHub</a>
+    </nav>
+    <div class="themes" role="group" aria-label="Colour theme">
+      <span class="lbl">Theme</span>
+      <button data-set="control-room" title="Control Room" style="background:linear-gradient(135deg,#07090c 50%,#39d98a 50%)"></button>
+      <button data-set="transmon" title="Transmon" style="background:linear-gradient(135deg,#0b0718 50%,#b18cff 50%)"></button>
+      <button data-set="plasma" title="Plasma" style="background:linear-gradient(135deg,#050a1a 50%,#ff8a3d 50%)"></button>
+      <button data-set="limestone" title="Limestone" style="background:linear-gradient(135deg,#f6efe3 50%,#1f5f9e 50%)"></button>
+      <button data-set="blueprint" title="Blueprint" style="background:linear-gradient(135deg,#0f3a66 50%,#ffffff 50%)"></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ───────────── Hero ───────────── -->
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Leander Grech · Malta</div>
+      <h1>Reinforcement learning for <em>physical control</em>.</h1>
+      <p class="lead">I train agents to steer real machines: shaping microwave pulses for superconducting qubits,
+        ramping up plasma current in a tokamak, throttling a rocket engine and rescheduling trains on a broken network.
+        Each project below is an open, reproducible codebase with a written review of its field.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">Explore the work</a>
+        <a class="btn" href="https://github.com/leandergrech"><svg><use href="#i-gh"/></svg>github.com/leandergrech</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>4</b><span>open control domains</span></div>
+        <div class="stat"><b>1</b><span>peer-reviewed paper (QST 2026)</span></div>
+        <div class="stat"><b>CPU</b><span>every baseline runs on a laptop</span></div>
+      </div>
+    </div>
+
+    <!-- Domain map -->
+    <svg class="map" viewBox="0 0 420 380" role="img" aria-label="Map of research domains around a central RL agent">
+      <g class="d-line">
+        <circle cx="210" cy="190" r="130" class="d-dash"/>
+        <circle cx="210" cy="190" r="70" class="d-dash"/>
+      </g>
+      <g style="--c: var(--accent)">
+        <line x1="210" y1="190" x2="210" y2="60" class="d-acc flow"/>
+        <line x1="210" y1="190" x2="333" y2="150" class="d-acc flow"/>
+        <line x1="210" y1="190" x2="286" y2="296" class="d-acc flow"/>
+        <line x1="210" y1="190" x2="134" y2="296" class="d-acc flow"/>
+        <line x1="210" y1="190" x2="87" y2="150" class="d-acc flow"/>
+      </g>
+      <circle cx="210" cy="190" r="42" class="d-boxa"/>
+      <text x="210" y="186" text-anchor="middle" class="t-ink t-big">RL</text>
+      <text x="210" y="202" text-anchor="middle">agent</text>
+
+      <g><circle cx="210" cy="60" r="30" class="d-box"/><circle cx="210" cy="60" r="5" class="d-fa3 pulse-dot"/>
+        <text x="210" y="20" text-anchor="middle" class="t-ink">Quantum gates</text></g>
+      <g><circle cx="333" cy="150" r="30" class="d-box"/><circle cx="333" cy="150" r="5" class="d-fa2 pulse-dot"/>
+        <text x="333" y="199" text-anchor="middle" class="t-ink">Fusion plasma</text></g>
+      <g><circle cx="286" cy="296" r="30" class="d-box"/><circle cx="286" cy="296" r="5" class="d-fa pulse-dot"/>
+        <text x="286" y="345" text-anchor="middle" class="t-ink">Rocket engines</text></g>
+      <g><circle cx="134" cy="296" r="30" class="d-box"/><circle cx="134" cy="296" r="5" class="d-fa3 pulse-dot"/>
+        <text x="134" y="345" text-anchor="middle" class="t-ink">Railway ops</text></g>
+      <g><circle cx="87" cy="150" r="30" class="d-box"/><circle cx="87" cy="150" r="5" class="d-fa2 pulse-dot"/>
+        <text x="87" y="199" text-anchor="middle" class="t-ink">Teaching RL</text></g>
+      <!-- tiny glyphs -->
+      <path d="M192,60 q4,-12 9,0 t9,0 t9,0" class="d-ink" transform="translate(-2,0)"/>
+      <path d="M333,136 c-14,0 -14,28 0,28 c9,0 13,-8 13,-14 c0,-6 -4,-14 -13,-14z" class="d-ink"/>
+      <path d="M279,282 h14 l-3,12 l7,14 h-22 l7,-14z" class="d-ink"/>
+      <path d="M116,290 h36 M116,302 h36 M122,284 v24 M134,284 v24 M146,284 v24" class="d-ink"/>
+      <path d="M72,150 a15,15 0 0 1 30,0" class="d-ink"/><line x1="87" y1="150" x2="97" y2="138" class="d-ink"/>
+    </svg>
+  </section>
+
+  <!-- ───────────── Projects ───────────── -->
+  <section class="block" id="projects">
+    <div class="sec-head">
+      <h2>Research projects</h2>
+      <p>Each site is a literature review plus a runnable codebase.</p>
+    </div>
+
+    <!-- RLQuantOpt -->
+    <article class="project" style="--c: var(--accent3)">
+      <div>
+        <div class="chips"><span class="status">Published · v2 active</span><span class="chip">quantum control</span><span class="chip">JAX</span><span class="chip">transmons</span></div>
+        <h3>RLQuantOpt</h3>
+        <div class="sub">Fast, robust perfect-entangling gates via reinforcement learning</div>
+        <p>RL agents shape the microwave control pulses of two coupled transmon qubits, reaching a perfect-entangling gate
+          at the quantum speed limit of the model. v1 is the paper in <i>Quantum Science and Technology</i> (2026); v2 re-implements
+          everything in JAX and moves toward what hardware demands: a policy that reads only a routine frequency calibration and plays a
+          whole pulse open loop on a drifted device.</p>
+        <div class="kpis">
+          <div class="kpi"><b>~10 ns</b><span>entangling gate at the speed limit</span></div>
+          <div class="kpi"><b>~100×</b><span>faster simulation in JAX v2</span></div>
+          <div class="kpi"><b>~40k</b><span>env steps/s on a laptop CPU</span></div>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="https://leandergrech.github.io/rlquantopt/"><svg><use href="#i-web"/></svg>Visit site</a>
+          <a class="btn" href="https://github.com/leandergrech/rlquantopt"><svg><use href="#i-gh"/></svg>Repository</a>
+          <a class="btn" href="https://doi.org/10.1088/2058-9565/ae2c16"><svg><use href="#i-doc"/></svg>Paper</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Agent shapes a pulse that drives two coupled transmon qubits; calibration feeds back">
+          <rect x="10" y="70" width="90" height="50" rx="8" class="d-boxa"/>
+          <text x="55" y="92" text-anchor="middle" class="t-ink">RL agent</text>
+          <text x="55" y="108" text-anchor="middle">TRPO · PPO</text>
+          <line x1="100" y1="95" x2="118" y2="95" class="d-line" marker-end="url(#arr)"/>
+          <path d="M120,95 L128,95 L130,95.3 L133,95.3 L136,94.7 L139,93.9 L142,94.7 L145,97 L148,97.3 L151,93.1 L154,89.3 L157,93.7 L160,103.4 L163,103.4 L166,88.5 L169,78.1 L172,92 L175,115.2 L178,112.4 L181,82.3 L184,66.8 L187,91 L190,122.1 L193,115.3 L196,81.2 L199,68.4 L202,92.1 L205,115.5 L208,108.4 L211,86.5 L214,80.9 L217,93.8 L220,103.7 L223,99.9 L226,92.1 L229,90.8 L232,94.7 L235,97.1 L238,96 L241,94.4 L244,94.3 L247,95 L250,95.3 L260,95" class="d-acc"/>
+          <text x="190" y="150" text-anchor="middle">control pulse Ω(t)</text>
+          <line x1="262" y1="95" x2="282" y2="95" class="d-line" marker-end="url(#arr)"/>
+          <circle cx="320" cy="62" r="20" class="d-box"/><text x="320" y="66" text-anchor="middle" class="t-ink">Q1</text>
+          <circle cx="320" cy="128" r="20" class="d-box"/><text x="320" y="132" text-anchor="middle" class="t-ink">Q2</text>
+          <path d="M320,82 l-6,5 l12,6 l-12,6 l12,6 l-6,3" class="d-acc2"/>
+          <text x="352" y="99">g</text>
+          <path d="M320,148 V180 H55 V122" class="d-line d-dash" marker-end="url(#arr)"/>
+          <text x="190" y="174" text-anchor="middle">calibration obs · gate fidelity reward</text>
+          <text x="320" y="28" text-anchor="middle" class="t-acc">√iSWAP / PE gate</text>
+        </svg>
+        <figcaption>The agent writes the pulse; the qubits' response is the reward.</figcaption>
+      </figure>
+    </article>
+
+    <!-- Tokamak -->
+    <article class="project" style="--c: var(--accent2)">
+      <div>
+        <div class="chips"><span class="status">Active · baselines running</span><span class="chip">fusion</span><span class="chip">Gym-TORAX</span><span class="chip">model-based RL</span></div>
+        <h3>RL for tokamak current ramp-up</h3>
+        <div class="sub">ITER hybrid-scenario ramp-up on the Gym-TORAX benchmark</div>
+        <p>Every second for 150 s, the agent sets the plasma current and the NBI and ECRH heating power. The repo reproduces the
+          benchmark paper's PI and open-loop baselines on its exact software stack, then adds PPO, SAC, MBPO, behaviour cloning,
+          TD3+BC and MOPO, with every checkpoint committed. Along the way it found that the benchmark reward can be gamed, and proposes an audited score.</p>
+        <div class="kpis">
+          <div class="kpi"><b>3.79</b><span>PI baseline, reproduced exactly</span></div>
+          <div class="kpi"><b>3.95</b><span>MBPO after 1,364 simulator steps</span></div>
+          <div class="kpi"><b>150 s</b><span>ramp-up, 3 actuators, 60-d state</span></div>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="https://leandergrech.github.io/rl-tokamak-rampup/"><svg><use href="#i-web"/></svg>Visit site</a>
+          <a class="btn" href="https://github.com/leandergrech/rl-tokamak-rampup"><svg><use href="#i-gh"/></svg>Repository</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Agent sets current and heating; TORAX simulates a D-shaped plasma; current ramps over 150 seconds">
+          <rect x="10" y="20" width="80" height="44" rx="8" class="d-boxa"/>
+          <text x="50" y="40" text-anchor="middle" class="t-ink">RL agent</text>
+          <text x="50" y="55" text-anchor="middle">1 Hz</text>
+          <line x1="90" y1="34" x2="140" y2="70" class="d-acc2" marker-end="url(#arr)"/>
+          <line x1="90" y1="44" x2="140" y2="90" class="d-acc2" marker-end="url(#arr)"/>
+          <line x1="90" y1="54" x2="140" y2="110" class="d-acc2" marker-end="url(#arr)"/>
+          <text x="14" y="94">I_p ramp</text><text x="14" y="110">P_NBI</text><text x="14" y="126">P_ECRH</text>
+          <!-- D-shaped plasma -->
+          <g transform="translate(190,98)">
+            <path d="M-14,-62 C40,-62 50,-20 50,0 C50,20 40,62 -14,62 C-26,40 -30,20 -30,0 C-30,-20 -26,-40 -14,-62Z" class="d-line"/>
+            <path d="M-8,-46 C30,-46 38,-15 38,0 C38,15 30,46 -8,46 C-17,30 -20,15 -20,0 C-20,-15 -17,-30 -8,-46Z" class="d-acc2"/>
+            <path d="M-2,-28 C20,-28 24,-9 24,0 C24,9 20,28 -2,28 C-8,18 -10,9 -10,0 C-10,-9 -8,-18 -2,-28Z" class="d-acc3"/>
+            <circle cx="6" cy="0" r="4" class="d-fa3"/>
+          </g>
+          <text x="196" y="186" text-anchor="middle">TORAX transport sim</text>
+          <!-- time series -->
+          <line x1="268" y1="150" x2="392" y2="150" class="d-line" marker-end="url(#arr)"/>
+          <line x1="270" y1="152" x2="270" y2="55" class="d-line" marker-end="url(#arr)"/>
+          <path d="M270,150 L278,139.4 L286,131.5 L294,124.5 L302,117.8 L310,111.6 L318,105.5 L326,99.7 L334,94 L342,88.5 L350,83.1 L358,77.8 L366,72.6 L370,70 L390,70" class="d-acc"/>
+          <path d="M270,146 L290,128 L310,112 L330,99 L350,87 L370,74 L390,74" class="d-ink d-dash"/>
+          <text x="330" y="166" text-anchor="middle">t = 0 … 150 s</text>
+          <text x="276" y="50">I_p (MA)</text>
+          <text x="340" y="64" class="t-acc">agent</text>
+          <text x="352" y="90">PI ref</text>
+        </svg>
+        <figcaption>Three actuators, one D-shaped plasma, a 150-second ramp.</figcaption>
+      </figure>
+    </article>
+
+    <!-- Rocket -->
+    <article class="project" style="--c: var(--accent)">
+      <div>
+        <div class="chips"><span class="status">Review done · awaiting simulator</span><span class="chip">propulsion</span><span class="chip">MIMO tracking</span><span class="chip">DLR LUMEN</span></div>
+        <h3>RL for rocket engine control</h3>
+        <div class="sub">Deep RL for a liquid-propellant engine, anchored on the LUMEN Control Challenge</div>
+        <p>LUMEN is DLR's 25 kN liquid-oxygen / methane expander-bleed engine. Two turbine valves must track chamber pressure (thrust)
+          and mixture ratio through model error, drift and faults. The site reviews the field from 2018 to 2026, sets published designs side by side
+          and ranks open questions. The baselines are ready to build as soon as the challenge simulator is released.</p>
+        <div class="kpis">
+          <div class="kpi"><b>25 kN</b><span>LOX / methane demonstrator</span></div>
+          <div class="kpi"><b>1.3 %</b><span>DLR's SAC tracking error on the real engine</span></div>
+          <div class="kpi"><b>7</b><span>benchmark cases, nominal to faults</span></div>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="https://leandergrech.github.io/rl-rocket-engine-control/"><svg><use href="#i-web"/></svg>Visit site</a>
+          <a class="btn" href="https://github.com/leandergrech/rl-rocket-engine-control"><svg><use href="#i-gh"/></svg>Repository</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Agent drives two turbine valves; engine outputs chamber pressure and mixture ratio tracked against references">
+          <rect x="8" y="76" width="76" height="44" rx="8" class="d-boxa"/>
+          <text x="46" y="96" text-anchor="middle" class="t-ink">RL agent</text>
+          <text x="46" y="111" text-anchor="middle">SAC</text>
+          <line x1="84" y1="90" x2="118" y2="62" class="d-line" marker-end="url(#arr)"/>
+          <line x1="84" y1="106" x2="118" y2="134" class="d-line" marker-end="url(#arr)"/>
+          <!-- valves (bowtie) -->
+          <path d="M122,52 L150,68 L150,52 L122,68Z" class="d-acc"/><text x="136" y="44" text-anchor="middle" class="t-ink">TFV</text>
+          <path d="M122,126 L150,142 L150,126 L122,142Z" class="d-acc"/><text x="136" y="162" text-anchor="middle" class="t-ink">TOV</text>
+          <line x1="150" y1="60" x2="182" y2="86" class="d-line" marker-end="url(#arr)"/>
+          <line x1="150" y1="134" x2="182" y2="110" class="d-line" marker-end="url(#arr)"/>
+          <!-- engine -->
+          <rect x="184" y="78" width="36" height="40" rx="4" class="d-box"/>
+          <path d="M220,86 L232,86 L256,70 L256,126 L232,110 L220,110" class="d-ink"/>
+          <path d="M258,80 q14,18 0,36" class="d-acc2"/><path d="M262,74 q22,24 0,48" class="d-acc2 d-dash"/>
+          <text x="220" y="140" text-anchor="middle">LUMEN</text>
+          <!-- lightning (faults) -->
+          <path d="M204,36 l-8,16 h8 l-6,14" class="d-acc2"/><text x="214" y="46">faults</text>
+          <!-- tracking plots -->
+          <g transform="translate(288,30)">
+            <rect width="104" height="60" rx="6" class="d-box"/>
+            <path d="M6,44 H30 V20 H70 V32 H98" class="d-ink d-dash"/>
+            <path d="M6,44 H30 C34,22 38,20 44,20 H70 C74,30 76,32 80,32 H98" class="d-acc"/>
+            <text x="8" y="14" class="t-ink">P_c</text>
+          </g>
+          <g transform="translate(288,108)">
+            <rect width="104" height="60" rx="6" class="d-box"/>
+            <path d="M6,30 H44 V18 H98" class="d-ink d-dash"/>
+            <path d="M6,30 H44 C48,20 52,18 58,18 H98" class="d-acc"/>
+            <text x="8" y="14" class="t-ink">MR</text>
+          </g>
+          <text x="392" y="190" text-anchor="end">- - ref  ── agent</text>
+        </svg>
+        <figcaption>A coupled 2×2 tracking problem: two valves in, thrust and mixture ratio out.</figcaption>
+      </figure>
+    </article>
+
+    <!-- Flatland -->
+    <article class="project" style="--c: var(--accent3)">
+      <div>
+        <div class="chips"><span class="status">Active · baselines complete</span><span class="chip">multi-agent RL</span><span class="chip">operations research</span><span class="chip">Flatland</span></div>
+        <h3>RL for Flatland train rescheduling</h3>
+        <div class="sub">Can multi-agent RL close the gap to operations research on railways?</div>
+        <p>Trains on a grid-drawn network must reach their targets inside timetable windows without sharing cells, while random malfunctions
+          stop them. Operations research has won every official Flatland round. This verified review (2019–2026) comes with four fixed scenarios,
+          an OR reference that reproduces the core of the winning planners, and PPO and imitation-then-PPO baselines, all scored by one harness.</p>
+        <div class="kpis">
+          <div class="kpi"><b>95.7 %</b><span>OR planner, 100 trains on 100×100</span></div>
+          <div class="kpi"><b>16.0 %</b><span>best RL policy on the same scenario</span></div>
+          <div class="kpi"><b>&lt; 1 h</b><span>train + evaluate, laptop CPU</span></div>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="https://leandergrech.github.io/rl-flatland-rescheduling/"><svg><use href="#i-web"/></svg>Visit site</a>
+          <a class="btn" href="https://github.com/leandergrech/rl-flatland-rescheduling"><svg><use href="#i-gh"/></svg>Repository</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Rail grid with trains, and bar chart of arrival rate: OR planner versus best RL across four scenario sizes">
+          <!-- rail grid -->
+          <g transform="translate(10,20)">
+            <rect width="160" height="150" rx="6" class="d-box"/>
+            <path d="M14,30 H146 M14,75 H100 Q116,75 116,91 V120 H146 M40,30 V120 H100 M100,30 V75" class="d-ink"/>
+            <path d="M14,30 H146 M14,75 H100 Q116,75 116,91 V120 H146 M40,30 V120 H100 M100,30 V75" class="d-line d-dash" transform="translate(0,3)"/>
+            <rect x="56" y="24" width="18" height="11" rx="2" class="d-fa"/>
+            <rect x="34" y="92" width="11" height="18" rx="2" class="d-fa2"/>
+            <rect x="122" y="114" width="18" height="11" rx="2" class="d-fa3"/>
+            <circle cx="102" cy="120" r="5" class="d-fa2 pulse-dot"/>
+            <text x="80" y="144" text-anchor="middle">malfunction ⚠</text>
+          </g>
+          <!-- bars -->
+          <g transform="translate(192,30)">
+            <line x1="20" y1="130" x2="200" y2="130" class="d-line"/>
+            <text x="0" y="-6">arrival %</text>
+            <!-- scale 100% = 110px -->
+            <rect x="26" y="20" width="14" height="110" style="fill: var(--muted)"/>
+            <rect x="42" y="60.7" width="14" height="69.3" class="d-fa"/>
+            <rect x="70" y="20.8" width="14" height="109.2" style="fill: var(--muted)"/>
+            <rect x="86" y="91.5" width="14" height="38.5" class="d-fa"/>
+            <rect x="114" y="22" width="14" height="108" style="fill: var(--muted)"/>
+            <rect x="130" y="111.9" width="14" height="18.1" class="d-fa"/>
+            <rect x="158" y="24.7" width="14" height="105.3" style="fill: var(--muted)"/>
+            <rect x="174" y="112.4" width="14" height="17.6" class="d-fa"/>
+            <text x="41" y="146" text-anchor="middle">10</text>
+            <text x="85" y="146" text-anchor="middle">30</text>
+            <text x="129" y="146" text-anchor="middle">60</text>
+            <text x="173" y="146" text-anchor="middle">100</text>
+            <text x="107" y="162" text-anchor="middle">trains per scenario</text>
+            <rect x="96" y="-14" width="9" height="9" style="fill: var(--muted)"/><text x="109" y="-6">OR</text>
+            <rect x="134" y="-14" width="9" height="9" class="d-fa"/><text x="147" y="-6">best RL</text>
+          </g>
+        </svg>
+        <figcaption>The OR–RL gap widens as the network grows (no malfunctions, held-out seeds).</figcaption>
+      </figure>
+    </article>
+  </section>
+
+  <!-- ───────────── Teaching ───────────── -->
+  <section class="block" id="teaching">
+    <div class="sec-head">
+      <h2>Teaching</h2>
+      <p>Getting people from zero to a trained agent.</p>
+    </div>
+    <article class="project" style="--c: var(--accent2)">
+      <div>
+        <div class="chips"><span class="status">Live handbook</span><span class="chip">RL Bootcamp</span><span class="chip">MkDocs</span><span class="chip">SB3 · MuJoCo</span></div>
+        <h3>RL Bootcamp — Participant Primer</h3>
+        <div class="sub">Install the toolkit, learn the mechanics, arrive ready</div>
+        <p>The permanent setup-and-basics companion to the hands-on tutorial track of the Reinforcement Learning Bootcamp:
+          one Conda environment, one smoke test that proves a machine is ready, and a complete worked example
+          from a random baseline to a trained SAC agent on Pendulum, with evaluation video.</p>
+        <div class="kpis">
+          <div class="kpi"><b>1</b><span>command to verify a setup</span></div>
+          <div class="kpi"><b>5–10 min</b><span>to train SAC on Pendulum</span></div>
+          <div class="kpi"><b>MIT</b><span>reusable for your own workshop</span></div>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="https://leandergrech.github.io/rl-bootcamp-setup-lg/"><svg><use href="#i-web"/></svg>Visit site</a>
+          <a class="btn" href="https://github.com/leandergrech/rl-bootcamp-setup-lg"><svg><use href="#i-gh"/></svg>Repository</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Five-step pipeline from conda environment to trained and evaluated agent, with a swinging pendulum">
+          <g>
+            <rect x="8" y="30" width="112" height="30" rx="15" class="d-box"/><text x="64" y="49" text-anchor="middle" class="t-ink">conda env</text>
+            <rect x="8" y="74" width="112" height="30" rx="15" class="d-box"/><text x="64" y="93" text-anchor="middle" class="t-ink">smoke test ✓</text>
+            <rect x="8" y="118" width="112" height="30" rx="15" class="d-box"/><text x="64" y="137" text-anchor="middle" class="t-ink">random baseline</text>
+            <rect x="140" y="118" width="112" height="30" rx="15" class="d-boxa"/><text x="196" y="137" text-anchor="middle" class="t-ink">train SAC</text>
+            <rect x="140" y="162" width="112" height="30" rx="15" class="d-box"/><text x="196" y="181" text-anchor="middle" class="t-ink">evaluate + video</text>
+            <line x1="64" y1="60" x2="64" y2="72" class="d-line" marker-end="url(#arr)"/>
+            <line x1="64" y1="104" x2="64" y2="116" class="d-line" marker-end="url(#arr)"/>
+            <line x1="120" y1="133" x2="138" y2="133" class="d-line" marker-end="url(#arr)"/>
+            <line x1="196" y1="148" x2="196" y2="160" class="d-line" marker-end="url(#arr)"/>
+          </g>
+          <!-- pendulum -->
+          <g transform="translate(320,70)">
+            <line x1="-40" y1="0" x2="40" y2="0" class="d-ink"/>
+            <path d="M0,0 L0,-55" class="d-line d-dash"/>
+            <line x1="0" y1="0" x2="30" y2="-46" class="d-acc"/>
+            <circle cx="30" cy="-46" r="8" class="d-fa"/>
+            <path d="M-22,34 A40,40 0 0 1 22,34" class="d-acc2 d-dash" transform="rotate(180)"/>
+            <text x="0" y="24" text-anchor="middle">swing up</text>
+            <text x="0" y="40" text-anchor="middle">Pendulum-v1</text>
+          </g>
+          <!-- return curve -->
+          <g transform="translate(270,120)">
+            <line x1="0" y1="60" x2="120" y2="60" class="d-line"/>
+            <path d="M0,56 C20,55 30,52 45,40 C60,20 80,10 120,8" class="d-acc"/>
+            <text x="60" y="74" text-anchor="middle">episode return ↑</text>
+          </g>
+        </svg>
+        <figcaption>From a fresh laptop to a trained agent in one afternoon.</figcaption>
+      </figure>
+    </article>
+
+    <div class="also">
+      <div class="mini">
+        <div><h4>Personal blog</h4><p>Notes on RL basics and travel, from 2020.</p></div>
+        <div class="btns"><a class="btn" href="https://leandergrech.github.io/"><svg><use href="#i-web"/></svg>Visit</a></div>
+      </div>
+      <div class="mini">
+        <div><h4>All repositories</h4><p>Experiments, forks and older work.</p></div>
+        <div class="btns"><a class="btn" href="https://github.com/leandergrech?tab=repositories"><svg><use href="#i-gh"/></svg>GitHub</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Leander Grech · Malta</span>
+    <span class="mono">RL × physical control</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btns = document.querySelectorAll('.themes button');
+    function mark() { btns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === root.dataset.theme); }); }
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        root.dataset.theme = b.dataset.set;
+        try { localStorage.setItem('lg-theme', b.dataset.set); } catch (e) {}
+        mark();
+      });
+    });
+    mark();
+  })();
+</script>
+</body>
+</html>
