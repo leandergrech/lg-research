@@ -73,7 +73,8 @@ flowchart LR
 
 ## Earth observation & applied AI
 
-- **Semablu** — Earth-observation startup: super-resolving free 10 m Sentinel-2 imagery ×4 for quantitative vegetation analysis (e.g. olive groves). Unlike bicubic upsampling, which only interpolates existing pixels, super-resolution learns the fine detail behind a coarse pixel from paired low/high-resolution imagery. [semablu.com](https://semablu.com/)
+- **Semablu** — Earth-observation startup: super-resolving free 10 m multispectral Sentinel-2 imagery ×4 for mapping farmland, towns, coastlines and seagrass. Unlike bicubic upsampling, which only interpolates existing pixels, super-resolution learns the fine detail behind a coarse pixel from paired low/high-resolution imagery. Clouds, shadows and other perturbations are detected per scene so noisy acquisitions still add coverage across all bands. [semablu.com](https://semablu.com/)
+- **ADACE3** — receipt data extraction (University of Malta × PTL, MCST FUSION): multi-engine OCR + layout-aware transformer + rules; 0.98 F1. [Paper](https://doi.org/10.3390/make7040167)
 - **PARG · Heritage Malta** — AI-generated vs human-written replies to visitor reviews.
 - **POLIRURAL · Horizon Europe** — three digital tools for Maltese farmers.
 
@@ -94,6 +95,7 @@ flowchart LR
 |---|---|---|
 | 2026 | [Achieving fast and robust perfect entangling gates via reinforcement learning](https://doi.org/10.1088/2058-9565/ae2c16) | Quantum Sci. Technol. |
 | sub. | Surrogate model driven RL optimization of the TWOCRYST crystal angular alignment | EPJ Research Instrumentation (submitted) |
+| 2025 | [Receipt information extraction with joint multi-modal transformer and rule-based model](https://doi.org/10.3390/make7040167) | Mach. Learn. Knowl. Extr. |
 | 2022 | [Application of reinforcement learning in the LHC tune feedback](https://doi.org/10.3389/fphy.2022.929064) | Frontiers in Physics |
 | 2021 | Renovation of the beam-based feedback controller in the LHC | ICALEPCS'21 |
 | 2021 | [A machine learning approach for the tune estimation in the LHC](https://doi.org/10.3390/info12050197) | Information |
