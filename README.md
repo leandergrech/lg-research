@@ -104,4 +104,4 @@ flowchart LR
 ## Site
 
 A single static `index.html` (no build step), served by GitHub Pages from `main`.
-Five colour themes are built in and switchable from the header: **Control Room**, **Transmon**, **Plasma**, **Limestone**, **Blueprint**.
+Five colour themes are built in and switchable from the header, with **Plasma** as the default: **Control Room**, **Transmon**, **Plasma**, **Limestone**, **Blueprint**.
