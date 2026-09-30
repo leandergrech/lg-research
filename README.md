@@ -61,8 +61,7 @@ flowchart LR
 | Project | Domain | Status | Highlights |
 |---|---|---|---|
 | **TADA** — RL arrival sequencing into Milan Malpensa | Air traffic control | Active · lead researcher | 92.7 % of flights within ±60 s of AMAN target · 63/100 twenty-flight streams solved · 3/100 with a loss of separation |
-| **AICRYSCON** — autonomous crystal alignment for TWOCRYST | CERN LHC | Beam-tested · paper submitted to EPJ-RI | PPO agent on a data-driven surrogate of LHC beam-test data; replaces 2–4 h manual sweeps with 1–3 min recoveries |
-| **RL in the LHC tune feedback** | CERN LHC | Published 2022 | [Frontiers in Physics, doi:10.3389/fphy.2022.929064](https://doi.org/10.3389/fphy.2022.929064) |
+| **AICRYSCON** — autonomous alignment of one bent crystal (TCCP) in TWOCRYST | CERN LHC | Beam-tested · paper submitted to EPJ-RI | PPO agent on a data-driven surrogate of beam-test data; replaces 2–4 h manual sweeps with 1–3 min recoveries |
 
 ```mermaid
 flowchart LR
@@ -71,6 +70,36 @@ flowchart LR
     PIX[PIX + BLM] --> A2[PPO agent] -->|Δθ µrad| TCCP[TCCP goniometer]
     TCCP --> PIX
 ```
+
+## Earth observation & applied AI
+
+- **Semablu** — Earth-observation startup: super-resolving free 10 m Sentinel-2 imagery ×4 for quantitative vegetation analysis (e.g. olive groves). Unlike bicubic upsampling, which only interpolates existing pixels, super-resolution learns the fine detail behind a coarse pixel from paired low/high-resolution imagery. [semablu.com](https://semablu.com/)
+- **PARG · Heritage Malta** — AI-generated vs human-written replies to visitor reviews.
+- **POLIRURAL · Horizon Europe** — three digital tools for Maltese farmers.
+
+## Teaching
+
+| Resource | Site | Code |
+|---|---|---|
+| **RL Bootcamp 2026 — Tutorial Handbook** (created & curated): fundamentals → Ant reality gap → design-your-own air-traffic MDP | [site](https://sarl-plus.github.io/RL_Bootcamp_2026_tutorial/) | [repo](https://github.com/SARL-PLUS/RL_Bootcamp_2026_tutorial) |
+| **RL Bootcamp — Participant Primer** | [site](https://leandergrech.github.io/rl-bootcamp-setup-lg/) | [repo](https://github.com/leandergrech/rl-bootcamp-setup-lg) |
+| **CCE5502** — Master's AI/ML course, University of Malta | | |
+
+## Degrees & publications
+
+- **PhD (University of Malta, 2022)** — *Renovation of the beam-based feedback systems in the LHC* · [PDF](https://www.um.edu.mt/library/oar/bitstream/123456789/104427/1/Leander%20Grech.pdf)
+- **B.Sc. (Hons) Computer Engineering (University of Malta, 2017)** — *Collision avoidance system for the RP survey and visual inspection train in the CERN LHC* · [record](https://www.um.edu.mt/library/oar/handle/123456789/23489)
+
+| Year | Publication | Venue |
+|---|---|---|
+| 2026 | [Achieving fast and robust perfect entangling gates via reinforcement learning](https://doi.org/10.1088/2058-9565/ae2c16) | Quantum Sci. Technol. |
+| sub. | Surrogate model driven RL optimization of the TWOCRYST crystal angular alignment | EPJ Research Instrumentation (submitted) |
+| 2022 | [Application of reinforcement learning in the LHC tune feedback](https://doi.org/10.3389/fphy.2022.929064) | Frontiers in Physics |
+| 2021 | Renovation of the beam-based feedback controller in the LHC | ICALEPCS'21 |
+| 2021 | [A machine learning approach for the tune estimation in the LHC](https://doi.org/10.3390/info12050197) | Information |
+| 2020 | [An alternative processing algorithm for the tune measurement system in the LHC](https://cds.cern.ch/record/2772585) | IBIC'20 |
+| 2019 | [Feasibility of hardware acceleration in the LHC orbit feedback controller](https://doi.org/10.18429/JACoW-ICALEPCS2019-MOPHA151) | ICALEPCS'19 |
+| 2018 | [Collision avoidance system for the RP survey and visual inspection train in the CERN LHC](https://ieeexplore.ieee.org/document/8560485/) | IEEE CASE |
 
 ## Site
 
