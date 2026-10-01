@@ -77,7 +77,6 @@ flowchart LR
 - **Semablu** — Earth-observation startup: super-resolving free 10 m multispectral Sentinel-2 imagery ×4 for mapping farmland, towns, coastlines and seagrass. Unlike bicubic upsampling, which only interpolates existing pixels, super-resolution learns the fine detail behind a coarse pixel from paired low/high-resolution imagery. Clouds, shadows and other perturbations are detected per scene so noisy acquisitions still add coverage across all bands. [semablu.com](https://semablu.com/)
 - **ADACE3** — receipt data extraction (University of Malta × PTL, MCST FUSION): multi-engine OCR + layout-aware transformer + rules; 0.98 F1. [Paper](https://doi.org/10.3390/make7040167)
 - **VISTA · Polzify** — privacy-preserving analysis of visitor photos for destination management (Malta's beaches). Best Full Paper, IFITT ENTER 2026.
-- **PARG · Heritage Malta** — AI-generated vs human-written replies to visitor reviews.
 - **POLIRURAL · Horizon Europe** — three digital tools for Maltese farmers.
 
 ## Teaching
