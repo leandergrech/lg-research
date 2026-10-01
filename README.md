@@ -2,7 +2,7 @@
 
 **Curated research portfolio of Leander Grech — reinforcement learning for physical control.**
 
-🌐 **Live site: <https://leandergrech.github.io/lg-research/>**
+🌐 **Live site: <https://leandergrech.github.io/lg-research/>** · [LinkedIn](https://www.linkedin.com/in/grechleander/)
 
 ```mermaid
 flowchart LR
@@ -60,7 +60,8 @@ flowchart LR
 
 | Project | Domain | Status | Highlights |
 |---|---|---|---|
-| **TADA** — RL arrival sequencing into Milan Malpensa | Air traffic control | Active · lead researcher | 92.7 % of flights within ±60 s of AMAN target · 63/100 twenty-flight streams solved · 3/100 with a loss of separation |
+| **TADA** — Terminal Airspace Digital Assistant: RL arrival sequencing at Milan Malpensa (trombone) and Bergamo (point merge) | Air traffic control | Active · lead researcher · Best of Session, DASC 2026 | 92.7 % of flights within ±60 s of AMAN target · 63/100 twenty-flight streams solved · 3/100 with a loss of separation; on point merge, no loss of separation on feasible streams |
+| **ASTRA** — en-route hotspot prediction (~1 h ahead) and RL resolution; I designed the prototype RL agent that paved the way for TADA | Air traffic control | Completed · TRL 2 | [Aerospace 2026](https://doi.org/10.3390/aerospace13010054) · [EASN 2025](https://doi.org/10.3390/engproc2025090091); real-time use still needs weather, knock-on effects and live integration |
 | **AICRYSCON** — autonomous alignment of one bent crystal (TCCP) in TWOCRYST | CERN LHC | Beam-tested · paper submitted to EPJ-RI | PPO agent on a data-driven surrogate of beam-test data; replaces 2–4 h manual sweeps with 1–3 min recoveries |
 
 ```mermaid
@@ -75,6 +76,7 @@ flowchart LR
 
 - **Semablu** — Earth-observation startup: super-resolving free 10 m multispectral Sentinel-2 imagery ×4 for mapping farmland, towns, coastlines and seagrass. Unlike bicubic upsampling, which only interpolates existing pixels, super-resolution learns the fine detail behind a coarse pixel from paired low/high-resolution imagery. Clouds, shadows and other perturbations are detected per scene so noisy acquisitions still add coverage across all bands. [semablu.com](https://semablu.com/)
 - **ADACE3** — receipt data extraction (University of Malta × PTL, MCST FUSION): multi-engine OCR + layout-aware transformer + rules; 0.98 F1. [Paper](https://doi.org/10.3390/make7040167)
+- **VISTA · Polzify** — privacy-preserving analysis of visitor photos for destination management (Malta's beaches). Best Full Paper, IFITT ENTER 2026.
 - **PARG · Heritage Malta** — AI-generated vs human-written replies to visitor reviews.
 - **POLIRURAL · Horizon Europe** — three digital tools for Maltese farmers.
 
@@ -93,9 +95,13 @@ flowchart LR
 
 | Year | Publication | Venue |
 |---|---|---|
+| 2026 | Preliminary validation of a terminal airspace digital assistance through low-fidelity simulation | 45th DASC · Best of Session |
+| 2026 | [A machine learning framework for predicting and resolving complex tactical air traffic events using historical data](https://doi.org/10.3390/aerospace13010054) | Aerospace |
+| 2026 | [Analysing visual user-generated content for destination management](https://link.springer.com/book/9783032239242) | ENTER 2026 · Best Full Paper |
 | 2026 | [Achieving fast and robust perfect entangling gates via reinforcement learning](https://doi.org/10.1088/2058-9565/ae2c16) | Quantum Sci. Technol. |
 | sub. | Surrogate model driven RL optimization of the TWOCRYST crystal angular alignment | EPJ Research Instrumentation (submitted) |
 | 2025 | [Receipt information extraction with joint multi-modal transformer and rule-based model](https://doi.org/10.3390/make7040167) | Mach. Learn. Knowl. Extr. |
+| 2025 | [AI-enabled tactical FMP hotspot prediction and resolution (ASTRA)](https://doi.org/10.3390/engproc2025090091) | Eng. Proc. · EASN 2025 |
 | 2022 | [Application of reinforcement learning in the LHC tune feedback](https://doi.org/10.3389/fphy.2022.929064) | Frontiers in Physics |
 | 2021 | Renovation of the beam-based feedback controller in the LHC | ICALEPCS'21 |
 | 2021 | [A machine learning approach for the tune estimation in the LHC](https://doi.org/10.3390/info12050197) | Information |

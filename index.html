@@ -214,6 +214,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     </marker>
     <symbol id="i-web" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-9.5 10h19M12 2c2.8 3 4 6.4 4 10s-1.2 7-4 10c-2.8-3-4-6.4-4-10s1.2-7 4-10z"/></symbol>
     <symbol id="i-gh" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></symbol>
     <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h8"/></symbol>
   </defs>
 </svg>
@@ -227,6 +228,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       <a href="#eo">Earth obs.</a>
       <a href="#teaching">Teaching</a>
       <a href="#pubs">Publications</a>
+      <a href="https://www.linkedin.com/in/grechleander/">LinkedIn</a>
     </nav>
     <div class="themes" role="group" aria-label="Colour theme">
       <span class="lbl">Theme</span>
@@ -252,12 +254,13 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         Earth observation and extract data from documents. Open projects come with a reproducible codebase and a written review of their field.</p>
       <div class="btns">
         <a class="btn primary" href="#projects">Explore the work</a>
-        <a class="btn" href="https://github.com/leandergrech"><svg><use href="#i-gh"/></svg>github.com/leandergrech</a>
+        <a class="btn" href="https://github.com/leandergrech"><svg><use href="#i-gh"/></svg>GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/grechleander/"><svg><use href="#i-in"/></svg>LinkedIn</a>
       </div>
       <div class="stats">
         <div class="stat"><b>6</b><span>physical control domains</span></div>
-        <div class="stat"><b>9</b><span>papers: 4 journal, 4 conference, 1 submitted</span></div>
-        <div class="stat"><b>PhD</b><span>on the LHC beam-based feedback systems</span></div>
+        <div class="stat"><b>13</b><span>papers: 5 journal, 7 conference, 1 submitted</span></div>
+        <div class="stat"><b>2</b><span>paper awards: DASC 2026, ENTER 2026</span></div>
       </div>
     </div>
 
@@ -523,16 +526,18 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     <!-- TADA -->
     <article class="project" style="--c: var(--accent2)">
       <div>
-        <div class="chips"><span class="status">Active · lead researcher</span><span class="chip lock">private codebase</span><span class="chip">air traffic control</span><span class="chip">RLlib</span></div>
-        <h3>TADA: RL arrival sequencing</h3>
-        <div class="sub">One agent sequencing arrival traffic into Milan Malpensa</div>
-        <p>An arrival manager (AMAN) gives every flight a target landing time. The agent works the MXP trombone arrival like a
-          controller: every 45 s it picks an aircraft, then a clearance (speed, route shortcut, trombone extension, vectors to the ILS),
-          so that each flight lands on time without two aircraft ever losing separation. It flies a stream of 20 flights through a window of the next 10 in the queue.</p>
+        <div class="chips"><span class="status">Active · lead researcher</span><span class="chip">Best of Session · DASC 2026</span><span class="chip lock">private codebase</span><span class="chip">air traffic control</span></div>
+        <h3>TADA: Terminal Airspace Digital Assistant</h3>
+        <div class="sub">RL arrival sequencing at Milan Malpensa and Bergamo</div>
+        <p>TADA builds a digital assistant for terminal-airspace controllers, and I lead its RL agent. An arrival manager (AMAN) gives every
+          flight a target landing time; the agent works the arrival like a controller: every 45 s it picks an aircraft, then a clearance
+          (speed, route shortcut, path stretching, vectors to the ILS), so that each flight lands on time without two aircraft ever losing
+          separation. It flies streams of 20 flights through a window of the next 10 in the queue.</p>
         <ul class="points">
+          <li><b>Two airports, two arrival designs:</b> the Malpensa trombone and the Bergamo point merge. Trained on point merge, the agent lost separation on none of the 48 feasible validation streams and landed 93 % of flights on time.</li>
           <li><b>Lexicographic objective:</b> safety first (3 NM / 500 ft), then landing precision, then fewest clearances.</li>
-          <li><b>Autoregressive policy:</b> aircraft first, then a clearance conditioned on it, over a permutation-equivariant window.</li>
           <li><b>Reselection:</b> allowing a second clearance per step roughly doubled solved streams; precision had been bandwidth-limited.</li>
+          <li><b>With controllers:</b> low-fidelity simulation trials with active ATCOs at ENAV's Rome ACC; the paper won Best of Session at the 45th DASC (Orlando, 2026).</li>
         </ul>
         <div class="kpis">
           <div class="kpi"><b>92.7 %</b><span>flights land within ±60 s of target</span></div>
@@ -572,6 +577,50 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
           <path d="M120,34 C170,14 220,14 246,32" class="d-acc d-dash" marker-end="url(#arrA)"/>
         </svg>
         <figcaption>Arrivals are delayed on the trombone's downwind leg and released onto final in AMAN order.</figcaption>
+      </figure>
+    </article>
+
+    <!-- ASTRA -->
+    <article class="project" style="--c: var(--accent3)">
+      <div>
+        <div class="chips"><span class="status">Completed · TRL 2</span><span class="chip lock">private codebase</span><span class="chip">en-route ATM</span><span class="chip">RL prototype</span></div>
+        <h3>ASTRA: hotspot prediction and resolution</h3>
+        <div class="sub">The RL prototype that paved the way for TADA</div>
+        <p>ASTRA helps the Flow Management Position see traffic-complexity hotspots in en-route airspace about an hour ahead, instead of
+          the usual twenty minutes, and proposes ranked ways to dissipate them. Working with SkySoft-ATM and University of Malta partners,
+          I designed the prototype RL agent that resolves a hotspot by issuing clearances to the aircraft inside it.</p>
+        <ul class="points">
+          <li><b>Four agents:</b> speed, flight-level and direct-routing clearances, plus a multi-clearance agent that combines them. The multi-clearance agent resolves the most hotspots; the flight-level agent scores best overall.</li>
+          <li><b>Goal met:</b> evaluated on historical Swiss airspace data, ASTRA reached its low-TRL research-feasibility target.</li>
+          <li><b>Not yet real time:</b> live use still needs wind and weather in the trajectory predictions, protection against knock-on hotspots in neighbouring sectors, and integration with live flow-management tools.</li>
+        </ul>
+        <div class="kpis">
+          <div class="kpi"><b>~1 h</b><span>hotspot lookahead, up from ~20 min</span></div>
+          <div class="kpi"><b>4</b><span>RL agent variants</span></div>
+          <div class="kpi"><b>TRL 2</b><span>feasibility target reached</span></div>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="https://doi.org/10.3390/aerospace13010054"><svg><use href="#i-doc"/></svg>Paper · Aerospace 2026</a>
+          <a class="btn" href="https://doi.org/10.3390/engproc2025090091"><svg><use href="#i-doc"/></svg>Paper · EASN 2025</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="En-route sectors with converging traffic forming a predicted hotspot; an RL agent issues speed, flight-level and direct-routing clearances to dissipate it">
+          <path d="M10,20 L130,12 L160,90 L60,120 Z M130,12 L250,30 L230,110 L160,90 Z M60,120 L160,90 L230,110 L210,188 L20,180 Z" class="d-line"/>
+          <path d="M14,60 L150,98" class="d-line d-dash"/><path d="M240,40 L150,98" class="d-line d-dash"/><path d="M60,176 L150,98" class="d-line d-dash"/><path d="M150,98 L236,160" class="d-line d-dash"/>
+          <circle cx="150" cy="98" r="30" class="d-acc2 d-dash"/>
+          <circle cx="126" cy="91" r="4" class="d-fa3"/><circle cx="170" cy="84" r="4" class="d-fa3"/><circle cx="138" cy="112" r="4" class="d-fa3"/><circle cx="160" cy="106" r="4" class="d-fa3"/><circle cx="148" cy="92" r="4" class="d-fa3"/>
+          <text x="150" y="56" text-anchor="middle" class="t-ink">hotspot in ~60 min</text>
+          <rect x="276" y="20" width="116" height="40" rx="8" class="d-boxa"/>
+          <text x="334" y="38" text-anchor="middle" class="t-ink">RL agent</text>
+          <text x="334" y="52" text-anchor="middle">ranked options</text>
+          <rect x="276" y="74" width="116" height="24" rx="12" class="d-box"/><text x="334" y="90" text-anchor="middle">speed ±</text>
+          <rect x="276" y="106" width="116" height="24" rx="12" class="d-box"/><text x="334" y="122" text-anchor="middle">flight level ↕</text>
+          <rect x="276" y="138" width="116" height="24" rx="12" class="d-box"/><text x="334" y="154" text-anchor="middle">direct to →</text>
+          <path d="M274,118 C230,118 210,110 184,102" class="d-acc" marker-end="url(#arrA)"/>
+          <text x="334" y="184" text-anchor="middle">or all three combined</text>
+        </svg>
+        <figcaption>Predict where traffic will pile up, then clear the aircraft that cause it.</figcaption>
       </figure>
     </article>
 
@@ -648,7 +697,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <p>Semablu is a small Earth-observation startup working on the Maltese islands and the wider Mediterranean. Sentinel-2 images
           the whole planet every few days for free, but at 10 m per pixel a building, a field boundary or a strip of shoreline blurs
           into a handful of pixels. The work is to super-resolve that multispectral imagery ×4, for mapping farmland, towns, coastlines
-          and seagrass meadows.</p>
+          and seagrass meadows. Semablu's first ESA activity (SEMS-2D, under ESA Malta PECS) demonstrated the super-resolved data for soil-erosion monitoring.</p>
         <ul class="points">
           <li><b>Bicubic upsampling</b> only interpolates between existing pixels: the image gets bigger and smoother, but no new information appears.</li>
           <li><b>Super-resolution</b> learns from pairs of low- and high-resolution images what fine detail usually sits behind a coarse pixel, and restores it.</li>
@@ -734,6 +783,56 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
           <text x="329" y="158" text-anchor="middle">structured record</text>
         </svg>
         <figcaption>Every word is read, placed and labelled, then assembled into a record.</figcaption>
+      </figure>
+    </article>
+
+    <!-- VISTA / Polzify -->
+    <article class="project" style="--c: var(--accent)">
+      <div>
+        <div class="chips"><span class="status">Best Full Paper · ENTER 2026</span><span class="chip">Polzify</span><span class="chip">tourism analytics</span><span class="chip">privacy by design</span></div>
+        <h3>VISTA: what visitors' photos say about a destination</h3>
+        <div class="sub">Visual user-generated content for destination management</div>
+        <p>At Polzify, a Maltese tourism-AI company, VISTA (Visual Interpretation Systems for Touristic Analysis) turns thousands of
+          public visitor photos into structured insight for destination managers. Applied to Malta's beaches, it shows where visitors
+          go, when, and what they notice, from crowding to litter.</p>
+        <ul class="points">
+          <li><b>Privacy by design:</b> faces are blurred before any analysis takes place.</li>
+          <li><b>Multi-modal AI:</b> every photo is classified into tourism themes, with a human in the loop.</li>
+          <li><b>Platform-agnostic:</b> the framework works on visual content whatever platform it comes from.</li>
+        </ul>
+        <div class="kpis">
+          <div class="kpi"><b>~8,300</b><span>beach photos from 2024 analysed</span></div>
+          <div class="kpi"><b>&gt; 50 %</b><span>of them from just five beaches</span></div>
+          <div class="kpi"><b>Award</b><span>best full paper, IFITT ENTER 2026</span></div>
+        </div>
+        <div class="btns">
+          <a class="btn primary" href="https://link.springer.com/book/9783032239242"><svg><use href="#i-doc"/></svg>ENTER 2026 proceedings</a>
+          <a class="btn" href="https://www.polzify.com/"><svg><use href="#i-web"/></svg>Polzify</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Visitor photos have faces blurred, are classified by a multi-modal model, and come out as themes such as crowding and litter">
+          <g>
+            <rect x="10" y="30" width="46" height="40" rx="4" class="d-box"/><rect x="62" y="30" width="46" height="40" rx="4" class="d-box"/>
+            <rect x="10" y="76" width="46" height="40" rx="4" class="d-box"/><rect x="62" y="76" width="46" height="40" rx="4" class="d-box"/>
+            <rect x="10" y="122" width="46" height="40" rx="4" class="d-box"/><rect x="62" y="122" width="46" height="40" rx="4" class="d-box"/>
+            <path d="M12,62 q10,-10 20,-4 t22,-2 V68 H12Z M64,108 q12,-8 22,-2 t20,-4 V114 H64Z M12,154 q10,-8 22,-3 t20,-3 V160 H12Z" class="d-fa3"/>
+            <circle cx="84" cy="46" r="7" class="d-fa2" style="filter:blur(2px)"/><circle cx="30" cy="92" r="7" class="d-fa2" style="filter:blur(2px)"/><circle cx="84" cy="136" r="7" class="d-fa2" style="filter:blur(2px)"/>
+          </g>
+          <text x="59" y="20" text-anchor="middle" class="t-ink">visitor photos</text>
+          <path d="M112,96 H136" class="d-line" marker-end="url(#arr)"/>
+          <rect x="140" y="62" width="100" height="30" rx="8" class="d-box"/><text x="190" y="81" text-anchor="middle" class="t-ink">blur faces</text>
+          <rect x="140" y="102" width="100" height="30" rx="8" class="d-boxa"/><text x="190" y="121" text-anchor="middle" class="t-ink">classify</text>
+          <path d="M190,92 V100" class="d-line" marker-end="url(#arr)"/>
+          <path d="M240,117 H262" class="d-acc" marker-end="url(#arrA)"/>
+          <rect x="266" y="30" width="126" height="140" rx="8" class="d-box"/>
+          <rect x="276" y="44" width="72" height="20" rx="10" class="d-boxa"/><text x="312" y="58" text-anchor="middle" class="t-ink">crowding</text>
+          <rect x="276" y="72" width="54" height="20" rx="10" class="d-boxa"/><text x="303" y="86" text-anchor="middle" class="t-ink">litter</text>
+          <rect x="276" y="100" width="82" height="20" rx="10" class="d-box"/><text x="317" y="114" text-anchor="middle">landscape</text>
+          <rect x="276" y="128" width="96" height="20" rx="10" class="d-box"/><text x="324" y="142" text-anchor="middle">where &amp; when</text>
+          <text x="329" y="164" text-anchor="middle">insights</text>
+        </svg>
+        <figcaption>Privacy first, then meaning: photos become themes a destination can act on.</figcaption>
       </figure>
     </article>
 
@@ -867,10 +966,6 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <div><h4>CCE5502 · University of Malta</h4><p>Master's course in AI/ML: MDPs and RL lectures, and scaffolded PPO robotics assignments on the reality gap.</p></div>
       </div>
       <div class="mini">
-        <div><h4>Personal blog</h4><p>Notes on RL basics and travel, from 2020.</p></div>
-        <div class="btns"><a class="btn" href="https://leandergrech.github.io/"><svg><use href="#i-web"/></svg>Visit</a></div>
-      </div>
-      <div class="mini">
         <div><h4>All repositories</h4><p>Experiments, forks and older work.</p></div>
         <div class="btns"><a class="btn" href="https://github.com/leandergrech?tab=repositories"><svg><use href="#i-gh"/></svg>GitHub</a></div>
       </div>
@@ -971,9 +1066,13 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 
     <h3 style="font-size:20px;margin:32px 0 14px">All publications</h3>
     <ul class="pubs">
+      <li><span class="yr">2026</span><span><span class="t">Preliminary validation of a terminal airspace digital assistance through low-fidelity simulation</span><span class="v">45th DASC, Orlando · Best of Session · TADA</span></span><a class="go" href="https://dasconline.org/2026">DASC →</a></li>
+      <li><span class="yr">2026</span><span><span class="t">A machine learning framework for predicting and resolving complex tactical air traffic events using historical data</span><span class="v">Aerospace 13(1), 54 · ASTRA</span></span><a class="go" href="https://doi.org/10.3390/aerospace13010054">DOI →</a></li>
+      <li><span class="yr">2026</span><span><span class="t">Analysing visual user-generated content for destination management</span><span class="v">ENTER 2026, IFITT · Best Full Paper · Polzify</span></span><a class="go" href="https://link.springer.com/book/9783032239242">Springer →</a></li>
       <li><span class="yr">2026</span><span><span class="t">Achieving fast and robust perfect entangling gates via reinforcement learning</span><span class="v">Quantum Science and Technology 11, 015030</span></span><a class="go" href="https://doi.org/10.1088/2058-9565/ae2c16">DOI →</a></li>
       <li><span class="yr">sub.</span><span><span class="t">Surrogate model driven RL optimization of the TWOCRYST crystal angular alignment</span><span class="v">EPJ Research Instrumentation · submitted · corresponding author</span></span><span class="v">in review</span></li>
       <li><span class="yr">2025</span><span><span class="t">Receipt information extraction with joint multi-modal transformer and rule-based model</span><span class="v">Machine Learning and Knowledge Extraction 7(4), 167 · ADACE3</span></span><a class="go" href="https://doi.org/10.3390/make7040167">DOI →</a></li>
+      <li><span class="yr">2025</span><span><span class="t">AI-enabled tactical FMP hotspot prediction and resolution (ASTRA): a solution for traffic complexity management in en-route airspace</span><span class="v">Engineering Proceedings 90, 91 · EASN 2025 · ASTRA</span></span><a class="go" href="https://doi.org/10.3390/engproc2025090091">DOI →</a></li>
       <li><span class="yr">2022</span><span><span class="t">Application of reinforcement learning in the LHC tune feedback</span><span class="v">Frontiers in Physics 10 · PhD</span></span><a class="go" href="https://doi.org/10.3389/fphy.2022.929064">DOI →</a></li>
       <li><span class="yr">2021</span><span><span class="t">Renovation of the beam-based feedback controller in the LHC</span><span class="v">ICALEPCS'21 · PhD</span></span><a class="go" href="https://proceedings.jacow.org/icalepcs2021/">JACoW →</a></li>
       <li><span class="yr">2021</span><span><span class="t">A machine learning approach for the tune estimation in the LHC</span><span class="v">Information 12(5), 197 · PhD</span></span><a class="go" href="https://doi.org/10.3390/info12050197">DOI →</a></li>
@@ -987,6 +1086,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 <footer>
   <div class="wrap">
     <span>© 2026 Leander Grech · Malta</span>
+    <span><a href="https://www.linkedin.com/in/grechleander/">LinkedIn</a> · <a href="https://github.com/leandergrech">GitHub</a></span>
     <span class="mono">RL × physical control</span>
   </div>
 </footer>
