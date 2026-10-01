@@ -96,7 +96,7 @@ flowchart LR
 
 | Year | Publication | Venue |
 |---|---|---|
-| 2026 | Preliminary validation of a terminal airspace digital assistance through low-fidelity simulation | 45th DASC · Best of Session |
+| 2026 | Preliminary validation of a terminal airspace digital assistant through low-fidelity simulation | 45th DASC · Best of Session |
 | 2026 | [A machine learning framework for predicting and resolving complex tactical air traffic events using historical data](https://doi.org/10.3390/aerospace13010054) | Aerospace |
 | 2026 | [Analysing visual user-generated content for destination management](https://link.springer.com/book/9783032239242) | ENTER 2026 · Best Full Paper |
 | 2026 | [Achieving fast and robust perfect entangling gates via reinforcement learning](https://doi.org/10.1088/2058-9565/ae2c16) | Quantum Sci. Technol. |
