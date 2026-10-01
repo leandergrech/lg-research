@@ -15,7 +15,7 @@ flowchart LR
 
 ## Projects
 
-> The tokamak, rocket-engine and Flatland repositories are **preliminary**: their literature reviews and baseline code were generated with AI assistance (Claude) to scope each benchmark. My own contribution starts at the design-optimisation stage (MDP, reward and agent design).
+> The tokamak, rocket-engine and Flatland repositories are **preliminary**: their literature reviews and baseline code were generated with AI assistance (Claude) to scope each benchmark.
 
 | Project | Domain | Status | Site | Code |
 |---|---|---|---|---|
