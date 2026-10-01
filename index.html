@@ -168,6 +168,13 @@ svg text.t-big { font-size: 13px; }
 .points li { position: relative; padding-left: 20px; font-size: 14.5px; }
 .points li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 8px; height: 8px; border-radius: 2px; background: var(--c, var(--accent)); transform: rotate(45deg); }
 
+/* Map links */
+.map-node { cursor: pointer; }
+.map-node circle.d-box { transition: stroke .15s, stroke-width .15s; }
+.map-node:hover circle.d-box, .map-node:focus circle.d-box { stroke: var(--accent); stroke-width: 2.5; }
+.map-node:hover text.t-ink { fill: var(--accent); }
+section.block, article.project { scroll-margin-top: 76px; }
+
 /* Also */
 .also { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
 .eo-sea { fill: #3b82c4; } .eo-field { fill: #7cb35a; } .eo-road { fill: #9aa0a6; } path.eo-road { stroke: #9aa0a6; } .eo-bld { fill: #d9a066; }
@@ -283,20 +290,20 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       <text x="210" y="186" text-anchor="middle" class="t-ink t-big">RL</text>
       <text x="210" y="202" text-anchor="middle">agent</text>
 
-      <g transform="translate(210,60)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
-        <path d="M-12,0 q3,-10 6,0 t6,0 t6,0 t6,0" class="d-ink"/><text y="-38" text-anchor="middle" class="t-ink">Quantum gates</text></g>
-      <g transform="translate(312,109)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa2 pulse-dot"/>
-        <path d="M-3,-12 c12,0 14,6 14,12 c0,6 -2,12 -14,12 c-4,-6 -5,-8 -5,-12 c0,-4 1,-6 5,-12z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Fusion plasma</text></g>
-      <g transform="translate(337,219)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa pulse-dot"/>
-        <path d="M-7,-12 h14 l-3,10 l7,14 h-22 l7,-14z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Rocket engines</text></g>
-      <g transform="translate(266,307)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
-        <path d="M-16,-5 h32 M-16,5 h32 M-10,-10 v20 M0,-10 v20 M10,-10 v20" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Railway ops</text></g>
-      <g transform="translate(154,307)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa2 pulse-dot"/>
-        <path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Air traffic</text></g>
-      <g transform="translate(83,219)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa pulse-dot"/>
-        <circle r="11" class="d-ink"/><path d="M-4,-16 q6,6 0,12" class="d-acc2"/><text y="44" text-anchor="middle" class="t-ink">Accelerators</text></g>
-      <g transform="translate(108,109)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
-        <path d="M-15,5 a15,15 0 0 1 30,0" class="d-ink"/><line x1="0" y1="5" x2="10" y2="-7" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Teaching RL</text></g>
+      <a href="#rlquantopt" class="map-node" aria-label="Quantum gates: RLQuantOpt"><g transform="translate(210,60)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
+        <path d="M-12,0 q3,-10 6,0 t6,0 t6,0 t6,0" class="d-ink"/><text y="-38" text-anchor="middle" class="t-ink">Quantum gates</text></g></a>
+      <a href="#tokamak" class="map-node" aria-label="Fusion plasma: tokamak ramp-up"><g transform="translate(312,109)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa2 pulse-dot"/>
+        <path d="M-3,-12 c12,0 14,6 14,12 c0,6 -2,12 -14,12 c-4,-6 -5,-8 -5,-12 c0,-4 1,-6 5,-12z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Fusion plasma</text></g></a>
+      <a href="#rocket" class="map-node" aria-label="Rocket engines: rocket engine control"><g transform="translate(337,219)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa pulse-dot"/>
+        <path d="M-7,-12 h14 l-3,10 l7,14 h-22 l7,-14z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Rocket engines</text></g></a>
+      <a href="#flatland" class="map-node" aria-label="Railway ops: Flatland rescheduling"><g transform="translate(266,307)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
+        <path d="M-16,-5 h32 M-16,5 h32 M-10,-10 v20 M0,-10 v20 M10,-10 v20" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Railway ops</text></g></a>
+      <a href="#tada" class="map-node" aria-label="Air traffic: TADA"><g transform="translate(154,307)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa2 pulse-dot"/>
+        <path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Air traffic</text></g></a>
+      <a href="#aicryscon" class="map-node" aria-label="Accelerators: AICRYSCON"><g transform="translate(83,219)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa pulse-dot"/>
+        <circle r="11" class="d-ink"/><path d="M-4,-16 q6,6 0,12" class="d-acc2"/><text y="44" text-anchor="middle" class="t-ink">Accelerators</text></g></a>
+      <a href="#teaching" class="map-node" aria-label="Teaching RL: Teaching"><g transform="translate(108,109)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
+        <path d="M-15,5 a15,15 0 0 1 30,0" class="d-ink"/><line x1="0" y1="5" x2="10" y2="-7" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Teaching RL</text></g></a>
     </svg>
   </section>
 
@@ -308,7 +315,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     </div>
 
     <!-- RLQuantOpt -->
-    <article class="project" style="--c: var(--accent3)">
+    <article id="rlquantopt" class="project" style="--c: var(--accent3)">
       <div>
         <div class="chips"><span class="status">Published · v2 active</span><span class="chip">quantum control</span><span class="chip">JAX</span><span class="chip">transmons</span></div>
         <h3>RLQuantOpt</h3>
@@ -350,7 +357,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     </article>
 
     <!-- Tokamak -->
-    <article class="project" style="--c: var(--accent2)">
+    <article id="tokamak" class="project" style="--c: var(--accent2)">
       <div>
         <div class="chips"><span class="status">Active · baselines running</span><span class="chip">fusion</span><span class="chip">Gym-TORAX</span><span class="chip">model-based RL</span></div>
         <h3>RL for tokamak current ramp-up</h3>
@@ -400,7 +407,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     </article>
 
     <!-- Rocket -->
-    <article class="project" style="--c: var(--accent)">
+    <article id="rocket" class="project" style="--c: var(--accent)">
       <div>
         <div class="chips"><span class="status">Review done · awaiting simulator</span><span class="chip">propulsion</span><span class="chip">MIMO tracking</span><span class="chip">DLR LUMEN</span></div>
         <h3>RL for rocket engine control</h3>
@@ -457,7 +464,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     </article>
 
     <!-- Flatland -->
-    <article class="project" style="--c: var(--accent3)">
+    <article id="flatland" class="project" style="--c: var(--accent3)">
       <div>
         <div class="chips"><span class="status">Active · baselines complete</span><span class="chip">multi-agent RL</span><span class="chip">operations research</span><span class="chip">Flatland</span></div>
         <h3>RL for Flatland train rescheduling</h3>
@@ -524,7 +531,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     <div class="section-note"><b>Code not public.</b> These projects run on partner infrastructure; the summaries below are drawn from project reports and publications.</div>
 
     <!-- TADA -->
-    <article class="project" style="--c: var(--accent2)">
+    <article id="tada" class="project" style="--c: var(--accent2)">
       <div>
         <div class="chips"><span class="status">Active · lead researcher</span><span class="chip">Best of Session · DASC 2026</span><span class="chip lock">private codebase</span><span class="chip">air traffic control</span></div>
         <h3>TADA: Terminal Airspace Digital Assistant</h3>
@@ -625,7 +632,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     </article>
 
     <!-- AICRYSCON -->
-    <article class="project" style="--c: var(--accent3)">
+    <article id="aicryscon" class="project" style="--c: var(--accent3)">
       <div>
         <div class="chips"><span class="status">Beam-tested · paper submitted</span><span class="chip lock">private codebase</span><span class="chip">CERN LHC</span><span class="chip">TWOCRYST</span></div>
         <h3>AICRYSCON: autonomous crystal alignment</h3>
