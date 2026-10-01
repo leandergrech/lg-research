@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <script>
   // Apply the saved theme before first paint.
-  try { var t = localStorage.getItem('lg-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  try { var t = localStorage.getItem('lg-theme-v2'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
 <style>
 /* ───────────── Themes ───────────── */
@@ -256,16 +256,15 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       <div class="eyebrow">Leander Grech · Malta</div>
       <h1>Reinforcement learning for <em>physical control</em>.</h1>
       <p class="lead">I train agents to steer real machines: shaping microwave pulses for superconducting qubits,
-        ramping up plasma current in a tokamak, throttling a rocket engine, rescheduling trains on a broken network,
-        sequencing arrivals into a busy airport and aligning bent crystals in the LHC. I also sharpen satellite imagery for
-        Earth observation and extract data from documents. Open projects come with a reproducible codebase and a written review of their field.</p>
+        sequencing arrivals into busy airports and aligning bent crystals in the LHC. I also sharpen satellite imagery for
+        Earth observation and extract data from documents. Next on my list: fusion plasmas, rocket engines and railway networks.</p>
       <div class="btns">
         <a class="btn primary" href="#projects">Explore the work</a>
         <a class="btn" href="https://github.com/leandergrech"><svg><use href="#i-gh"/></svg>GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/grechleander/"><svg><use href="#i-in"/></svg>LinkedIn</a>
       </div>
       <div class="stats">
-        <div class="stat"><b>6</b><span>physical control domains</span></div>
+        <div class="stat"><b>3</b><span>control domains with published RL work</span></div>
         <div class="stat"><b>13</b><span>papers: 5 journal, 7 conference, 1 submitted</span></div>
         <div class="stat"><b>2</b><span>paper awards: DASC 2026, ENTER 2026</span></div>
       </div>
@@ -292,11 +291,11 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 
       <a href="#rlquantopt" class="map-node" aria-label="Quantum gates: RLQuantOpt"><g transform="translate(210,60)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
         <path d="M-12,0 q3,-10 6,0 t6,0 t6,0 t6,0" class="d-ink"/><text y="-38" text-anchor="middle" class="t-ink">Quantum gates</text></g></a>
-      <a href="#tokamak" class="map-node" aria-label="Fusion plasma: tokamak ramp-up"><g transform="translate(312,109)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa2 pulse-dot"/>
+      <a href="#tokamak" class="map-node" aria-label="Fusion plasma: tokamak ramp-up"><g transform="translate(312,109)"><circle r="27" class="d-box" style="stroke-dasharray:4 4"/><circle cx="17" cy="-17" r="4" class="d-fa2 pulse-dot"/>
         <path d="M-3,-12 c12,0 14,6 14,12 c0,6 -2,12 -14,12 c-4,-6 -5,-8 -5,-12 c0,-4 1,-6 5,-12z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Fusion plasma</text></g></a>
-      <a href="#rocket" class="map-node" aria-label="Rocket engines: rocket engine control"><g transform="translate(337,219)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa pulse-dot"/>
+      <a href="#rocket" class="map-node" aria-label="Rocket engines: rocket engine control"><g transform="translate(337,219)"><circle r="27" class="d-box" style="stroke-dasharray:4 4"/><circle cx="17" cy="-17" r="4" class="d-fa pulse-dot"/>
         <path d="M-7,-12 h14 l-3,10 l7,14 h-22 l7,-14z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Rocket engines</text></g></a>
-      <a href="#flatland" class="map-node" aria-label="Railway ops: Flatland rescheduling"><g transform="translate(266,307)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
+      <a href="#flatland" class="map-node" aria-label="Railway ops: Flatland rescheduling"><g transform="translate(266,307)"><circle r="27" class="d-box" style="stroke-dasharray:4 4"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
         <path d="M-16,-5 h32 M-16,5 h32 M-10,-10 v20 M0,-10 v20 M10,-10 v20" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Railway ops</text></g></a>
       <a href="#tada" class="map-node" aria-label="Air traffic: TADA"><g transform="translate(154,307)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa2 pulse-dot"/>
         <path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Air traffic</text></g></a>
@@ -304,6 +303,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <circle r="11" class="d-ink"/><path d="M-4,-16 q6,6 0,12" class="d-acc2"/><text y="44" text-anchor="middle" class="t-ink">Accelerators</text></g></a>
       <a href="#teaching" class="map-node" aria-label="Teaching RL: Teaching"><g transform="translate(108,109)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
         <path d="M-15,5 a15,15 0 0 1 30,0" class="d-ink"/><line x1="0" y1="5" x2="10" y2="-7" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Teaching RL</text></g></a>
+      <text x="416" y="376" text-anchor="end">dashed: preliminary</text>
     </svg>
   </section>
 
@@ -311,7 +311,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
   <section class="block" id="projects">
     <div class="sec-head">
       <h2>Research projects</h2>
-      <p>Each site is a literature review plus a runnable codebase.</p>
+      <p>Published work with open code and documentation.</p>
     </div>
 
     <!-- RLQuantOpt -->
@@ -356,10 +356,13 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       </figure>
     </article>
 
+    <h3 id="preliminary" style="font-size:22px;margin:40px 0 12px">Preliminary: open control benchmarks</h3>
+    <div class="section-note"><b>Early stage.</b> These literature reviews and baseline codebases were generated with AI assistance (Claude) to map each problem, its benchmark and its open questions. My own work starts at the next stage: optimising the design of the MDP, the reward and the agent.</div>
+
     <!-- Tokamak -->
     <article id="tokamak" class="project" style="--c: var(--accent2)">
       <div>
-        <div class="chips"><span class="status">Active · baselines running</span><span class="chip">fusion</span><span class="chip">Gym-TORAX</span><span class="chip">model-based RL</span></div>
+        <div class="chips"><span class="status">Preliminary · scoping</span><span class="chip lock">AI-assisted scaffold</span><span class="chip">fusion</span><span class="chip">Gym-TORAX</span><span class="chip">model-based RL</span></div>
         <h3>RL for tokamak current ramp-up</h3>
         <div class="sub">ITER hybrid-scenario ramp-up on the Gym-TORAX benchmark</div>
         <p>Every second for 150 s, the agent sets the plasma current and the NBI and ECRH heating power. The repo reproduces the
@@ -409,7 +412,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     <!-- Rocket -->
     <article id="rocket" class="project" style="--c: var(--accent)">
       <div>
-        <div class="chips"><span class="status">Review done · awaiting simulator</span><span class="chip">propulsion</span><span class="chip">MIMO tracking</span><span class="chip">DLR LUMEN</span></div>
+        <div class="chips"><span class="status">Preliminary · scoping</span><span class="chip lock">AI-assisted scaffold</span><span class="chip">propulsion</span><span class="chip">MIMO tracking</span><span class="chip">DLR LUMEN</span></div>
         <h3>RL for rocket engine control</h3>
         <div class="sub">Deep RL for a liquid-propellant engine, anchored on the LUMEN Control Challenge</div>
         <p>LUMEN is DLR's 25 kN liquid-oxygen / methane expander-bleed engine. Two turbine valves must track chamber pressure (thrust)
@@ -466,7 +469,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     <!-- Flatland -->
     <article id="flatland" class="project" style="--c: var(--accent3)">
       <div>
-        <div class="chips"><span class="status">Active · baselines complete</span><span class="chip">multi-agent RL</span><span class="chip">operations research</span><span class="chip">Flatland</span></div>
+        <div class="chips"><span class="status">Preliminary · scoping</span><span class="chip lock">AI-assisted scaffold</span><span class="chip">multi-agent RL</span><span class="chip">operations research</span><span class="chip">Flatland</span></div>
         <h3>RL for Flatland train rescheduling</h3>
         <div class="sub">Can multi-agent RL close the gap to operations research on railways?</div>
         <p>Trains on a grid-drawn network must reach their targets inside timetable windows without sharing cells, while random malfunctions
@@ -1103,7 +1106,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     btns.forEach(function (b) {
       b.addEventListener('click', function () {
         root.dataset.theme = b.dataset.set;
-        try { localStorage.setItem('lg-theme', b.dataset.set); } catch (e) {}
+        try { localStorage.setItem('lg-theme-v2', b.dataset.set); } catch (e) {}
         mark();
       });
     });

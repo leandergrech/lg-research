@@ -15,12 +15,14 @@ flowchart LR
 
 ## Projects
 
+> The tokamak, rocket-engine and Flatland repositories are **preliminary**: their literature reviews and baseline code were generated with AI assistance (Claude) to scope each benchmark. My own contribution starts at the design-optimisation stage (MDP, reward and agent design).
+
 | Project | Domain | Status | Site | Code |
 |---|---|---|---|---|
 | **RLQuantOpt** — fast, robust perfect-entangling gates via RL | Quantum control | Published (QST 2026) · v2 active | [site](https://leandergrech.github.io/rlquantopt/) | [repo](https://github.com/leandergrech/rlquantopt) |
-| **RL for tokamak current ramp-up** — Gym-TORAX ITER hybrid scenario | Fusion | Active | [site](https://leandergrech.github.io/rl-tokamak-rampup/) | [repo](https://github.com/leandergrech/rl-tokamak-rampup) |
-| **RL for rocket engine control** — DLR LUMEN Control Challenge | Propulsion | Review done · awaiting simulator | [site](https://leandergrech.github.io/rl-rocket-engine-control/) | [repo](https://github.com/leandergrech/rl-rocket-engine-control) |
-| **RL for Flatland train rescheduling** — MARL vs operations research | Railways | Active | [site](https://leandergrech.github.io/rl-flatland-rescheduling/) | [repo](https://github.com/leandergrech/rl-flatland-rescheduling) |
+| **RL for tokamak current ramp-up** — Gym-TORAX ITER hybrid scenario | Fusion | Preliminary · AI-assisted scaffold | [site](https://leandergrech.github.io/rl-tokamak-rampup/) | [repo](https://github.com/leandergrech/rl-tokamak-rampup) |
+| **RL for rocket engine control** — DLR LUMEN Control Challenge | Propulsion | Preliminary · AI-assisted scaffold | [site](https://leandergrech.github.io/rl-rocket-engine-control/) | [repo](https://github.com/leandergrech/rl-rocket-engine-control) |
+| **RL for Flatland train rescheduling** — MARL vs operations research | Railways | Preliminary · AI-assisted scaffold | [site](https://leandergrech.github.io/rl-flatland-rescheduling/) | [repo](https://github.com/leandergrech/rl-flatland-rescheduling) |
 | **RL Bootcamp — Participant Primer** | Teaching | Live handbook | [site](https://leandergrech.github.io/rl-bootcamp-setup-lg/) | [repo](https://github.com/leandergrech/rl-bootcamp-setup-lg) |
 
 ### RLQuantOpt
