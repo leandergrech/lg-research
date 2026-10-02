@@ -2,7 +2,7 @@
 
 **Curated research portfolio of Leander Grech — reinforcement learning for physical control.**
 
-🌐 **Live site: <https://leandergrech.github.io/lg-research/>** · [LinkedIn](https://www.linkedin.com/in/grechleander/)
+🌐 **Live site: <https://leandergrech.github.io/lg-research/>** · [LinkedIn](https://www.linkedin.com/in/grechleander/) · ✉️ grechleander@gmail.com — open to research collaborations and consulting
 
 ```mermaid
 flowchart LR
@@ -64,7 +64,7 @@ flowchart LR
 |---|---|---|---|
 | **TADA** — Terminal Airspace Digital Assistant: RL arrival sequencing at Milan Malpensa (trombone) and Bergamo (point merge) · [single-agent docs](https://leander-grech.github.io/tada-single-agent-docs/) | Air traffic control | Active · researcher · Best of Session, DASC 2026 | 92.7 % of flights within ±60 s of AMAN target · 63/100 twenty-flight streams solved · 3/100 with a loss of separation; on point merge, no loss of separation on feasible streams |
 | **ASTRA** — en-route hotspot prediction (~1 h ahead) and RL resolution; I designed the prototype RL agent that paved the way for TADA | Air traffic control | Completed · TRL 2 | [Aerospace 2026](https://doi.org/10.3390/aerospace13010054) · [EASN 2025](https://doi.org/10.3390/engproc2025090091); real-time use still needs weather, knock-on effects and live integration |
-| **AICRYSCON** — autonomous alignment of one bent crystal (TCCP) in TWOCRYST | CERN LHC | Beam-tested · paper submitted to EPJ-RI | PPO agent on a data-driven surrogate of beam-test data; replaces 2–4 h manual sweeps with 1–3 min recoveries |
+| **AICRYSCON** — autonomous alignment of one bent crystal (TCCP) in TWOCRYST | CERN LHC | Beam-tested · paper submitted to EPJ-RI | PPO agent on a data-driven surrogate of beam-test data; replaces 2–4 h manual sweeps with 1–3 min recoveries; real-machine performance paper in preparation (PRAB) |
 
 ```mermaid
 flowchart LR

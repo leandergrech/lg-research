@@ -3,8 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leander Grech · Research</title>
-<meta name="description" content="Curated research portfolio of Leander Grech: reinforcement learning for physical control systems — quantum gates, fusion plasmas, rocket engines, railway networks.">
+<title>Leander Grech — Reinforcement learning for physical control</title>
+<meta name="description" content="Leander Grech, PhD — researcher building and evaluating reinforcement-learning agents for real control systems: quantum gates, air traffic, particle accelerators, plus applied ML for Earth observation and document AI.">
+<link rel="canonical" href="https://leandergrech.github.io/lg-research/">
+<meta name="theme-color" content="#050a1a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leander Grech — Reinforcement learning for physical control">
+<meta property="og:description" content="RL agents for quantum gates, air traffic and particle accelerators: publications, results and code.">
+<meta property="og:url" content="https://leandergrech.github.io/lg-research/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050a1a'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23ff8a3d'/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Leander Grech","honorificSuffix":"PhD","jobTitle":"Postdoctoral researcher","affiliation":{"@type":"CollegeOrUniversity","name":"University of Malta"},"url":"https://leandergrech.github.io/lg-research/","email":"mailto:grechleander@gmail.com","sameAs":["https://github.com/leandergrech","https://www.linkedin.com/in/grechleander/"],"knowsAbout":["Reinforcement learning","Control systems","Quantum optimal control","Air traffic management","Particle accelerators"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -207,6 +216,72 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
   .themes .lbl { display: none; }
   .mini { flex-direction: column; align-items: flex-start; }
 }
+
+/* ───────────── Portfolio v2 ───────────── */
+.skip { position: absolute; left: -9999px; top: 8px; z-index: 50; background: var(--accent); color: var(--bg); padding: 8px 14px; border-radius: 8px; font-weight: 600; }
+.skip:focus { left: 12px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.brand small { font-family: var(--font-body); font-weight: 500; color: var(--muted); font-size: 13px; margin-left: 2px; }
+.top .cta { padding: 7px 14px; font-size: 13px; }
+.hdr-right { display: flex; align-items: center; gap: 14px; }
+.hero h1 { font-size: clamp(34px, 5vw, 56px); }
+.interests { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.interests .chip { font-size: 12px; padding: 4px 10px; color: var(--ink); background: var(--panel); }
+.sec-head h2 { font-size: clamp(24px, 3vw, 30px); }
+.sec-head p { max-width: 36em; }
+.evidence { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.ev { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--c, var(--accent)); border-radius: var(--radius); padding: 18px 18px 14px; display: flex; flex-direction: column; gap: 8px; }
+.ev .dom { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--c, var(--accent)); }
+.ev b { font-family: var(--font-head); font-size: clamp(22px, 2.1vw, 28px); line-height: 1.15; white-space: nowrap; }
+.ev .links span { color: var(--muted); }
+.btn.icon { padding: 10px 12px; }
+.project .viz { align-self: center; }
+#research .also { margin: 0 0 40px; }
+.ev p { margin: 0; color: var(--muted); font-size: 14px; flex: 1; }
+.ev .links { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; border-top: 1px solid var(--line); padding-top: 10px; }
+.ev .links a { text-decoration: none; }
+.about { display: grid; grid-template-columns: 1.15fr .85fr; gap: 28px; align-items: start; }
+.about .bio p { margin: 0 0 14px; font-size: 16.5px; }
+.about .bio p:first-child::first-line { color: var(--ink); }
+.skills { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; display: grid; gap: 16px; }
+.skills h3 { font-size: 13px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 8px; }
+.skills ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14.5px; display: grid; gap: 4px; }
+.skills ul li::marker { color: var(--accent); }
+.tier { display: flex; align-items: center; gap: 12px; margin: 8px 0 18px; font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.tier::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+details.more { margin: 12px 0 0; border-top: 1px solid var(--line); padding-top: 10px; }
+details.more summary { cursor: pointer; font-size: 13.5px; font-weight: 600; color: var(--c, var(--accent)); list-style: none; display: inline-flex; align-items: center; gap: 6px; }
+details.more summary::-webkit-details-marker { display: none; }
+details.more summary::before { content: "+"; font-family: 'JetBrains Mono', monospace; display: inline-block; width: 14px; }
+details.more[open] summary::before { content: "−"; }
+.project > div > .btns { margin-top: 18px; }
+.explore-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.explore-grid .project { grid-template-columns: 1fr; padding: 20px; margin: 0; gap: 14px; box-shadow: none; }
+.explore-grid .project .viz { order: -1; padding: 10px; }
+.explore-grid .project .viz figcaption { display: none; }
+.explore-grid .project h3 { font-size: 19px; }
+.explore-grid .project .sub { font-size: 14px; margin-bottom: 4px; }
+.explore-grid .project p { font-size: 14px; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+.explore-grid .kpis, .explore-grid details.more { display: none; }
+.explore-grid .btn { padding: 8px 13px; font-size: 13px; }
+.offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 22px; }
+.offer { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+.offer h3 { font-size: 18px; margin: 0 0 8px; }
+.offer p { margin: 0; color: var(--muted); font-size: 14.5px; }
+.contact-box { background: var(--panel2); border: 1px solid var(--line); border-radius: calc(var(--radius) + 4px); padding: 26px 28px; box-shadow: var(--glow); }
+.contact-box .mail { font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--ink); margin: 4px 0 18px; display: block; }
+.pub-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.pub-filter button { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--muted); cursor: pointer; }
+.pub-filter button[aria-pressed="true"] { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+.pubs .tag { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; }
+.pubs .award { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; padding: 1px 8px; border-radius: 999px; color: var(--accent2); border: 1px solid color-mix(in srgb, var(--accent2) 55%, transparent); margin-left: 4px; white-space: nowrap; }
+.pubs li[hidden] { display: none; }
+.degrees { margin-top: 36px; }
+footer .wrap a { color: var(--muted); }
+footer .wrap a:hover { color: var(--ink); }
+@media (max-width: 1100px) { .evidence { grid-template-columns: repeat(2, 1fr); } .explore-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 860px) { .about, .offers { grid-template-columns: 1fr; } .explore-grid { grid-template-columns: 1fr; } .hdr-right .lbl { display: none; } }
+@media (max-width: 560px) { .evidence { grid-template-columns: 1fr; } .top .cta { display: none; } .contact-box { padding: 20px; } }
 </style>
 </head>
 <body>
@@ -226,47 +301,54 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
   </defs>
 </svg>
 
+<a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#"><span class="dot"></span>LG · Research</a>
-    <nav class="links">
-      <a href="#projects">Research</a>
-      <a href="#applied">Aviation &amp; CERN</a>
-      <a href="#eo">Earth obs.</a>
-      <a href="#teaching">Teaching</a>
+    <a class="brand" href="#top"><span class="dot"></span>Leander Grech <small>PhD</small></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#results">Results</a>
+      <a href="#research">Research</a>
       <a href="#pubs">Publications</a>
-      <a href="https://www.linkedin.com/in/grechleander/">LinkedIn</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#about">About</a>
     </nav>
-    <div class="themes" role="group" aria-label="Colour theme">
-      <span class="lbl">Theme</span>
-      <button data-set="control-room" title="Control Room" style="background:linear-gradient(135deg,#07090c 50%,#39d98a 50%)"></button>
-      <button data-set="transmon" title="Transmon" style="background:linear-gradient(135deg,#0b0718 50%,#b18cff 50%)"></button>
-      <button data-set="plasma" title="Plasma" style="background:linear-gradient(135deg,#050a1a 50%,#ff8a3d 50%)"></button>
-      <button data-set="limestone" title="Limestone" style="background:linear-gradient(135deg,#f6efe3 50%,#1f5f9e 50%)"></button>
-      <button data-set="blueprint" title="Blueprint" style="background:linear-gradient(135deg,#0f3a66 50%,#ffffff 50%)"></button>
+    <div class="hdr-right">
+      <div class="themes" role="group" aria-label="Colour theme">
+        <span class="lbl">Theme</span>
+        <button data-set="control-room" title="Control Room" aria-label="Control Room theme" style="background:linear-gradient(135deg,#07090c 50%,#39d98a 50%)"></button>
+        <button data-set="transmon" title="Transmon" aria-label="Transmon theme" style="background:linear-gradient(135deg,#0b0718 50%,#b18cff 50%)"></button>
+        <button data-set="plasma" title="Plasma" aria-label="Plasma theme" style="background:linear-gradient(135deg,#050a1a 50%,#ff8a3d 50%)"></button>
+        <button data-set="limestone" title="Limestone" aria-label="Limestone theme" style="background:linear-gradient(135deg,#f6efe3 50%,#1f5f9e 50%)"></button>
+        <button data-set="blueprint" title="Blueprint" aria-label="Blueprint theme" style="background:linear-gradient(135deg,#0f3a66 50%,#ffffff 50%)"></button>
+      </div>
+      <a class="btn primary cta" href="#contact">Contact</a>
     </div>
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main">
 
   <!-- ───────────── Hero ───────────── -->
-  <section class="hero">
+  <section class="hero" id="top">
     <div>
-      <div class="eyebrow">Leander Grech · Malta</div>
+      <div class="eyebrow">Leander Grech, PhD · University of Malta</div>
       <h1>Reinforcement learning for <em>physical control</em>.</h1>
-      <p class="lead">I train agents to steer real machines: shaping microwave pulses for superconducting qubits,
-        sequencing arrivals into busy airports and aligning bent crystals in the LHC. I also sharpen satellite imagery for
-        Earth observation and extract data from documents. Next on my list: fusion plasmas, rocket engines and railway networks.</p>
+      <p class="lead">I design and evaluate reinforcement-learning agents for systems where mistakes are expensive:
+        quantum gates, air traffic and particle accelerators. The work runs from MDP and reward design to validation with
+        air traffic controllers and tests on beam. Alongside it, I apply ML to Earth observation, document AI and tourism analytics.</p>
+      <div class="interests" aria-label="Research interests">
+        <span class="chip">reward &amp; MDP design</span><span class="chip">safety-first objectives</span><span class="chip">data-driven surrogate environments</span><span class="chip">robustness to drift</span><span class="chip">sim-to-real</span>
+      </div>
       <div class="btns">
-        <a class="btn primary" href="#projects">Explore the work</a>
-        <a class="btn" href="https://github.com/leandergrech"><svg><use href="#i-gh"/></svg>GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/grechleander/"><svg><use href="#i-in"/></svg>LinkedIn</a>
+        <a class="btn primary" href="#results">Selected results</a>
+        <a class="btn" href="#contact">Collaborate or consult</a>
+        <a class="btn icon" href="https://github.com/leandergrech" aria-label="GitHub" title="GitHub"><svg aria-hidden="true"><use href="#i-gh"/></svg></a>
+        <a class="btn icon" href="https://www.linkedin.com/in/grechleander/" aria-label="LinkedIn" title="LinkedIn"><svg aria-hidden="true"><use href="#i-in"/></svg></a>
       </div>
       <div class="stats">
-        <div class="stat"><b>3</b><span>control domains with published RL work</span></div>
-        <div class="stat"><b>13</b><span>papers: 5 journal, 7 conference, 1 submitted</span></div>
+        <div class="stat"><b>13</b><span>publications: 5 journal, 7 conference, 1 submitted</span></div>
         <div class="stat"><b>2</b><span>paper awards: DASC 2026, ENTER 2026</span></div>
+        <div class="stat"><b>2</b><span>systems validated with air traffic controllers or on beam</span></div>
       </div>
     </div>
 
@@ -307,13 +389,57 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     </svg>
   </section>
 
-  <!-- ───────────── Projects ───────────── -->
-  <section class="block" id="projects">
+  <!-- ───────────── Selected results ───────────── -->
+  <section class="block" id="results">
     <div class="sec-head">
-      <h2>Research projects</h2>
-      <p>Published work with open code and documentation.</p>
+      <h2>Selected results</h2>
+      <p>Headline numbers from completed work, each linked to the paper or documentation behind it.</p>
+    </div>
+    <div class="evidence">
+      <div class="ev" style="--c: var(--accent3)"><span class="dom">Quantum control</span><b>~10 ns</b><p>Perfect-entangling two-qubit gate found by an RL agent, at the quantum speed limit of the transmon model, with robustness compared against Krotov-optimised pulses.</p><div class="links"><a href="#rlquantopt">Project ↓</a><a href="https://doi.org/10.1088/2058-9565/ae2c16">QST 2026 →</a></div></div>
+      <div class="ev" style="--c: var(--accent2)"><span class="dom">Air traffic</span><b>92.7 %</b><p>Of flights land within ±60 s of their AMAN target on 20-flight Malpensa streams; separation lost on 3 of 100. Paper: Best of Session, DASC 2026.</p><div class="links"><a href="#tada">Project ↓</a><a href="https://leander-grech.github.io/tada-single-agent-docs/">Evaluation docs →</a></div></div>
+      <div class="ev" style="--c: var(--accent)"><span class="dom">Particle accelerators</span><b>2–4 h → 1–3 min</b><p>Manual angular sweeps versus an RL recovery run, for aligning one bent crystal (TCCP) in the TWOCRYST experiment; beam-tested April 2026.</p><div class="links"><a href="#aicryscon">Project ↓</a><span>EPJ-RI, submitted</span></div></div>
+      <div class="ev" style="--c: var(--accent3)"><span class="dom">Document AI</span><b>0.98 F1</b><p>On receipt fields, line items included, combining an OCR ensemble, a layout-aware transformer and rule-based checks.</p><div class="links"><a href="#adace3">Project ↓</a><a href="https://doi.org/10.3390/make7040167">MAKE 2025 →</a></div></div>
+    </div>
+  </section>
+
+  <!-- ───────────── About ───────────── -->
+  <section class="block" id="about">
+    <div class="sec-head">
+      <h2>About</h2>
+      <p>From LHC feedback systems to agents tested with controllers and on beam.</p>
+    </div>
+    <div class="about">
+      <div class="bio">
+        <p>I am a postdoctoral researcher at the University of Malta. My PhD (2022) renovated the beam-based feedback systems of CERN's Large Hadron Collider and tested reinforcement learning as a replacement for its classical tune-feedback controller.</p>
+        <p>Since then I have built RL agents for quantum gate design, en-route and terminal air traffic, and bent-crystal alignment in the LHC, and applied machine learning to satellite super-resolution, receipt extraction and tourism analytics.</p>
+        <p>I also teach RL: a Master's course at the University of Malta and the hands-on tutorial track of the Reinforcement Learning Bootcamp.</p>
+      </div>
+      <div class="skills">
+        <div><h3>Methods</h3><ul>
+          <li>MDP and reward design, including lexicographic safety-first objectives</li>
+          <li>Data-driven surrogate environments built from machine data</li>
+          <li>Autoregressive, permutation-equivariant policies for multi-object control</li>
+          <li>Robustness to drift, noise and the sim-to-real gap</li>
+          <li>Evaluation on held-out seeds with paired comparisons</li>
+        </ul></div>
+        <div><h3>Tools</h3><ul>
+          <li>PyTorch, JAX, Stable-Baselines3, RLlib, Gymnasium</li>
+          <li>Hydra, MLflow, SLURM and rented GPUs</li>
+          <li>CERN controls (PyJAPC) and PyQt operator GUIs</li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── Research ───────────── -->
+  <section class="block" id="research">
+    <div class="sec-head">
+      <h2>Research</h2>
+      <p>Completed and published work first, then applied projects, then early-stage exploration.</p>
     </div>
 
+    <div class="tier" id="projects">Featured · published or tested on real systems</div>
     <!-- RLQuantOpt -->
     <article id="rlquantopt" class="project" style="--c: var(--accent3)">
       <div>
@@ -356,9 +482,339 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       </figure>
     </article>
 
-    <h3 id="preliminary" style="font-size:22px;margin:40px 0 12px">Preliminary: open control benchmarks</h3>
-    <div class="section-note"><b>Early stage.</b> These literature reviews and baseline codebases were generated with AI assistance (Claude) to map each problem, its benchmark and its open questions.</div>
+    <!-- TADA -->
+    <article id="tada" class="project" style="--c: var(--accent2)">
+      <div>
+        <div class="chips"><span class="status">Researcher · SESAR 3 JU</span><span class="chip">Best of Session · DASC 2026</span><span class="chip lock">private codebase</span><span class="chip">air traffic control</span></div>
+        <h3>TADA: Terminal Airspace Digital Assistant</h3>
+        <div class="sub">RL arrival sequencing at Milan Malpensa and Bergamo</div>
+        <p>TADA builds a digital assistant for terminal-airspace controllers, and I work on its RL agent. An arrival manager (AMAN) gives every
+          flight a target landing time; the agent works the arrival like a controller: every 45 s it picks an aircraft, then a clearance
+          (speed, route shortcut, path stretching, vectors to the ILS), so that each flight lands on time without two aircraft ever losing
+          separation. It flies streams of 20 flights through a window of the next 10 in the queue.</p>
+        <div class="kpis">
+          <div class="kpi"><b>92.7 %</b><span>flights land within ±60 s of target</span></div>
+          <div class="kpi"><b>63 / 100</b><span>20-flight streams fully solved</span></div>
+          <div class="kpi"><b>3 / 100</b><span>streams with a loss of separation</span></div>
+        </div>
+        <details class="more"><summary>Key contributions</summary>
+        <ul class="points">
+          <li><b>Two airports, two arrival designs:</b> the Malpensa trombone and the Bergamo point merge. Trained on point merge, the agent lost separation on none of the 48 feasible validation streams and landed 93 % of flights on time.</li>
+          <li><b>Lexicographic objective:</b> safety first (3 NM / 500 ft), then landing precision, then fewest clearances.</li>
+          <li><b>Reselection:</b> allowing a second clearance per step roughly doubled solved streams; precision had been bandwidth-limited.</li>
+          <li><b>With controllers:</b> low-fidelity simulation trials with active ATCOs at ENAV's Rome ACC; the paper won Best of Session at the 45th DASC (Orlando, 2026).</li>
+        </ul>
+        </details>
+        <div class="btns">
+          <a class="btn primary" href="https://dasconline.org/2026"><svg><use href="#i-doc"/></svg>Paper · DASC 2026</a>
+          <a class="btn" href="https://leander-grech.github.io/tada-single-agent-docs/"><svg><use href="#i-web"/></svg>Single-agent docs</a>
+          <a class="btn" href="https://research.dblue.it/tada/"><svg><use href="#i-web"/></svg>Project site</a>
+          <a class="btn" href="https://www.sesarju.eu/projects/TADA"><svg><use href="#i-web"/></svg>SESAR 3 JU</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Agent picks an aircraft and a clearance each 45 seconds to sequence arrivals through a trombone arrival onto the runway">
+          <rect x="8" y="12" width="112" height="44" rx="8" class="d-boxa"/>
+          <text x="64" y="31" text-anchor="middle" class="t-ink">RL agent</text>
+          <text x="64" y="46" text-anchor="middle">every 45 s</text>
+          <text x="8" y="74">aircraft → clearance</text>
+          <text x="8" y="100">AMAN queue</text>
+          <rect x="8" y="106" width="112" height="15" rx="3" class="d-box"/><text x="14" y="117">#1 → t₁</text>
+          <rect x="8" y="124" width="112" height="15" rx="3" class="d-box"/><text x="14" y="135">#2 → t₂</text>
+          <rect x="8" y="142" width="112" height="15" rx="3" class="d-box"/><text x="14" y="153">#3 → t₃</text>
+          <rect x="8" y="160" width="112" height="15" rx="3" class="d-box"/><text x="14" y="171">… next 10</text>
+          <!-- trombone -->
+          <path d="M392,40 H190" class="d-ink"/>
+          <path d="M190,40 H150 V150 H190" class="d-line d-dash"/>
+          <path d="M230,40 V150" class="d-line d-dash"/>
+          <path d="M190,40 V150 H330" class="d-acc"/>
+          <rect x="330" y="144" width="62" height="12" rx="2" class="d-box"/>
+          <path d="M336,150 H386" class="d-line d-dash"/>
+          <text x="300" y="30" class="t-ink">downwind</text>
+          <text x="152" y="186">lengthen / shorten trombone</text>
+          <text x="262" y="170">final</text>
+          <text x="361" y="172" text-anchor="middle">RWY</text>
+          <!-- aircraft -->
+          <g transform="translate(350,40) rotate(-90) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa3"/></g>
+          <g transform="translate(262,40) rotate(-90) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa"/></g>
+          <g transform="translate(190,98) rotate(180) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa3"/></g>
+          <g transform="translate(270,150) rotate(90) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa3"/></g>
+          <circle cx="262" cy="40" r="15" class="d-acc2 d-dash"/>
+          <text x="262" y="72" text-anchor="middle">3 NM</text>
+          <path d="M120,34 C170,14 220,14 246,32" class="d-acc d-dash" marker-end="url(#arrA)"/>
+        </svg>
+        <figcaption>Arrivals are delayed on the trombone's downwind leg and released onto final in AMAN order.</figcaption>
+      </figure>
+    </article>
 
+    <!-- AICRYSCON -->
+    <article id="aicryscon" class="project" style="--c: var(--accent3)">
+      <div>
+        <div class="chips"><span class="status">Beam-tested · paper submitted</span><span class="chip lock">private codebase</span><span class="chip">CERN LHC</span><span class="chip">TWOCRYST</span></div>
+        <h3>AICRYSCON: autonomous crystal alignment</h3>
+        <div class="sub">Deep RL for bent-crystal double channeling in the LHC</div>
+        <p>TWOCRYST steers LHC halo protons through two bent silicon crystals, paving the way for measuring the dipole moments of
+          short-lived charm baryons. The second crystal (TCCP) must sit within a ~13 µrad angular acceptance, and experts find it with
+          manual sweeps that can take 2–4 hours. AICRYSCON replaces the sweep with a PPO agent that reads the pixel detector and beam
+          loss monitors and rotates the goniometer.</p>
+        <div class="kpis">
+          <div class="kpi"><b>~13 µrad</b><span>TCCP angular acceptance</span></div>
+          <div class="kpi"><b>2–4 h</b><span>per manual sweep, 30–50 % of beam time</span></div>
+          <div class="kpi"><b>1–3 min</b><span>per agent recovery (~30–40 steps)</span></div>
+        </div>
+        <details class="more"><summary>Key contributions</summary>
+        <ul class="points">
+          <li><b>Data-driven surrogate:</b> MDHaloEnv synthesises PIX and BLM data recorded in LHC beam tests from 450 GeV to 3 TeV, with no physics simulator.</li>
+          <li><b>Grounded MDP:</b> a current-frame reward, convergence thresholds derived from the detector's salt-and-pepper noise, and a noise-scaled smoothness penalty.</li>
+          <li><b>With beam:</b> in the April 2026 beam test the agent aligned one bent crystal, the TCCP, and recovered double channeling.</li>
+          <li><b>Next:</b> a paper on the agent's real-machine performance is in preparation for Physical Review Accelerators and Beams.</li>
+        </ul>
+        </details>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Halo protons channeled by the TCCS crystal onto the rotating TCCP crystal; the pixel detector shows the double-channeled spot; the agent adjusts the TCCP angle">
+          <line x1="8" y1="70" x2="86" y2="70" class="d-line"/>
+          <text x="8" y="60">LHC halo p⁺</text>
+          <!-- TCCS -->
+          <path d="M88,60 q6,10 0,20" class="d-acc2" style="stroke-width:5"/>
+          <text x="90" y="98" text-anchor="middle" class="t-ink">TCCS</text>
+          <path d="M92,70 Q150,68 196,62" class="d-acc2 flow"/>
+          <!-- TCCP on goniometer -->
+          <path d="M200,52 q16,12 10,26" class="d-acc" style="stroke-width:6"/>
+          <path d="M184,44 a26,26 0 0 1 40,4" class="d-ink" marker-end="url(#arr)"/>
+          <text x="206" y="34" text-anchor="middle" class="t-acc">θ</text>
+          <text x="205" y="98" text-anchor="middle" class="t-ink">TCCP</text>
+          <path d="M212,62 Q280,48 326,40" class="d-acc flow"/>
+          <!-- PIX detector -->
+          <rect x="328" y="18" width="64" height="84" rx="4" class="d-box"/>
+          <circle cx="360" cy="40" r="7" class="d-fa pulse-dot"/>
+          <ellipse cx="360" cy="78" rx="14" ry="6" class="d-fm"/>
+          <text x="360" y="116" text-anchor="middle" class="t-ink">PIX</text>
+          <text x="398" y="44" text-anchor="end" class="t-acc">DC</text>
+          <!-- agent loop -->
+          <rect x="150" y="140" width="110" height="40" rx="8" class="d-boxa"/>
+          <text x="205" y="158" text-anchor="middle" class="t-ink">PPO agent</text>
+          <text x="205" y="172" text-anchor="middle">PIX + BLM stack</text>
+          <path d="M360,122 V160 H262" class="d-line" marker-end="url(#arr)"/>
+          <path d="M205,140 V108" class="d-acc" marker-end="url(#arrA)"/>
+          <text x="214" y="126">Δθ (µrad)</text>
+          <text x="8" y="160">BLMs at TCCS,</text>
+          <text x="8" y="174">TCCP and TCLA</text>
+        </svg>
+        <figcaption>When the TCCP angle is right, the double-channeled spot lights up on the pixel detector.</figcaption>
+      </figure>
+    </article>
+
+    <div class="tier" id="applied">Further research &amp; applied AI</div>
+    <!-- ASTRA -->
+    <article id="astra" class="project" style="--c: var(--accent3)">
+      <div>
+        <div class="chips"><span class="status">Completed · TRL 2</span><span class="chip lock">private codebase</span><span class="chip">en-route ATM</span><span class="chip">RL prototype</span></div>
+        <h3>ASTRA: hotspot prediction and resolution</h3>
+        <div class="sub">The RL prototype that paved the way for TADA</div>
+        <p>ASTRA helps the Flow Management Position see traffic-complexity hotspots in en-route airspace about an hour ahead, instead of
+          the usual twenty minutes, and proposes ranked ways to dissipate them. Working with SkySoft-ATM and University of Malta partners,
+          I designed the prototype RL agent that resolves a hotspot by issuing clearances to the aircraft inside it.</p>
+        <div class="kpis">
+          <div class="kpi"><b>~1 h</b><span>hotspot lookahead, up from ~20 min</span></div>
+          <div class="kpi"><b>4</b><span>RL agent variants</span></div>
+          <div class="kpi"><b>TRL 2</b><span>feasibility target reached</span></div>
+        </div>
+        <details class="more"><summary>Key contributions</summary>
+        <ul class="points">
+          <li><b>Four agents:</b> speed, flight-level and direct-routing clearances, plus a multi-clearance agent that combines them. The multi-clearance agent resolves the most hotspots; the flight-level agent scores best overall.</li>
+          <li><b>Goal met:</b> evaluated on historical Swiss airspace data, ASTRA reached its low-TRL research-feasibility target.</li>
+          <li><b>Not yet real time:</b> live use still needs wind and weather in the trajectory predictions, protection against knock-on hotspots in neighbouring sectors, and integration with live flow-management tools.</li>
+        </ul>
+        </details>
+        <div class="btns">
+          <a class="btn primary" href="https://doi.org/10.3390/aerospace13010054"><svg><use href="#i-doc"/></svg>Paper · Aerospace 2026</a>
+          <a class="btn" href="https://doi.org/10.3390/engproc2025090091"><svg><use href="#i-doc"/></svg>Paper · EASN 2025</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="En-route sectors with converging traffic forming a predicted hotspot; an RL agent issues speed, flight-level and direct-routing clearances to dissipate it">
+          <path d="M10,20 L130,12 L160,90 L60,120 Z M130,12 L250,30 L230,110 L160,90 Z M60,120 L160,90 L230,110 L210,188 L20,180 Z" class="d-line"/>
+          <path d="M14,60 L150,98" class="d-line d-dash"/><path d="M240,40 L150,98" class="d-line d-dash"/><path d="M60,176 L150,98" class="d-line d-dash"/><path d="M150,98 L236,160" class="d-line d-dash"/>
+          <circle cx="150" cy="98" r="30" class="d-acc2 d-dash"/>
+          <circle cx="126" cy="91" r="4" class="d-fa3"/><circle cx="170" cy="84" r="4" class="d-fa3"/><circle cx="138" cy="112" r="4" class="d-fa3"/><circle cx="160" cy="106" r="4" class="d-fa3"/><circle cx="148" cy="92" r="4" class="d-fa3"/>
+          <text x="150" y="56" text-anchor="middle" class="t-ink">hotspot in ~60 min</text>
+          <rect x="276" y="20" width="116" height="40" rx="8" class="d-boxa"/>
+          <text x="334" y="38" text-anchor="middle" class="t-ink">RL agent</text>
+          <text x="334" y="52" text-anchor="middle">ranked options</text>
+          <rect x="276" y="74" width="116" height="24" rx="12" class="d-box"/><text x="334" y="90" text-anchor="middle">speed ±</text>
+          <rect x="276" y="106" width="116" height="24" rx="12" class="d-box"/><text x="334" y="122" text-anchor="middle">flight level ↕</text>
+          <rect x="276" y="138" width="116" height="24" rx="12" class="d-box"/><text x="334" y="154" text-anchor="middle">direct to →</text>
+          <path d="M274,118 C230,118 210,110 184,102" class="d-acc" marker-end="url(#arrA)"/>
+          <text x="334" y="184" text-anchor="middle">or all three combined</text>
+        </svg>
+        <figcaption>Predict where traffic will pile up, then clear the aircraft that cause it.</figcaption>
+      </figure>
+    </article>
+
+    <!-- ADACE3 -->
+    <article id="adace3" class="project" style="--c: var(--accent2)">
+      <div>
+        <div class="chips"><span class="status">Published · 2025</span><span class="chip">MCST FUSION</span><span class="chip">document AI</span><span class="chip">LayoutLMv3</span></div>
+        <h3>ADACE3: receipt data extraction</h3>
+        <div class="sub">From a photo of a receipt to structured accounting data</div>
+        <p>ADACE3 (Automated Document Analysis and Classification for Enhanced Enterprise Efficiency) was a University of Malta and
+          PTL Ltd project, funded by MCST's FUSION programme, to cut the manual work of entering business documents for small companies.
+          The system reads a photographed receipt and returns its fields, line items included.</p>
+        <div class="kpis">
+          <div class="kpi"><b>0.98</b><span>overall F1, line items included</span></div>
+          <div class="kpi"><b>~600</b><span>receipts to train (450 real, 150 synthetic)</span></div>
+          <div class="kpi"><b>12+</b><span>semantic fields per receipt</span></div>
+        </div>
+        <details class="more"><summary>Key contributions</summary>
+        <ul class="points">
+          <li><b>Robust OCR:</b> the outputs of several OCR engines are combined, so faded, creased or skewed receipts still yield clean text and boxes.</li>
+          <li><b>Layout-aware classification:</b> a multi-modal transformer reads each word with its position and the image, and labels it as shop, date, line item, unit price, total, VAT and more.</li>
+          <li><b>Rules and people in the loop:</b> rule-based checks fix the structure, and a labelling tool feeds corrections back into training.</li>
+        </ul>
+        </details>
+        <div class="btns">
+          <a class="btn primary" href="https://doi.org/10.3390/make7040167"><svg><use href="#i-doc"/></svg>Paper · MAKE 2025</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="A photographed receipt passes through OCR and a layout-aware model, and comes out as structured fields">
+          <path d="M14,14 H104 V178 l-9,-6 l-9,6 l-9,-6 l-9,6 l-9,-6 l-9,6 l-9,-6 l-9,6 l-9,-6 l-9,6 Z" class="d-box" transform="rotate(-4 59 96)"/>
+          <g transform="rotate(-4 59 96)">
+            <rect x="30" y="26" width="58" height="8" rx="2" class="d-fa"/>
+            <rect x="24" y="42" width="70" height="5" rx="2" class="d-fm"/>
+            <rect x="24" y="52" width="46" height="5" rx="2" class="d-fa3"/>
+            <rect x="24" y="72" width="44" height="5" rx="2" class="d-fa2"/><rect x="78" y="72" width="16" height="5" rx="2" class="d-fa2"/>
+            <rect x="24" y="84" width="38" height="5" rx="2" class="d-fa2"/><rect x="78" y="84" width="16" height="5" rx="2" class="d-fa2"/>
+            <rect x="24" y="96" width="48" height="5" rx="2" class="d-fa2"/><rect x="78" y="96" width="16" height="5" rx="2" class="d-fa2"/>
+            <rect x="24" y="120" width="30" height="7" rx="2" class="d-fa"/><rect x="70" y="120" width="24" height="7" rx="2" class="d-fa"/>
+            <rect x="24" y="138" width="60" height="5" rx="2" class="d-fm"/>
+          </g>
+          <path d="M112,96 H136" class="d-line" marker-end="url(#arr)"/>
+          <rect x="140" y="62" width="100" height="30" rx="8" class="d-box"/><text x="190" y="81" text-anchor="middle" class="t-ink">OCR ensemble</text>
+          <rect x="140" y="102" width="100" height="30" rx="8" class="d-boxa"/><text x="190" y="121" text-anchor="middle" class="t-ink">layout model</text>
+          <path d="M190,92 V100" class="d-line" marker-end="url(#arr)"/>
+          <path d="M240,117 H262" class="d-acc" marker-end="url(#arrA)"/>
+          <rect x="266" y="30" width="126" height="140" rx="8" class="d-box"/>
+          <text x="276" y="52" class="t-acc">shop</text><text x="382" y="52" text-anchor="end">"…"</text>
+          <text x="276" y="72" class="t-acc">date</text><text x="382" y="72" text-anchor="end">dd/mm/yy</text>
+          <text x="276" y="92" class="t-acc">items</text><text x="382" y="92" text-anchor="end">qty × price</text>
+          <text x="276" y="112" class="t-acc">VAT</text><text x="382" y="112" text-anchor="end">€ …</text>
+          <text x="276" y="132" class="t-acc">total</text><text x="382" y="132" text-anchor="end">€ …</text>
+          <text x="329" y="158" text-anchor="middle">structured record</text>
+        </svg>
+        <figcaption>Every word is read, placed and labelled, then assembled into a record.</figcaption>
+      </figure>
+    </article>
+
+    <!-- VISTA / Polzify -->
+    <article id="vista" class="project" style="--c: var(--accent)">
+      <div>
+        <div class="chips"><span class="status">Best Full Paper · ENTER 2026</span><span class="chip">Polzify</span><span class="chip">tourism analytics</span><span class="chip">privacy by design</span></div>
+        <h3>VISTA: what visitors' photos say about a destination</h3>
+        <div class="sub">Visual user-generated content for destination management</div>
+        <p>At Polzify, a Maltese tourism-AI company, VISTA (Visual Interpretation Systems for Touristic Analysis) turns thousands of
+          public visitor photos into structured insight for destination managers. Applied to Malta's beaches, it shows where visitors
+          go, when, and what they notice, from crowding to litter.</p>
+        <div class="kpis">
+          <div class="kpi"><b>~8,300</b><span>beach photos from 2024 analysed</span></div>
+          <div class="kpi"><b>&gt; 50 %</b><span>of them from just five beaches</span></div>
+          <div class="kpi"><b>Award</b><span>best full paper, IFITT ENTER 2026</span></div>
+        </div>
+        <details class="more"><summary>Key contributions</summary>
+        <ul class="points">
+          <li><b>Privacy by design:</b> faces are blurred before any analysis takes place.</li>
+          <li><b>Multi-modal AI:</b> every photo is classified into tourism themes, with a human in the loop.</li>
+          <li><b>Platform-agnostic:</b> the framework works on visual content whatever platform it comes from.</li>
+        </ul>
+        </details>
+        <div class="btns">
+          <a class="btn primary" href="https://link.springer.com/book/9783032239242"><svg><use href="#i-doc"/></svg>ENTER 2026 proceedings</a>
+          <a class="btn" href="https://www.polzify.com/"><svg><use href="#i-web"/></svg>Polzify</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Visitor photos have faces blurred, are classified by a multi-modal model, and come out as themes such as crowding and litter">
+          <g>
+            <rect x="10" y="30" width="46" height="40" rx="4" class="d-box"/><rect x="62" y="30" width="46" height="40" rx="4" class="d-box"/>
+            <rect x="10" y="76" width="46" height="40" rx="4" class="d-box"/><rect x="62" y="76" width="46" height="40" rx="4" class="d-box"/>
+            <rect x="10" y="122" width="46" height="40" rx="4" class="d-box"/><rect x="62" y="122" width="46" height="40" rx="4" class="d-box"/>
+            <path d="M12,62 q10,-10 20,-4 t22,-2 V68 H12Z M64,108 q12,-8 22,-2 t20,-4 V114 H64Z M12,154 q10,-8 22,-3 t20,-3 V160 H12Z" class="d-fa3"/>
+            <circle cx="84" cy="46" r="7" class="d-fa2" style="filter:blur(2px)"/><circle cx="30" cy="92" r="7" class="d-fa2" style="filter:blur(2px)"/><circle cx="84" cy="136" r="7" class="d-fa2" style="filter:blur(2px)"/>
+          </g>
+          <text x="59" y="20" text-anchor="middle" class="t-ink">visitor photos</text>
+          <path d="M112,96 H136" class="d-line" marker-end="url(#arr)"/>
+          <rect x="140" y="62" width="100" height="30" rx="8" class="d-box"/><text x="190" y="81" text-anchor="middle" class="t-ink">blur faces</text>
+          <rect x="140" y="102" width="100" height="30" rx="8" class="d-boxa"/><text x="190" y="121" text-anchor="middle" class="t-ink">classify</text>
+          <path d="M190,92 V100" class="d-line" marker-end="url(#arr)"/>
+          <path d="M240,117 H262" class="d-acc" marker-end="url(#arrA)"/>
+          <rect x="266" y="30" width="126" height="140" rx="8" class="d-box"/>
+          <rect x="276" y="44" width="72" height="20" rx="10" class="d-boxa"/><text x="312" y="58" text-anchor="middle" class="t-ink">crowding</text>
+          <rect x="276" y="72" width="54" height="20" rx="10" class="d-boxa"/><text x="303" y="86" text-anchor="middle" class="t-ink">litter</text>
+          <rect x="276" y="100" width="82" height="20" rx="10" class="d-box"/><text x="317" y="114" text-anchor="middle">landscape</text>
+          <rect x="276" y="128" width="96" height="20" rx="10" class="d-box"/><text x="324" y="142" text-anchor="middle">where &amp; when</text>
+          <text x="329" y="164" text-anchor="middle">insights</text>
+        </svg>
+        <figcaption>Privacy first, then meaning: photos become themes a destination can act on.</figcaption>
+      </figure>
+    </article>
+
+    <!-- Semablu -->
+    <article id="semablu" class="project" style="--c: var(--accent3)">
+      <div>
+        <div class="chips"><span class="status">Startup · active</span><span class="chip lock">private codebase</span><span class="chip">Earth observation</span><span class="chip">super-resolution</span></div>
+        <h3>Semablu: satellite super-resolution</h3>
+        <div class="sub">Sharper free satellite imagery for land and coastal monitoring</div>
+        <p>Semablu is a small Earth-observation startup working on the Maltese islands and the wider Mediterranean. Sentinel-2 images
+          the whole planet every few days for free, but at 10 m per pixel a building, a field boundary or a strip of shoreline blurs
+          into a handful of pixels. The work is to super-resolve that multispectral imagery ×4, for mapping farmland, towns, coastlines
+          and seagrass meadows. Semablu's first ESA activity (SEMS-2D, under ESA Malta PECS) demonstrated the super-resolved data for soil-erosion monitoring.</p>
+        <div class="kpis">
+          <div class="kpi"><b>10 m</b><span>native Sentinel-2 resolution</span></div>
+          <div class="kpi"><b>×4</b><span>finer ground detail targeted</span></div>
+          <div class="kpi"><b>Multi-band</b><span>visible, red-edge and near-infrared</span></div>
+        </div>
+        <details class="more"><summary>Key contributions</summary>
+        <ul class="points">
+          <li><b>Bicubic upsampling</b> only interpolates between existing pixels: the image gets bigger and smoother, but no new information appears.</li>
+          <li><b>Super-resolution</b> learns from pairs of low- and high-resolution images what fine detail usually sits behind a coarse pixel, and restores it.</li>
+          <li><b>Clean-scene extraction:</b> clouds, shadows and other perturbations are detected in each Sentinel-2 scene, so every usable pixel is kept and noisy acquisitions still add coverage across all spectral bands.</li>
+          <li><b>Built for measurement:</b> the output must stay radiometrically faithful, so indices computed on it can be trusted, not just look sharp.</li>
+        </ul>
+        </details>
+        <div class="btns">
+          <a class="btn primary" href="https://semablu.com/"><svg><use href="#i-web"/></svg>Visit Semablu</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="The same coastal scene with fields, a road and buildings at native Sentinel-2 resolution, upsampled four times by bicubic interpolation, and super-resolved: bicubic is smooth but blurry, super-resolution recovers the shapes">
+          <defs>
+            <filter id="sr-blur" x="0" y="0" width="100%" height="100%"><feGaussianBlur stdDeviation="6"/></filter>
+            <clipPath id="sr-clip"><rect width="120" height="120" rx="6"/></clipPath>
+            <g id="sr-lr"><g class="eo-sea"><rect x="0" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="20" y="60" width="20" height="20" fill-opacity="0.1"/><rect x="0" y="80" width="20" height="20" fill-opacity="1"/><rect x="20" y="80" width="20" height="20" fill-opacity="0.9"/><rect x="40" y="80" width="20" height="20" fill-opacity="0.4"/><rect x="60" y="80" width="20" height="20" fill-opacity="0.1"/><rect x="0" y="100" width="20" height="20" fill-opacity="1"/><rect x="20" y="100" width="20" height="20" fill-opacity="1"/><rect x="40" y="100" width="20" height="20" fill-opacity="1"/><rect x="60" y="100" width="20" height="20" fill-opacity="0.9"/><rect x="80" y="100" width="20" height="20" fill-opacity="0.4"/></g><g class="eo-field"><rect x="0" y="0" width="20" height="20" fill-opacity="0.5"/><rect x="20" y="0" width="20" height="20" fill-opacity="0.7"/><rect x="40" y="0" width="20" height="20" fill-opacity="0.5"/><rect x="60" y="0" width="20" height="20" fill-opacity="0.7"/><rect x="80" y="0" width="20" height="20" fill-opacity="0.6"/><rect x="100" y="0" width="20" height="20" fill-opacity="0.5"/><rect x="0" y="20" width="20" height="20" fill-opacity="0.5"/><rect x="20" y="20" width="20" height="20" fill-opacity="0.7"/><rect x="40" y="20" width="20" height="20" fill-opacity="0.4"/><rect x="60" y="20" width="20" height="20" fill-opacity="0.5"/><rect x="80" y="20" width="20" height="20" fill-opacity="0.8"/><rect x="100" y="20" width="20" height="20" fill-opacity="0.7"/><rect x="0" y="40" width="20" height="20" fill-opacity="0.7"/><rect x="20" y="40" width="20" height="20" fill-opacity="1"/><rect x="40" y="40" width="20" height="20" fill-opacity="0.3"/><rect x="80" y="40" width="20" height="20" fill-opacity="0.3"/><rect x="100" y="40" width="20" height="20" fill-opacity="0.2"/></g><g class="eo-road"><rect x="60" y="40" width="20" height="20" fill-opacity="0.2"/><rect x="80" y="40" width="20" height="20" fill-opacity="0.2"/><rect x="100" y="40" width="20" height="20" fill-opacity="0.2"/><rect x="0" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="20" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="40" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="60" y="60" width="20" height="20" fill-opacity="0.2"/></g><g class="eo-bld"><rect x="60" y="40" width="20" height="20" fill-opacity="0.4"/><rect x="80" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="100" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="80" y="80" width="20" height="20" fill-opacity="0.2"/><rect x="100" y="80" width="20" height="20" fill-opacity="0.2"/></g></g>
+          </defs>
+          <g transform="translate(10,28)"><g clip-path="url(#sr-clip)"><rect width="120" height="120" class="d-box"/><use href="#sr-lr"/></g>
+            <text x="60" y="-10" text-anchor="middle" class="t-ink">Sentinel-2 · 10 m</text><text x="60" y="140" text-anchor="middle">native pixels</text></g>
+          <g transform="translate(140,28)"><g clip-path="url(#sr-clip)"><rect width="120" height="120" class="d-box"/><use href="#sr-lr" filter="url(#sr-blur)"/></g>
+            <text x="60" y="-10" text-anchor="middle" class="t-ink">bicubic ×4</text><text x="60" y="140" text-anchor="middle">no new detail</text></g>
+          <g transform="translate(270,28)"><g clip-path="url(#sr-clip)"><rect width="120" height="120" class="d-box"/><polygon points="0,80 20,76 34,82 46,92 60,96 74,102 86,110 94,120 0,120" class="eo-sea"/><g class="eo-field" fill-opacity=".85"><rect x="6" y="6" width="34" height="26" rx="1"/><rect x="46" y="6" width="32" height="24" rx="1"/><rect x="84" y="6" width="30" height="38" rx="1"/><rect x="6" y="38" width="38" height="22" rx="1"/></g><path d="M0,70 L120,52" class="eo-road" style="stroke-width:3"/><g class="eo-bld"><rect x="58" y="40" width="6" height="6"/><rect x="68" y="44" width="6" height="6"/><rect x="60" y="52" width="6" height="6"/><rect x="74" y="56" width="6" height="6"/><rect x="86" y="58" width="6" height="6"/><rect x="98" y="68" width="6" height="6"/><rect x="106" y="80" width="6" height="6"/><rect x="96" y="86" width="6" height="6"/></g></g>
+            <text x="60" y="-10" text-anchor="middle" class="t-acc">super-resolution ×4</text><text x="60" y="140" text-anchor="middle">shapes recovered</text></g>
+          <path d="M131,88 H139" class="d-line" marker-end="url(#arr)"/>
+          <path d="M261,88 H269" class="d-line" marker-end="url(#arr)"/>
+        </svg>
+        <figcaption>Illustration: fields, a road, buildings and a shoreline at native resolution, bicubic ×4 and super-resolved ×4.</figcaption>
+      </figure>
+    </article>
+
+    <div class="also" id="eo">
+      <div class="mini">
+        <div><h4>POLIRURAL · Horizon Europe</h4><p>Three digital tools for Maltese farmers, from specification to training material.</p></div>
+      </div>
+    </div>
+
+    <div class="tier" id="preliminary">Exploratory · preliminary</div>
+    <div class="section-note"><b>Early stage.</b> These literature reviews and baseline codebases were generated with AI assistance (Claude) to map each problem, its benchmark and its open questions.</div>
+    <div class="explore-grid">
     <!-- Tokamak -->
     <article id="tokamak" class="project" style="--c: var(--accent2)">
       <div>
@@ -408,7 +864,6 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <figcaption>Three actuators, one D-shaped plasma, a 150-second ramp.</figcaption>
       </figure>
     </article>
-
     <!-- Rocket -->
     <article id="rocket" class="project" style="--c: var(--accent)">
       <div>
@@ -465,7 +920,6 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <figcaption>A coupled 2×2 tracking problem: two valves in, thrust and mixture ratio out.</figcaption>
       </figure>
     </article>
-
     <!-- Flatland -->
     <article id="flatland" class="project" style="--c: var(--accent3)">
       <div>
@@ -523,340 +977,127 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <figcaption>The OR–RL gap widens as the network grows (no malfunctions, held-out seeds).</figcaption>
       </figure>
     </article>
+    </div>
   </section>
 
-  <!-- ───────────── Applied: aviation & accelerators ───────────── -->
-  <section class="block" id="applied">
+  <!-- ───────────── Publications ───────────── -->
+  <section class="block" id="pubs">
     <div class="sec-head">
-      <h2>Aviation &amp; particle accelerators</h2>
-      <p>Collaborative projects on real operational systems.</p>
+      <h2>Publications</h2>
+      <p>Journal and conference papers, newest first. Awards are marked.</p>
     </div>
-    <div class="section-note"><b>Code not public.</b> These projects run on partner infrastructure; the summaries below are drawn from project reports and publications.</div>
-
-    <!-- TADA -->
-    <article id="tada" class="project" style="--c: var(--accent2)">
-      <div>
-        <div class="chips"><span class="status">Active · researcher</span><span class="chip">Best of Session · DASC 2026</span><span class="chip lock">private codebase</span><span class="chip">air traffic control</span></div>
-        <h3>TADA: Terminal Airspace Digital Assistant</h3>
-        <div class="sub">RL arrival sequencing at Milan Malpensa and Bergamo</div>
-        <p>TADA builds a digital assistant for terminal-airspace controllers, and I work on its RL agent. An arrival manager (AMAN) gives every
-          flight a target landing time; the agent works the arrival like a controller: every 45 s it picks an aircraft, then a clearance
-          (speed, route shortcut, path stretching, vectors to the ILS), so that each flight lands on time without two aircraft ever losing
-          separation. It flies streams of 20 flights through a window of the next 10 in the queue.</p>
-        <ul class="points">
-          <li><b>Two airports, two arrival designs:</b> the Malpensa trombone and the Bergamo point merge. Trained on point merge, the agent lost separation on none of the 48 feasible validation streams and landed 93 % of flights on time.</li>
-          <li><b>Lexicographic objective:</b> safety first (3 NM / 500 ft), then landing precision, then fewest clearances.</li>
-          <li><b>Reselection:</b> allowing a second clearance per step roughly doubled solved streams; precision had been bandwidth-limited.</li>
-          <li><b>With controllers:</b> low-fidelity simulation trials with active ATCOs at ENAV's Rome ACC; the paper won Best of Session at the 45th DASC (Orlando, 2026).</li>
-        </ul>
-        <div class="kpis">
-          <div class="kpi"><b>92.7 %</b><span>flights land within ±60 s of target</span></div>
-          <div class="kpi"><b>63 / 100</b><span>20-flight streams fully solved</span></div>
-          <div class="kpi"><b>3 / 100</b><span>streams with a loss of separation</span></div>
-        </div>
-        <div class="btns">
-          <a class="btn primary" href="https://dasconline.org/2026"><svg><use href="#i-doc"/></svg>Paper · DASC 2026</a>
-          <a class="btn" href="https://leander-grech.github.io/tada-single-agent-docs/"><svg><use href="#i-web"/></svg>Single-agent docs</a>
-          <a class="btn" href="https://research.dblue.it/tada/"><svg><use href="#i-web"/></svg>Project site</a>
-          <a class="btn" href="https://www.sesarju.eu/projects/TADA"><svg><use href="#i-web"/></svg>SESAR 3 JU</a>
-        </div>
-      </div>
-      <figure class="viz" style="margin:0">
-        <svg viewBox="0 0 400 200" role="img" aria-label="Agent picks an aircraft and a clearance each 45 seconds to sequence arrivals through a trombone arrival onto the runway">
-          <rect x="8" y="12" width="112" height="44" rx="8" class="d-boxa"/>
-          <text x="64" y="31" text-anchor="middle" class="t-ink">RL agent</text>
-          <text x="64" y="46" text-anchor="middle">every 45 s</text>
-          <text x="8" y="74">aircraft → clearance</text>
-          <text x="8" y="100">AMAN queue</text>
-          <rect x="8" y="106" width="112" height="15" rx="3" class="d-box"/><text x="14" y="117">#1 → t₁</text>
-          <rect x="8" y="124" width="112" height="15" rx="3" class="d-box"/><text x="14" y="135">#2 → t₂</text>
-          <rect x="8" y="142" width="112" height="15" rx="3" class="d-box"/><text x="14" y="153">#3 → t₃</text>
-          <rect x="8" y="160" width="112" height="15" rx="3" class="d-box"/><text x="14" y="171">… next 10</text>
-          <!-- trombone -->
-          <path d="M392,40 H190" class="d-ink"/>
-          <path d="M190,40 H150 V150 H190" class="d-line d-dash"/>
-          <path d="M230,40 V150" class="d-line d-dash"/>
-          <path d="M190,40 V150 H330" class="d-acc"/>
-          <rect x="330" y="144" width="62" height="12" rx="2" class="d-box"/>
-          <path d="M336,150 H386" class="d-line d-dash"/>
-          <text x="300" y="30" class="t-ink">downwind</text>
-          <text x="152" y="186">lengthen / shorten trombone</text>
-          <text x="262" y="170">final</text>
-          <text x="361" y="172" text-anchor="middle">RWY</text>
-          <!-- aircraft -->
-          <g transform="translate(350,40) rotate(-90) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa3"/></g>
-          <g transform="translate(262,40) rotate(-90) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa"/></g>
-          <g transform="translate(190,98) rotate(180) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa3"/></g>
-          <g transform="translate(270,150) rotate(90) scale(.6)"><path d="M0,-13 L3,-4 L13,2 L13,5 L3,2 L2,9 L6,12 L6,14 L0,12 L-6,14 L-6,12 L-2,9 L-3,2 L-13,5 L-13,2 L-3,-4Z" class="d-fa3"/></g>
-          <circle cx="262" cy="40" r="15" class="d-acc2 d-dash"/>
-          <text x="262" y="72" text-anchor="middle">3 NM</text>
-          <path d="M120,34 C170,14 220,14 246,32" class="d-acc d-dash" marker-end="url(#arrA)"/>
-        </svg>
-        <figcaption>Arrivals are delayed on the trombone's downwind leg and released onto final in AMAN order.</figcaption>
-      </figure>
-    </article>
-
-    <!-- ASTRA -->
-    <article class="project" style="--c: var(--accent3)">
-      <div>
-        <div class="chips"><span class="status">Completed · TRL 2</span><span class="chip lock">private codebase</span><span class="chip">en-route ATM</span><span class="chip">RL prototype</span></div>
-        <h3>ASTRA: hotspot prediction and resolution</h3>
-        <div class="sub">The RL prototype that paved the way for TADA</div>
-        <p>ASTRA helps the Flow Management Position see traffic-complexity hotspots in en-route airspace about an hour ahead, instead of
-          the usual twenty minutes, and proposes ranked ways to dissipate them. Working with SkySoft-ATM and University of Malta partners,
-          I designed the prototype RL agent that resolves a hotspot by issuing clearances to the aircraft inside it.</p>
-        <ul class="points">
-          <li><b>Four agents:</b> speed, flight-level and direct-routing clearances, plus a multi-clearance agent that combines them. The multi-clearance agent resolves the most hotspots; the flight-level agent scores best overall.</li>
-          <li><b>Goal met:</b> evaluated on historical Swiss airspace data, ASTRA reached its low-TRL research-feasibility target.</li>
-          <li><b>Not yet real time:</b> live use still needs wind and weather in the trajectory predictions, protection against knock-on hotspots in neighbouring sectors, and integration with live flow-management tools.</li>
-        </ul>
-        <div class="kpis">
-          <div class="kpi"><b>~1 h</b><span>hotspot lookahead, up from ~20 min</span></div>
-          <div class="kpi"><b>4</b><span>RL agent variants</span></div>
-          <div class="kpi"><b>TRL 2</b><span>feasibility target reached</span></div>
-        </div>
-        <div class="btns">
-          <a class="btn primary" href="https://doi.org/10.3390/aerospace13010054"><svg><use href="#i-doc"/></svg>Paper · Aerospace 2026</a>
-          <a class="btn" href="https://doi.org/10.3390/engproc2025090091"><svg><use href="#i-doc"/></svg>Paper · EASN 2025</a>
-        </div>
-      </div>
-      <figure class="viz" style="margin:0">
-        <svg viewBox="0 0 400 200" role="img" aria-label="En-route sectors with converging traffic forming a predicted hotspot; an RL agent issues speed, flight-level and direct-routing clearances to dissipate it">
-          <path d="M10,20 L130,12 L160,90 L60,120 Z M130,12 L250,30 L230,110 L160,90 Z M60,120 L160,90 L230,110 L210,188 L20,180 Z" class="d-line"/>
-          <path d="M14,60 L150,98" class="d-line d-dash"/><path d="M240,40 L150,98" class="d-line d-dash"/><path d="M60,176 L150,98" class="d-line d-dash"/><path d="M150,98 L236,160" class="d-line d-dash"/>
-          <circle cx="150" cy="98" r="30" class="d-acc2 d-dash"/>
-          <circle cx="126" cy="91" r="4" class="d-fa3"/><circle cx="170" cy="84" r="4" class="d-fa3"/><circle cx="138" cy="112" r="4" class="d-fa3"/><circle cx="160" cy="106" r="4" class="d-fa3"/><circle cx="148" cy="92" r="4" class="d-fa3"/>
-          <text x="150" y="56" text-anchor="middle" class="t-ink">hotspot in ~60 min</text>
-          <rect x="276" y="20" width="116" height="40" rx="8" class="d-boxa"/>
-          <text x="334" y="38" text-anchor="middle" class="t-ink">RL agent</text>
-          <text x="334" y="52" text-anchor="middle">ranked options</text>
-          <rect x="276" y="74" width="116" height="24" rx="12" class="d-box"/><text x="334" y="90" text-anchor="middle">speed ±</text>
-          <rect x="276" y="106" width="116" height="24" rx="12" class="d-box"/><text x="334" y="122" text-anchor="middle">flight level ↕</text>
-          <rect x="276" y="138" width="116" height="24" rx="12" class="d-box"/><text x="334" y="154" text-anchor="middle">direct to →</text>
-          <path d="M274,118 C230,118 210,110 184,102" class="d-acc" marker-end="url(#arrA)"/>
-          <text x="334" y="184" text-anchor="middle">or all three combined</text>
-        </svg>
-        <figcaption>Predict where traffic will pile up, then clear the aircraft that cause it.</figcaption>
-      </figure>
-    </article>
-
-    <!-- AICRYSCON -->
-    <article id="aicryscon" class="project" style="--c: var(--accent3)">
-      <div>
-        <div class="chips"><span class="status">Beam-tested · paper submitted</span><span class="chip lock">private codebase</span><span class="chip">CERN LHC</span><span class="chip">TWOCRYST</span></div>
-        <h3>AICRYSCON: autonomous crystal alignment</h3>
-        <div class="sub">Deep RL for bent-crystal double channeling in the LHC</div>
-        <p>TWOCRYST steers LHC halo protons through two bent silicon crystals, paving the way for measuring the dipole moments of
-          short-lived charm baryons. The second crystal (TCCP) must sit within a ~13 µrad angular acceptance, and experts find it with
-          manual sweeps that can take 2–4 hours. AICRYSCON replaces the sweep with a PPO agent that reads the pixel detector and beam
-          loss monitors and rotates the goniometer.</p>
-        <ul class="points">
-          <li><b>Data-driven surrogate:</b> MDHaloEnv synthesises PIX and BLM data recorded in LHC beam tests from 450 GeV to 3 TeV, with no physics simulator.</li>
-          <li><b>Grounded MDP:</b> a current-frame reward, convergence thresholds derived from the detector's salt-and-pepper noise, and a noise-scaled smoothness penalty.</li>
-          <li><b>With beam:</b> in the April 2026 beam test the agent aligned one bent crystal, the TCCP, and recovered double channeling.</li>
-        </ul>
-        <div class="kpis">
-          <div class="kpi"><b>~13 µrad</b><span>TCCP angular acceptance</span></div>
-          <div class="kpi"><b>2–4 h</b><span>per manual sweep, 30–50 % of beam time</span></div>
-          <div class="kpi"><b>1–3 min</b><span>per agent recovery (~30–40 steps)</span></div>
-        </div>
-      </div>
-      <figure class="viz" style="margin:0">
-        <svg viewBox="0 0 400 200" role="img" aria-label="Halo protons channeled by the TCCS crystal onto the rotating TCCP crystal; the pixel detector shows the double-channeled spot; the agent adjusts the TCCP angle">
-          <line x1="8" y1="70" x2="86" y2="70" class="d-line"/>
-          <text x="8" y="60">LHC halo p⁺</text>
-          <!-- TCCS -->
-          <path d="M88,60 q6,10 0,20" class="d-acc2" style="stroke-width:5"/>
-          <text x="90" y="98" text-anchor="middle" class="t-ink">TCCS</text>
-          <path d="M92,70 Q150,68 196,62" class="d-acc2 flow"/>
-          <!-- TCCP on goniometer -->
-          <path d="M200,52 q16,12 10,26" class="d-acc" style="stroke-width:6"/>
-          <path d="M184,44 a26,26 0 0 1 40,4" class="d-ink" marker-end="url(#arr)"/>
-          <text x="206" y="34" text-anchor="middle" class="t-acc">θ</text>
-          <text x="205" y="98" text-anchor="middle" class="t-ink">TCCP</text>
-          <path d="M212,62 Q280,48 326,40" class="d-acc flow"/>
-          <!-- PIX detector -->
-          <rect x="328" y="18" width="64" height="84" rx="4" class="d-box"/>
-          <circle cx="360" cy="40" r="7" class="d-fa pulse-dot"/>
-          <ellipse cx="360" cy="78" rx="14" ry="6" class="d-fm"/>
-          <text x="360" y="116" text-anchor="middle" class="t-ink">PIX</text>
-          <text x="398" y="44" text-anchor="end" class="t-acc">DC</text>
-          <!-- agent loop -->
-          <rect x="150" y="140" width="110" height="40" rx="8" class="d-boxa"/>
-          <text x="205" y="158" text-anchor="middle" class="t-ink">PPO agent</text>
-          <text x="205" y="172" text-anchor="middle">PIX + BLM stack</text>
-          <path d="M360,122 V160 H262" class="d-line" marker-end="url(#arr)"/>
-          <path d="M205,140 V108" class="d-acc" marker-end="url(#arrA)"/>
-          <text x="214" y="126">Δθ (µrad)</text>
-          <text x="8" y="160">BLMs at TCCS,</text>
-          <text x="8" y="174">TCCP and TCLA</text>
-        </svg>
-        <figcaption>When the TCCP angle is right, the double-channeled spot lights up on the pixel detector.</figcaption>
-      </figure>
-    </article>
-
-  </section>
-
-  <!-- ───────────── Earth observation & applied AI ───────────── -->
-  <section class="block" id="eo">
-    <div class="sec-head">
-      <h2>Earth observation &amp; applied AI</h2>
-      <p>Machine learning beyond control.</p>
+    <div class="pub-filter" role="group" aria-label="Filter publications">
+      <button type="button" data-f="all" aria-pressed="true">All (13)</button>
+      <button type="button" data-f="journal" aria-pressed="false">Journal (5)</button>
+      <button type="button" data-f="conference" aria-pressed="false">Conference (7)</button>
+      <button type="button" data-f="award" aria-pressed="false">Awards (2)</button>
     </div>
+    <ul class="pubs">
+      <li data-kind="journal"><span class="yr">2026</span><span><span class="t">Achieving fast and robust perfect entangling gates via reinforcement learning</span><span class="v">Quantum Science and Technology 11, 015030 · <span class="tag">RLQuantOpt</span></span></span><a class="go" href="https://doi.org/10.1088/2058-9565/ae2c16">DOI →</a></li>
+      <li data-kind="journal"><span class="yr">2026</span><span><span class="t">A machine learning framework for predicting and resolving complex tactical air traffic events using historical data</span><span class="v">Aerospace 13(1), 54 · <span class="tag">ASTRA</span></span></span><a class="go" href="https://doi.org/10.3390/aerospace13010054">DOI →</a></li>
+      <li data-kind="conference" data-award="1"><span class="yr">2026</span><span><span class="t">Preliminary validation of a terminal airspace digital assistant through low-fidelity simulation</span><span class="v">45th Digital Avionics Systems Conference (DASC), Orlando · <span class="tag">TADA</span> <span class="award">Best of Session</span></span></span><a class="go" href="https://dasconline.org/2026">DASC →</a></li>
+      <li data-kind="conference" data-award="1"><span class="yr">2026</span><span><span class="t">Analysing visual user-generated content for destination management</span><span class="v">ENTER 2026, IFITT · <span class="tag">VISTA · Polzify</span> <span class="award">Best Full Paper</span></span></span><a class="go" href="https://link.springer.com/book/9783032239242">Springer →</a></li>
+      <li data-kind="journal"><span class="yr">2025</span><span><span class="t">Receipt information extraction with joint multi-modal transformer and rule-based model</span><span class="v">Machine Learning and Knowledge Extraction 7(4), 167 · <span class="tag">ADACE3</span></span></span><a class="go" href="https://doi.org/10.3390/make7040167">DOI →</a></li>
+      <li data-kind="conference"><span class="yr">2025</span><span><span class="t">AI-enabled tactical FMP hotspot prediction and resolution (ASTRA): a solution for traffic complexity management in en-route airspace</span><span class="v">Engineering Proceedings 90, 91 · EASN 2025 · <span class="tag">ASTRA</span></span></span><a class="go" href="https://doi.org/10.3390/engproc2025090091">DOI →</a></li>
+      <li data-kind="submitted"><span class="yr">sub.</span><span><span class="t">Surrogate model driven RL optimization of the TWOCRYST crystal angular alignment</span><span class="v">EPJ Research Instrumentation · submitted · corresponding author · <span class="tag">AICRYSCON</span></span></span><span class="v">in review</span></li>
+      <li data-kind="journal"><span class="yr">2022</span><span><span class="t">Application of reinforcement learning in the LHC tune feedback</span><span class="v">Frontiers in Physics 10 · <span class="tag">PhD</span></span></span><a class="go" href="https://doi.org/10.3389/fphy.2022.929064">DOI →</a></li>
+      <li data-kind="conference"><span class="yr">2021</span><span><span class="t">Renovation of the beam-based feedback controller in the LHC</span><span class="v">ICALEPCS 2021 · <span class="tag">PhD</span></span></span><a class="go" href="https://proceedings.jacow.org/icalepcs2021/">JACoW →</a></li>
+      <li data-kind="journal"><span class="yr">2021</span><span><span class="t">A machine learning approach for the tune estimation in the LHC</span><span class="v">Information 12(5), 197 · <span class="tag">PhD</span></span></span><a class="go" href="https://doi.org/10.3390/info12050197">DOI →</a></li>
+      <li data-kind="conference"><span class="yr">2020</span><span><span class="t">An alternative processing algorithm for the tune measurement system in the LHC</span><span class="v">IBIC 2020 · <span class="tag">PhD</span></span></span><a class="go" href="https://cds.cern.ch/record/2772585">CDS →</a></li>
+      <li data-kind="conference"><span class="yr">2019</span><span><span class="t">Feasibility of hardware acceleration in the LHC orbit feedback controller</span><span class="v">ICALEPCS 2019 · <span class="tag">PhD</span></span></span><a class="go" href="https://doi.org/10.18429/JACoW-ICALEPCS2019-MOPHA151">DOI →</a></li>
+      <li data-kind="conference"><span class="yr">2018</span><span><span class="t">Collision avoidance system for the RP survey and visual inspection train in the CERN Large Hadron Collider</span><span class="v">IEEE CASE 2018 · <span class="tag">B.Sc.</span></span></span><a class="go" href="https://ieeexplore.ieee.org/document/8560485/">IEEE →</a></li>
+    </ul>
 
-    <!-- Semablu -->
-    <article class="project" style="--c: var(--accent3)">
-      <div>
-        <div class="chips"><span class="status">Startup · active</span><span class="chip lock">private codebase</span><span class="chip">Earth observation</span><span class="chip">super-resolution</span></div>
-        <h3>Semablu: satellite super-resolution</h3>
-        <div class="sub">Sharper free satellite imagery for land and coastal monitoring</div>
-        <p>Semablu is a small Earth-observation startup working on the Maltese islands and the wider Mediterranean. Sentinel-2 images
-          the whole planet every few days for free, but at 10 m per pixel a building, a field boundary or a strip of shoreline blurs
-          into a handful of pixels. The work is to super-resolve that multispectral imagery ×4, for mapping farmland, towns, coastlines
-          and seagrass meadows. Semablu's first ESA activity (SEMS-2D, under ESA Malta PECS) demonstrated the super-resolved data for soil-erosion monitoring.</p>
-        <ul class="points">
-          <li><b>Bicubic upsampling</b> only interpolates between existing pixels: the image gets bigger and smoother, but no new information appears.</li>
-          <li><b>Super-resolution</b> learns from pairs of low- and high-resolution images what fine detail usually sits behind a coarse pixel, and restores it.</li>
-          <li><b>Clean-scene extraction:</b> clouds, shadows and other perturbations are detected in each Sentinel-2 scene, so every usable pixel is kept and noisy acquisitions still add coverage across all spectral bands.</li>
-          <li><b>Built for measurement:</b> the output must stay radiometrically faithful, so indices computed on it can be trusted, not just look sharp.</li>
-        </ul>
-        <div class="kpis">
-          <div class="kpi"><b>10 m</b><span>native Sentinel-2 resolution</span></div>
-          <div class="kpi"><b>×4</b><span>finer ground detail targeted</span></div>
-          <div class="kpi"><b>Multi-band</b><span>visible, red-edge and near-infrared</span></div>
-        </div>
-        <div class="btns">
-          <a class="btn primary" href="https://semablu.com/"><svg><use href="#i-web"/></svg>Visit Semablu</a>
-        </div>
-      </div>
-      <figure class="viz" style="margin:0">
-        <svg viewBox="0 0 400 200" role="img" aria-label="The same coastal scene with fields, a road and buildings at native Sentinel-2 resolution, upsampled four times by bicubic interpolation, and super-resolved: bicubic is smooth but blurry, super-resolution recovers the shapes">
-          <defs>
-            <filter id="sr-blur" x="0" y="0" width="100%" height="100%"><feGaussianBlur stdDeviation="6"/></filter>
-            <clipPath id="sr-clip"><rect width="120" height="120" rx="6"/></clipPath>
-            <g id="sr-lr"><g class="eo-sea"><rect x="0" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="20" y="60" width="20" height="20" fill-opacity="0.1"/><rect x="0" y="80" width="20" height="20" fill-opacity="1"/><rect x="20" y="80" width="20" height="20" fill-opacity="0.9"/><rect x="40" y="80" width="20" height="20" fill-opacity="0.4"/><rect x="60" y="80" width="20" height="20" fill-opacity="0.1"/><rect x="0" y="100" width="20" height="20" fill-opacity="1"/><rect x="20" y="100" width="20" height="20" fill-opacity="1"/><rect x="40" y="100" width="20" height="20" fill-opacity="1"/><rect x="60" y="100" width="20" height="20" fill-opacity="0.9"/><rect x="80" y="100" width="20" height="20" fill-opacity="0.4"/></g><g class="eo-field"><rect x="0" y="0" width="20" height="20" fill-opacity="0.5"/><rect x="20" y="0" width="20" height="20" fill-opacity="0.7"/><rect x="40" y="0" width="20" height="20" fill-opacity="0.5"/><rect x="60" y="0" width="20" height="20" fill-opacity="0.7"/><rect x="80" y="0" width="20" height="20" fill-opacity="0.6"/><rect x="100" y="0" width="20" height="20" fill-opacity="0.5"/><rect x="0" y="20" width="20" height="20" fill-opacity="0.5"/><rect x="20" y="20" width="20" height="20" fill-opacity="0.7"/><rect x="40" y="20" width="20" height="20" fill-opacity="0.4"/><rect x="60" y="20" width="20" height="20" fill-opacity="0.5"/><rect x="80" y="20" width="20" height="20" fill-opacity="0.8"/><rect x="100" y="20" width="20" height="20" fill-opacity="0.7"/><rect x="0" y="40" width="20" height="20" fill-opacity="0.7"/><rect x="20" y="40" width="20" height="20" fill-opacity="1"/><rect x="40" y="40" width="20" height="20" fill-opacity="0.3"/><rect x="80" y="40" width="20" height="20" fill-opacity="0.3"/><rect x="100" y="40" width="20" height="20" fill-opacity="0.2"/></g><g class="eo-road"><rect x="60" y="40" width="20" height="20" fill-opacity="0.2"/><rect x="80" y="40" width="20" height="20" fill-opacity="0.2"/><rect x="100" y="40" width="20" height="20" fill-opacity="0.2"/><rect x="0" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="20" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="40" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="60" y="60" width="20" height="20" fill-opacity="0.2"/></g><g class="eo-bld"><rect x="60" y="40" width="20" height="20" fill-opacity="0.4"/><rect x="80" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="100" y="60" width="20" height="20" fill-opacity="0.2"/><rect x="80" y="80" width="20" height="20" fill-opacity="0.2"/><rect x="100" y="80" width="20" height="20" fill-opacity="0.2"/></g></g>
-          </defs>
-          <g transform="translate(10,28)"><g clip-path="url(#sr-clip)"><rect width="120" height="120" class="d-box"/><use href="#sr-lr"/></g>
-            <text x="60" y="-10" text-anchor="middle" class="t-ink">Sentinel-2 · 10 m</text><text x="60" y="140" text-anchor="middle">native pixels</text></g>
-          <g transform="translate(140,28)"><g clip-path="url(#sr-clip)"><rect width="120" height="120" class="d-box"/><use href="#sr-lr" filter="url(#sr-blur)"/></g>
-            <text x="60" y="-10" text-anchor="middle" class="t-ink">bicubic ×4</text><text x="60" y="140" text-anchor="middle">no new detail</text></g>
-          <g transform="translate(270,28)"><g clip-path="url(#sr-clip)"><rect width="120" height="120" class="d-box"/><polygon points="0,80 20,76 34,82 46,92 60,96 74,102 86,110 94,120 0,120" class="eo-sea"/><g class="eo-field" fill-opacity=".85"><rect x="6" y="6" width="34" height="26" rx="1"/><rect x="46" y="6" width="32" height="24" rx="1"/><rect x="84" y="6" width="30" height="38" rx="1"/><rect x="6" y="38" width="38" height="22" rx="1"/></g><path d="M0,70 L120,52" class="eo-road" style="stroke-width:3"/><g class="eo-bld"><rect x="58" y="40" width="6" height="6"/><rect x="68" y="44" width="6" height="6"/><rect x="60" y="52" width="6" height="6"/><rect x="74" y="56" width="6" height="6"/><rect x="86" y="58" width="6" height="6"/><rect x="98" y="68" width="6" height="6"/><rect x="106" y="80" width="6" height="6"/><rect x="96" y="86" width="6" height="6"/></g></g>
-            <text x="60" y="-10" text-anchor="middle" class="t-acc">super-resolution ×4</text><text x="60" y="140" text-anchor="middle">shapes recovered</text></g>
-          <path d="M131,88 H139" class="d-line" marker-end="url(#arr)"/>
-          <path d="M261,88 H269" class="d-line" marker-end="url(#arr)"/>
-        </svg>
-        <figcaption>Illustration: fields, a road, buildings and a shoreline at native resolution, bicubic ×4 and super-resolved ×4.</figcaption>
-      </figure>
-    </article>
-
-    <!-- ADACE3 -->
-    <article class="project" style="--c: var(--accent2)">
-      <div>
-        <div class="chips"><span class="status">Published · 2025</span><span class="chip">MCST FUSION</span><span class="chip">document AI</span><span class="chip">LayoutLMv3</span></div>
-        <h3>ADACE3: receipt data extraction</h3>
-        <div class="sub">From a photo of a receipt to structured accounting data</div>
-        <p>ADACE3 (Automated Document Analysis and Classification for Enhanced Enterprise Efficiency) was a University of Malta and
-          PTL Ltd project, funded by MCST's FUSION programme, to cut the manual work of entering business documents for small companies.
-          The system reads a photographed receipt and returns its fields, line items included.</p>
-        <ul class="points">
-          <li><b>Robust OCR:</b> the outputs of several OCR engines are combined, so faded, creased or skewed receipts still yield clean text and boxes.</li>
-          <li><b>Layout-aware classification:</b> a multi-modal transformer reads each word with its position and the image, and labels it as shop, date, line item, unit price, total, VAT and more.</li>
-          <li><b>Rules and people in the loop:</b> rule-based checks fix the structure, and a labelling tool feeds corrections back into training.</li>
-        </ul>
-        <div class="kpis">
-          <div class="kpi"><b>0.98</b><span>overall F1, line items included</span></div>
-          <div class="kpi"><b>~600</b><span>receipts to train (450 real, 150 synthetic)</span></div>
-          <div class="kpi"><b>12+</b><span>semantic fields per receipt</span></div>
-        </div>
-        <div class="btns">
-          <a class="btn primary" href="https://doi.org/10.3390/make7040167"><svg><use href="#i-doc"/></svg>Paper · MAKE 2025</a>
-        </div>
-      </div>
-      <figure class="viz" style="margin:0">
-        <svg viewBox="0 0 400 200" role="img" aria-label="A photographed receipt passes through OCR and a layout-aware model, and comes out as structured fields">
-          <path d="M14,14 H104 V178 l-9,-6 l-9,6 l-9,-6 l-9,6 l-9,-6 l-9,6 l-9,-6 l-9,6 l-9,-6 l-9,6 Z" class="d-box" transform="rotate(-4 59 96)"/>
-          <g transform="rotate(-4 59 96)">
-            <rect x="30" y="26" width="58" height="8" rx="2" class="d-fa"/>
-            <rect x="24" y="42" width="70" height="5" rx="2" class="d-fm"/>
-            <rect x="24" y="52" width="46" height="5" rx="2" class="d-fa3"/>
-            <rect x="24" y="72" width="44" height="5" rx="2" class="d-fa2"/><rect x="78" y="72" width="16" height="5" rx="2" class="d-fa2"/>
-            <rect x="24" y="84" width="38" height="5" rx="2" class="d-fa2"/><rect x="78" y="84" width="16" height="5" rx="2" class="d-fa2"/>
-            <rect x="24" y="96" width="48" height="5" rx="2" class="d-fa2"/><rect x="78" y="96" width="16" height="5" rx="2" class="d-fa2"/>
-            <rect x="24" y="120" width="30" height="7" rx="2" class="d-fa"/><rect x="70" y="120" width="24" height="7" rx="2" class="d-fa"/>
-            <rect x="24" y="138" width="60" height="5" rx="2" class="d-fm"/>
-          </g>
-          <path d="M112,96 H136" class="d-line" marker-end="url(#arr)"/>
-          <rect x="140" y="62" width="100" height="30" rx="8" class="d-box"/><text x="190" y="81" text-anchor="middle" class="t-ink">OCR ensemble</text>
-          <rect x="140" y="102" width="100" height="30" rx="8" class="d-boxa"/><text x="190" y="121" text-anchor="middle" class="t-ink">layout model</text>
-          <path d="M190,92 V100" class="d-line" marker-end="url(#arr)"/>
-          <path d="M240,117 H262" class="d-acc" marker-end="url(#arrA)"/>
-          <rect x="266" y="30" width="126" height="140" rx="8" class="d-box"/>
-          <text x="276" y="52" class="t-acc">shop</text><text x="382" y="52" text-anchor="end">"…"</text>
-          <text x="276" y="72" class="t-acc">date</text><text x="382" y="72" text-anchor="end">dd/mm/yy</text>
-          <text x="276" y="92" class="t-acc">items</text><text x="382" y="92" text-anchor="end">qty × price</text>
-          <text x="276" y="112" class="t-acc">VAT</text><text x="382" y="112" text-anchor="end">€ …</text>
-          <text x="276" y="132" class="t-acc">total</text><text x="382" y="132" text-anchor="end">€ …</text>
-          <text x="329" y="158" text-anchor="middle">structured record</text>
-        </svg>
-        <figcaption>Every word is read, placed and labelled, then assembled into a record.</figcaption>
-      </figure>
-    </article>
-
-    <!-- VISTA / Polzify -->
+    <div class="tier degrees">Degrees</div>
+    <!-- PhD -->
     <article class="project" style="--c: var(--accent)">
       <div>
-        <div class="chips"><span class="status">Best Full Paper · ENTER 2026</span><span class="chip">Polzify</span><span class="chip">tourism analytics</span><span class="chip">privacy by design</span></div>
-        <h3>VISTA: what visitors' photos say about a destination</h3>
-        <div class="sub">Visual user-generated content for destination management</div>
-        <p>At Polzify, a Maltese tourism-AI company, VISTA (Visual Interpretation Systems for Touristic Analysis) turns thousands of
-          public visitor photos into structured insight for destination managers. Applied to Malta's beaches, it shows where visitors
-          go, when, and what they notice, from crowding to litter.</p>
+        <div class="chips"><span class="status">PhD · University of Malta · 2022</span><span class="chip">CERN LHC</span><span class="chip">beam-based feedback</span></div>
+        <h3>Renovation of the beam-based feedback systems in the LHC</h3>
+        <div class="sub">Supervised by Dr Ing. Gianluca Valentino, co-supervised by Dr Diogo Alves (CERN)</div>
+        <p>The LHC's beam-based feedbacks keep the orbit and the betatron tunes on target throughout every fill. The thesis
+          modernised them on three fronts, from the measurement to the controller to the software that runs it.</p>
+        <details class="more"><summary>Key contributions</summary>
         <ul class="points">
-          <li><b>Privacy by design:</b> faces are blurred before any analysis takes place.</li>
-          <li><b>Multi-modal AI:</b> every photo is classified into tourism themes, with a human in the loop.</li>
-          <li><b>Platform-agnostic:</b> the framework works on visual content whatever platform it comes from.</li>
+          <li><b>Tune estimation:</b> 50 Hz noise harmonics made the tune estimate jump between peaks; models trained on GAN-refined simulated spectra made it stable.</li>
+          <li><b>RL feedback:</b> RL agents (NAF2, PPO) outperformed the PI controller in simulation, and coped better with noise and actuator failures.</li>
+          <li><b>Renovation:</b> GPU acceleration of the orbit feedback proved unnecessary; the controller was rebuilt as BFCLHC with new automation (Function Players).</li>
         </ul>
-        <div class="kpis">
-          <div class="kpi"><b>~8,300</b><span>beach photos from 2024 analysed</span></div>
-          <div class="kpi"><b>&gt; 50 %</b><span>of them from just five beaches</span></div>
-          <div class="kpi"><b>Award</b><span>best full paper, IFITT ENTER 2026</span></div>
-        </div>
-        <div class="btns">
-          <a class="btn primary" href="https://link.springer.com/book/9783032239242"><svg><use href="#i-doc"/></svg>ENTER 2026 proceedings</a>
-          <a class="btn" href="https://www.polzify.com/"><svg><use href="#i-web"/></svg>Polzify</a>
+        </details>
+        <div class="btns" style="margin-top:20px">
+          <a class="btn primary" href="https://www.um.edu.mt/library/oar/bitstream/123456789/104427/1/Leander%20Grech.pdf"><svg><use href="#i-doc"/></svg>Thesis PDF</a>
+          <a class="btn" href="https://www.um.edu.mt/library/oar/handle/123456789/104427"><svg><use href="#i-web"/></svg>OAR@UM record</a>
         </div>
       </div>
       <figure class="viz" style="margin:0">
-        <svg viewBox="0 0 400 200" role="img" aria-label="Visitor photos have faces blurred, are classified by a multi-modal model, and come out as themes such as crowding and litter">
-          <g>
-            <rect x="10" y="30" width="46" height="40" rx="4" class="d-box"/><rect x="62" y="30" width="46" height="40" rx="4" class="d-box"/>
-            <rect x="10" y="76" width="46" height="40" rx="4" class="d-box"/><rect x="62" y="76" width="46" height="40" rx="4" class="d-box"/>
-            <rect x="10" y="122" width="46" height="40" rx="4" class="d-box"/><rect x="62" y="122" width="46" height="40" rx="4" class="d-box"/>
-            <path d="M12,62 q10,-10 20,-4 t22,-2 V68 H12Z M64,108 q12,-8 22,-2 t20,-4 V114 H64Z M12,154 q10,-8 22,-3 t20,-3 V160 H12Z" class="d-fa3"/>
-            <circle cx="84" cy="46" r="7" class="d-fa2" style="filter:blur(2px)"/><circle cx="30" cy="92" r="7" class="d-fa2" style="filter:blur(2px)"/><circle cx="84" cy="136" r="7" class="d-fa2" style="filter:blur(2px)"/>
-          </g>
-          <text x="59" y="20" text-anchor="middle" class="t-ink">visitor photos</text>
-          <path d="M112,96 H136" class="d-line" marker-end="url(#arr)"/>
-          <rect x="140" y="62" width="100" height="30" rx="8" class="d-box"/><text x="190" y="81" text-anchor="middle" class="t-ink">blur faces</text>
-          <rect x="140" y="102" width="100" height="30" rx="8" class="d-boxa"/><text x="190" y="121" text-anchor="middle" class="t-ink">classify</text>
-          <path d="M190,92 V100" class="d-line" marker-end="url(#arr)"/>
-          <path d="M240,117 H262" class="d-acc" marker-end="url(#arrA)"/>
-          <rect x="266" y="30" width="126" height="140" rx="8" class="d-box"/>
-          <rect x="276" y="44" width="72" height="20" rx="10" class="d-boxa"/><text x="312" y="58" text-anchor="middle" class="t-ink">crowding</text>
-          <rect x="276" y="72" width="54" height="20" rx="10" class="d-boxa"/><text x="303" y="86" text-anchor="middle" class="t-ink">litter</text>
-          <rect x="276" y="100" width="82" height="20" rx="10" class="d-box"/><text x="317" y="114" text-anchor="middle">landscape</text>
-          <rect x="276" y="128" width="96" height="20" rx="10" class="d-box"/><text x="324" y="142" text-anchor="middle">where &amp; when</text>
-          <text x="329" y="164" text-anchor="middle">insights</text>
+        <svg viewBox="0 0 400 200" role="img" aria-label="LHC tune feedback loop with the three thesis contributions: tune estimation, RL feedback and controller renovation">
+          <circle cx="72" cy="100" r="54" class="d-ink"/>
+          <circle cx="72" cy="100" r="46" class="d-line d-dash"/>
+          <circle cx="72" cy="46" r="5" class="d-fa pulse-dot"/>
+          <text x="72" y="104" text-anchor="middle" class="t-ink">LHC</text>
+          <rect x="160" y="22" width="110" height="34" rx="8" class="d-box"/>
+          <text x="215" y="43" text-anchor="middle" class="t-ink">tune estimate</text>
+          <rect x="270" y="82" width="120" height="40" rx="8" class="d-boxa"/>
+          <text x="330" y="100" text-anchor="middle" class="t-ink">controller</text>
+          <text x="330" y="114" text-anchor="middle">PI → RL agent</text>
+          <rect x="160" y="146" width="110" height="34" rx="8" class="d-box"/>
+          <text x="215" y="167" text-anchor="middle" class="t-ink">trim quads</text>
+          <path d="M112,64 L158,42" class="d-line" marker-end="url(#arr)"/>
+          <path d="M270,42 Q322,44 326,80" class="d-line" marker-end="url(#arr)"/>
+          <path d="M326,124 Q320,162 272,163" class="d-acc" marker-end="url(#arrA)"/>
+          <path d="M158,163 L114,138" class="d-acc" marker-end="url(#arrA)"/>
+          <rect x="262" y="72" width="136" height="60" rx="10" class="d-line d-dash"/>
+          <circle cx="160" cy="22" r="9" class="d-fa2"/><text x="160" y="26" text-anchor="middle" class="t-ink">1</text>
+          <circle cx="270" cy="102" r="9" class="d-fa2"/><text x="270" y="106" text-anchor="middle" class="t-ink">2</text>
+          <circle cx="262" cy="72" r="9" class="d-fa2"/><text x="262" y="76" text-anchor="middle" class="t-ink">3</text>
+          <text x="394" y="148" text-anchor="end">BFCLHC</text>
         </svg>
-        <figcaption>Privacy first, then meaning: photos become themes a destination can act on.</figcaption>
+        <figcaption>① better tune estimates, ② a learned controller, ③ a rebuilt feedback system.</figcaption>
       </figure>
     </article>
 
-    <div class="also">
-      <div class="mini">
-        <div><h4>POLIRURAL · Horizon Europe</h4><p>Three digital tools for Maltese farmers, from specification to training material.</p></div>
+    <!-- BSc -->
+    <article class="project" style="--c: var(--accent2)">
+      <div>
+        <div class="chips"><span class="status">B.Sc. (Hons) · University of Malta · 2017</span><span class="chip">CERN LHC</span><span class="chip">embedded systems</span></div>
+        <h3>Collision avoidance for the LHC inspection train</h3>
+        <div class="sub">B.Sc. Computer Engineering thesis, published at IEEE CASE 2018</div>
+        <p>The Train Inspection Monorail (TIM) runs along the LHC tunnel ceiling and lowers a retractable radiation-protection
+          arm to survey the machine. The thesis built a working prototype that guards the zone beneath the monorail and raises an
+          alarm when anything enters it.</p>
+        <details class="more"><summary>Key contributions</summary>
+        <ul class="points">
+          <li>Eight infrared time-of-flight distance sensors watch the safety zone below the arm.</li>
+          <li>A Cortex-M microcontroller reads them over multiplexed serial links.</li>
+          <li>Calibration and characterisation of accuracy, thermal drift and partial field-of-view obstruction.</li>
+        </ul>
+        </details>
+        <div class="btns" style="margin-top:20px">
+          <a class="btn primary" href="https://ieeexplore.ieee.org/document/8560485/"><svg><use href="#i-doc"/></svg>IEEE CASE 2018 paper</a>
+          <a class="btn" href="https://www.um.edu.mt/library/oar/handle/123456789/23489"><svg><use href="#i-web"/></svg>Thesis record</a>
+        </div>
       </div>
-    </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="Monorail train with a lowered arm and a fan of infrared sensor beams guarding the zone below; an obstacle entering the zone triggers an alarm">
+          <path d="M10,24 H390" class="d-ink" style="stroke-width:4"/>
+          <text x="14" y="16">monorail (tunnel ceiling)</text>
+          <rect x="120" y="28" width="160" height="30" rx="6" class="d-box"/>
+          <text x="200" y="47" text-anchor="middle" class="t-ink">TIM train</text>
+          <path d="M200,58 V92" class="d-ink" style="stroke-width:3"/>
+          <rect x="186" y="92" width="28" height="12" rx="3" class="d-boxa"/>
+          <text x="232" y="84">RP arm</text>
+          <g class="d-acc2 d-dash">
+            <path d="M200,104 L96,186"/><path d="M200,104 L128,186"/><path d="M200,104 L160,186"/><path d="M200,104 L190,186"/>
+            <path d="M200,104 L210,186"/><path d="M200,104 L240,186"/><path d="M200,104 L272,186"/><path d="M200,104 L304,186"/>
+          </g>
+          <text x="200" y="198" text-anchor="middle">8 IR time-of-flight beams</text>
+          <rect x="300" y="150" width="26" height="36" rx="3" class="d-fa"/>
+          <path d="M340,120 l8,-14 l8,14 z" class="d-acc"/><text x="348" y="118" text-anchor="middle" class="t-acc">!</text>
+          <text x="350" y="140" text-anchor="middle" class="t-acc">alarm</text>
+        </svg>
+        <figcaption>A fan of distance sensors turns the space under the arm into a monitored safety zone.</figcaption>
+      </figure>
+    </article>
   </section>
 
   <!-- ───────────── Teaching ───────────── -->
@@ -873,11 +1114,13 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <div class="sub">Three hands-on sessions, from a Q-table to designing your own MDP</div>
         <p>The tutorial track of the Reinforcement Learning Bootcamp 2026 in Salzburg (16–18 September). Each session is self-contained and
           colour-coded by difficulty, with the code, notebooks, checkpoints and slides in one repository.</p>
+        <details class="more"><summary>Key contributions</summary>
         <ul class="points">
           <li><b>Fundamentals:</b> Q-learning and SARSA on maze gridworlds, up to the point where a Q-table stops working.</li>
           <li><b>Intermediate:</b> PPO and SAC on a MuJoCo Ant, then break a leg and measure what the policy really learned.</li>
           <li><b>Advanced:</b> design the MDP for an air-traffic sector, beat a rule-based controller, and compete on a held-out leaderboard.</li>
         </ul>
+        </details>
         <div class="btns" style="margin-top:20px">
           <a class="btn primary" href="https://sarl-plus.github.io/RL_Bootcamp_2026_tutorial/"><svg><use href="#i-web"/></svg>Visit site</a>
           <a class="btn" href="https://github.com/SARL-PLUS/RL_Bootcamp_2026_tutorial"><svg><use href="#i-gh"/></svg>Repository</a>
@@ -984,123 +1227,34 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       </div>
     </div>
   </section>
-  <!-- ───────────── Degrees & publications ───────────── -->
-  <section class="block" id="pubs">
+
+  <!-- ───────────── Contact ───────────── -->
+  <section class="block" id="contact">
     <div class="sec-head">
-      <h2>Degrees &amp; publications</h2>
-      <p>Where the control work started: the LHC.</p>
+      <h2>Work with me</h2>
+      <p>Open to research collaborations and selected consulting work.</p>
     </div>
-
-    <!-- PhD -->
-    <article class="project" style="--c: var(--accent)">
-      <div>
-        <div class="chips"><span class="status">PhD · University of Malta · 2022</span><span class="chip">CERN LHC</span><span class="chip">beam-based feedback</span></div>
-        <h3>Renovation of the beam-based feedback systems in the LHC</h3>
-        <div class="sub">Supervised by Dr Ing. Gianluca Valentino, co-supervised by Dr Diogo Alves (CERN)</div>
-        <p>The LHC's beam-based feedbacks keep the orbit and the betatron tunes on target throughout every fill. The thesis
-          modernised them on three fronts, from the measurement to the controller to the software that runs it.</p>
-        <ul class="points">
-          <li><b>Tune estimation:</b> 50 Hz noise harmonics made the tune estimate jump between peaks; models trained on GAN-refined simulated spectra made it stable.</li>
-          <li><b>RL feedback:</b> RL agents (NAF2, PPO) outperformed the PI controller in simulation, and coped better with noise and actuator failures.</li>
-          <li><b>Renovation:</b> GPU acceleration of the orbit feedback proved unnecessary; the controller was rebuilt as BFCLHC with new automation (Function Players).</li>
-        </ul>
-        <div class="btns" style="margin-top:20px">
-          <a class="btn primary" href="https://www.um.edu.mt/library/oar/bitstream/123456789/104427/1/Leander%20Grech.pdf"><svg><use href="#i-doc"/></svg>Thesis PDF</a>
-          <a class="btn" href="https://www.um.edu.mt/library/oar/handle/123456789/104427"><svg><use href="#i-web"/></svg>OAR@UM record</a>
-        </div>
+    <div class="offers">
+      <div class="offer"><h3>Research collaboration</h3><p>RL for physical systems, especially where hardware time or operators are available: testing RL-designed pulses on a quantum processor, beam and accelerator control, air traffic and other sequencing problems.</p></div>
+      <div class="offer"><h3>Consulting</h3><p>Problem framing, MDP and reward design, evaluation protocols and prototypes for control, scheduling, Earth-observation and document-AI problems.</p></div>
+      <div class="offer"><h3>Teaching &amp; talks</h3><p>Hands-on RL tutorials and workshops, from tabular methods to designing your own MDP for a real system.</p></div>
+    </div>
+    <div class="contact-box">
+      <div class="eyebrow">Get in touch</div>
+      <a class="mail" href="mailto:grechleander@gmail.com">grechleander@gmail.com</a>
+      <div class="btns">
+        <a class="btn primary" href="mailto:grechleander@gmail.com?subject=Collaboration%20enquiry">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/grechleander/"><svg aria-hidden="true"><use href="#i-in"/></svg>LinkedIn</a>
+        <a class="btn" href="https://github.com/leandergrech"><svg aria-hidden="true"><use href="#i-gh"/></svg>GitHub</a>
       </div>
-      <figure class="viz" style="margin:0">
-        <svg viewBox="0 0 400 200" role="img" aria-label="LHC tune feedback loop with the three thesis contributions: tune estimation, RL feedback and controller renovation">
-          <circle cx="72" cy="100" r="54" class="d-ink"/>
-          <circle cx="72" cy="100" r="46" class="d-line d-dash"/>
-          <circle cx="72" cy="46" r="5" class="d-fa pulse-dot"/>
-          <text x="72" y="104" text-anchor="middle" class="t-ink">LHC</text>
-          <rect x="160" y="22" width="110" height="34" rx="8" class="d-box"/>
-          <text x="215" y="43" text-anchor="middle" class="t-ink">tune estimate</text>
-          <rect x="270" y="82" width="120" height="40" rx="8" class="d-boxa"/>
-          <text x="330" y="100" text-anchor="middle" class="t-ink">controller</text>
-          <text x="330" y="114" text-anchor="middle">PI → RL agent</text>
-          <rect x="160" y="146" width="110" height="34" rx="8" class="d-box"/>
-          <text x="215" y="167" text-anchor="middle" class="t-ink">trim quads</text>
-          <path d="M112,64 L158,42" class="d-line" marker-end="url(#arr)"/>
-          <path d="M270,42 Q322,44 326,80" class="d-line" marker-end="url(#arr)"/>
-          <path d="M326,124 Q320,162 272,163" class="d-acc" marker-end="url(#arrA)"/>
-          <path d="M158,163 L114,138" class="d-acc" marker-end="url(#arrA)"/>
-          <rect x="262" y="72" width="136" height="60" rx="10" class="d-line d-dash"/>
-          <circle cx="160" cy="22" r="9" class="d-fa2"/><text x="160" y="26" text-anchor="middle" class="t-ink">1</text>
-          <circle cx="270" cy="102" r="9" class="d-fa2"/><text x="270" y="106" text-anchor="middle" class="t-ink">2</text>
-          <circle cx="262" cy="72" r="9" class="d-fa2"/><text x="262" y="76" text-anchor="middle" class="t-ink">3</text>
-          <text x="394" y="148" text-anchor="end">BFCLHC</text>
-        </svg>
-        <figcaption>① better tune estimates, ② a learned controller, ③ a rebuilt feedback system.</figcaption>
-      </figure>
-    </article>
-
-    <!-- BSc -->
-    <article class="project" style="--c: var(--accent2)">
-      <div>
-        <div class="chips"><span class="status">B.Sc. (Hons) · University of Malta · 2017</span><span class="chip">CERN LHC</span><span class="chip">embedded systems</span></div>
-        <h3>Collision avoidance for the LHC inspection train</h3>
-        <div class="sub">B.Sc. Computer Engineering thesis, published at IEEE CASE 2018</div>
-        <p>The Train Inspection Monorail (TIM) runs along the LHC tunnel ceiling and lowers a retractable radiation-protection
-          arm to survey the machine. The thesis built a working prototype that guards the zone beneath the monorail and raises an
-          alarm when anything enters it.</p>
-        <ul class="points">
-          <li>Eight infrared time-of-flight distance sensors watch the safety zone below the arm.</li>
-          <li>A Cortex-M microcontroller reads them over multiplexed serial links.</li>
-          <li>Calibration and characterisation of accuracy, thermal drift and partial field-of-view obstruction.</li>
-        </ul>
-        <div class="btns" style="margin-top:20px">
-          <a class="btn primary" href="https://ieeexplore.ieee.org/document/8560485/"><svg><use href="#i-doc"/></svg>IEEE CASE 2018 paper</a>
-          <a class="btn" href="https://www.um.edu.mt/library/oar/handle/123456789/23489"><svg><use href="#i-web"/></svg>Thesis record</a>
-        </div>
-      </div>
-      <figure class="viz" style="margin:0">
-        <svg viewBox="0 0 400 200" role="img" aria-label="Monorail train with a lowered arm and a fan of infrared sensor beams guarding the zone below; an obstacle entering the zone triggers an alarm">
-          <path d="M10,24 H390" class="d-ink" style="stroke-width:4"/>
-          <text x="14" y="16">monorail (tunnel ceiling)</text>
-          <rect x="120" y="28" width="160" height="30" rx="6" class="d-box"/>
-          <text x="200" y="47" text-anchor="middle" class="t-ink">TIM train</text>
-          <path d="M200,58 V92" class="d-ink" style="stroke-width:3"/>
-          <rect x="186" y="92" width="28" height="12" rx="3" class="d-boxa"/>
-          <text x="232" y="84">RP arm</text>
-          <g class="d-acc2 d-dash">
-            <path d="M200,104 L96,186"/><path d="M200,104 L128,186"/><path d="M200,104 L160,186"/><path d="M200,104 L190,186"/>
-            <path d="M200,104 L210,186"/><path d="M200,104 L240,186"/><path d="M200,104 L272,186"/><path d="M200,104 L304,186"/>
-          </g>
-          <text x="200" y="198" text-anchor="middle">8 IR time-of-flight beams</text>
-          <rect x="300" y="150" width="26" height="36" rx="3" class="d-fa"/>
-          <path d="M340,120 l8,-14 l8,14 z" class="d-acc"/><text x="348" y="118" text-anchor="middle" class="t-acc">!</text>
-          <text x="350" y="140" text-anchor="middle" class="t-acc">alarm</text>
-        </svg>
-        <figcaption>A fan of distance sensors turns the space under the arm into a monitored safety zone.</figcaption>
-      </figure>
-    </article>
-
-    <h3 style="font-size:20px;margin:32px 0 14px">All publications</h3>
-    <ul class="pubs">
-      <li><span class="yr">2026</span><span><span class="t">Preliminary validation of a terminal airspace digital assistant through low-fidelity simulation</span><span class="v">45th DASC, Orlando · Best of Session · TADA</span></span><a class="go" href="https://dasconline.org/2026">DASC →</a></li>
-      <li><span class="yr">2026</span><span><span class="t">A machine learning framework for predicting and resolving complex tactical air traffic events using historical data</span><span class="v">Aerospace 13(1), 54 · ASTRA</span></span><a class="go" href="https://doi.org/10.3390/aerospace13010054">DOI →</a></li>
-      <li><span class="yr">2026</span><span><span class="t">Analysing visual user-generated content for destination management</span><span class="v">ENTER 2026, IFITT · Best Full Paper · Polzify</span></span><a class="go" href="https://link.springer.com/book/9783032239242">Springer →</a></li>
-      <li><span class="yr">2026</span><span><span class="t">Achieving fast and robust perfect entangling gates via reinforcement learning</span><span class="v">Quantum Science and Technology 11, 015030</span></span><a class="go" href="https://doi.org/10.1088/2058-9565/ae2c16">DOI →</a></li>
-      <li><span class="yr">sub.</span><span><span class="t">Surrogate model driven RL optimization of the TWOCRYST crystal angular alignment</span><span class="v">EPJ Research Instrumentation · submitted · corresponding author</span></span><span class="v">in review</span></li>
-      <li><span class="yr">2025</span><span><span class="t">Receipt information extraction with joint multi-modal transformer and rule-based model</span><span class="v">Machine Learning and Knowledge Extraction 7(4), 167 · ADACE3</span></span><a class="go" href="https://doi.org/10.3390/make7040167">DOI →</a></li>
-      <li><span class="yr">2025</span><span><span class="t">AI-enabled tactical FMP hotspot prediction and resolution (ASTRA): a solution for traffic complexity management in en-route airspace</span><span class="v">Engineering Proceedings 90, 91 · EASN 2025 · ASTRA</span></span><a class="go" href="https://doi.org/10.3390/engproc2025090091">DOI →</a></li>
-      <li><span class="yr">2022</span><span><span class="t">Application of reinforcement learning in the LHC tune feedback</span><span class="v">Frontiers in Physics 10 · PhD</span></span><a class="go" href="https://doi.org/10.3389/fphy.2022.929064">DOI →</a></li>
-      <li><span class="yr">2021</span><span><span class="t">Renovation of the beam-based feedback controller in the LHC</span><span class="v">ICALEPCS'21 · PhD</span></span><a class="go" href="https://proceedings.jacow.org/icalepcs2021/">JACoW →</a></li>
-      <li><span class="yr">2021</span><span><span class="t">A machine learning approach for the tune estimation in the LHC</span><span class="v">Information 12(5), 197 · PhD</span></span><a class="go" href="https://doi.org/10.3390/info12050197">DOI →</a></li>
-      <li><span class="yr">2020</span><span><span class="t">An alternative processing algorithm for the tune measurement system in the LHC</span><span class="v">IBIC'20 · PhD</span></span><a class="go" href="https://cds.cern.ch/record/2772585">CDS →</a></li>
-      <li><span class="yr">2019</span><span><span class="t">Feasibility of hardware acceleration in the LHC orbit feedback controller</span><span class="v">ICALEPCS'19 · PhD</span></span><a class="go" href="https://doi.org/10.18429/JACoW-ICALEPCS2019-MOPHA151">DOI →</a></li>
-      <li><span class="yr">2018</span><span><span class="t">Collision avoidance system for the RP survey and visual inspection train in the CERN Large Hadron Collider</span><span class="v">IEEE CASE 2018 · B.Sc.</span></span><a class="go" href="https://ieeexplore.ieee.org/document/8560485/">IEEE →</a></li>
-    </ul>
+    </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
     <span>© 2026 Leander Grech · Malta</span>
-    <span><a href="https://www.linkedin.com/in/grechleander/">LinkedIn</a> · <a href="https://github.com/leandergrech">GitHub</a></span>
-    <span class="mono">RL × physical control</span>
+    <span><a href="mailto:grechleander@gmail.com">grechleander@gmail.com</a> · <a href="https://www.linkedin.com/in/grechleander/">LinkedIn</a> · <a href="https://github.com/leandergrech">GitHub</a> · <a href="https://github.com/leandergrech/lg-research">Source</a></span>
   </div>
 </footer>
 
@@ -1117,6 +1271,18 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       });
     });
     mark();
+    var fb = document.querySelectorAll('.pub-filter button');
+    var items = document.querySelectorAll('.pubs li');
+    fb.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.dataset.f;
+        fb.forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+        items.forEach(function (li) {
+          var show = f === 'all' || (f === 'award' ? li.dataset.award === '1' : li.dataset.kind === f);
+          li.hidden = !show;
+        });
+      });
+    });
   })();
 </script>
 </body>
