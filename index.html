@@ -165,6 +165,9 @@ svg text.t-big { font-size: 13px; }
 @media (prefers-reduced-motion: no-preference) {
   .flow { stroke-dasharray: 6 6; animation: flow 1.4s linear infinite; }
   @keyframes flow { to { stroke-dashoffset: -24; } }
+  .flow.prelim { stroke-dasharray: 0 7; stroke-linecap: round; stroke-width: 2.4; animation-duration: 2.4s; }
+  @keyframes flow-p { to { stroke-dashoffset: -14; } }
+  .flow.prelim { animation-name: flow-p; }
   .pulse-dot { animation: blink 2s ease-in-out infinite; }
   @keyframes blink { 50% { opacity: .35; } }
 }
@@ -359,13 +362,13 @@ footer .wrap a:hover { color: var(--ink); }
         <circle cx="210" cy="190" r="70" class="d-dash"/>
       </g>
       <g style="--c: var(--accent)">
-        <line x1="210" y1="190" x2="210" y2="60" class="d-acc flow"/>
-        <line x1="210" y1="190" x2="312" y2="109" class="d-acc flow"/>
-        <line x1="210" y1="190" x2="337" y2="219" class="d-acc flow"/>
-        <line x1="210" y1="190" x2="266" y2="307" class="d-acc flow"/>
-        <line x1="210" y1="190" x2="154" y2="307" class="d-acc flow"/>
-        <line x1="210" y1="190" x2="83" y2="219" class="d-acc flow"/>
-        <line x1="210" y1="190" x2="108" y2="109" class="d-acc flow"/>
+        <line x1="210" y1="190" x2="210" y2="60" class="d-acc"/>
+        <line x1="210" y1="190" x2="312" y2="109" class="d-acc flow prelim"/>
+        <line x1="210" y1="190" x2="337" y2="219" class="d-acc flow prelim"/>
+        <line x1="210" y1="190" x2="266" y2="307" class="d-acc flow prelim"/>
+        <line x1="210" y1="190" x2="154" y2="307" class="d-acc"/>
+        <line x1="210" y1="190" x2="83" y2="219" class="d-acc"/>
+        <line x1="210" y1="190" x2="108" y2="109" class="d-acc"/>
       </g>
       <circle cx="210" cy="190" r="42" class="d-boxa"/>
       <text x="210" y="186" text-anchor="middle" class="t-ink t-big">RL</text>
@@ -385,7 +388,7 @@ footer .wrap a:hover { color: var(--ink); }
         <circle r="11" class="d-ink"/><path d="M-4,-16 q6,6 0,12" class="d-acc2"/><text y="44" text-anchor="middle" class="t-ink">Accelerators</text></g></a>
       <a href="#teaching" class="map-node" aria-label="Teaching RL: Teaching"><g transform="translate(108,109)"><circle r="27" class="d-box"/><circle cx="17" cy="-17" r="4" class="d-fa3 pulse-dot"/>
         <path d="M-15,5 a15,15 0 0 1 30,0" class="d-ink"/><line x1="0" y1="5" x2="10" y2="-7" class="d-ink"/><text y="44" text-anchor="middle" class="t-ink">Teaching RL</text></g></a>
-      <text x="416" y="376" text-anchor="end">dashed: preliminary</text>
+      <text x="416" y="376" text-anchor="end">dotted: preliminary</text>
     </svg>
   </section>
 
