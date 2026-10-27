@@ -553,7 +553,7 @@ footer .wrap a:hover { color: var(--ink); }
     <!-- AICRYSCON -->
     <article id="aicryscon" class="project" style="--c: var(--accent3)">
       <div>
-        <div class="chips"><span class="status">Beam-tested · paper submitted</span><span class="chip lock">private codebase</span><span class="chip">CERN LHC</span><span class="chip">TWOCRYST</span></div>
+        <div class="chips"><span class="status">Beam-tested · EPJ-RI submitted · PRAB in draft</span><span class="chip lock">private codebase</span><span class="chip">CERN LHC</span><span class="chip">TWOCRYST</span></div>
         <h3>AICRYSCON: autonomous crystal alignment</h3>
         <div class="sub">Deep RL for bent-crystal double channeling in the LHC</div>
         <p>TWOCRYST steers LHC halo protons through two bent silicon crystals, paving the way for measuring the dipole moments of
@@ -570,7 +570,7 @@ footer .wrap a:hover { color: var(--ink); }
           <li><b>Data-driven surrogate:</b> MDHaloEnv synthesises PIX and BLM data recorded in LHC beam tests from 450 GeV to 3 TeV, with no physics simulator.</li>
           <li><b>Grounded MDP:</b> a current-frame reward, convergence thresholds derived from the detector's salt-and-pepper noise, and a noise-scaled smoothness penalty.</li>
           <li><b>With beam:</b> in the April 2026 beam test the agent aligned one bent crystal, the TCCP, and recovered double channeling.</li>
-          <li><b>Next:</b> a paper on the agent's real-machine performance is in preparation for Physical Review Accelerators and Beams.</li>
+          <li><b>Real-machine paper:</b> a first draft on the agent's performance with beam is written for Physical Review Accelerators and Beams. The agent code and results will be released in a public repository alongside it; the raw beam data belongs to the TWOCRYST collaboration and stays private for now.</li>
         </ul>
         </details>
       </div>
@@ -782,7 +782,10 @@ footer .wrap a:hover { color: var(--ink); }
           <li><b>Bicubic upsampling</b> only interpolates between existing pixels: the image gets bigger and smoother, but no new information appears.</li>
           <li><b>Super-resolution</b> learns from pairs of low- and high-resolution images what fine detail usually sits behind a coarse pixel, and restores it.</li>
           <li><b>Clean-scene extraction:</b> clouds, shadows and other perturbations are detected in each Sentinel-2 scene, so every usable pixel is kept and noisy acquisitions still add coverage across all spectral bands.</li>
-          <li><b>Built for measurement:</b> the output must stay radiometrically faithful, so indices computed on it can be trusted, not just look sharp.</li>
+          <li><b>Built for measurement:</b> the output must stay radiometrically faithful, so indices computed on it can be trusted, not just look sharp. That is why a regression model was chosen over diffusion, which can invent plausible but unmeasured detail.</li>
+          <li><b>Model and data:</b> a Hybrid Attention Transformer (HAT) trained on Sentinel-2 scenes paired with PlanetScope imagery, through a custom geospatial dataset loader for BasicSR.</li>
+          <li><b>Pairing two satellites:</b> sub-pixel co-registration (AROSICS), radiometric harmonisation between sensors, and a misalignment-robust loss, so the model learns detail rather than residual offsets.</li>
+          <li><b>Pinġi:</b> the models and lab built on this pipeline, organised as separate core, training and inference codebases and trained on rented GPUs.</li>
         </ul>
         </details>
         <div class="btns">
@@ -809,9 +812,68 @@ footer .wrap a:hover { color: var(--ink); }
       </figure>
     </article>
 
+    <!-- Miżien -->
+    <article id="mizien" class="project" style="--c: var(--accent2)">
+      <div>
+        <div class="chips"><span class="status">Live · open source</span><span class="chip">open science</span><span class="chip">environment</span><span class="chip">CC BY 4.0 · MIT</span></div>
+        <h3>Miżien: checking public claims against the evidence</h3>
+        <div class="sub">An open, science-first record of environmental and quality-of-life claims in Malta</div>
+        <p>Miżien (Maltese for a scale) takes statements made by authorities, institutions, parties and NGOs in Malta about the
+          environment and quality of life, and tests each one against peer-reviewed literature and independent data. Every check,
+          source and dataset is public, so anyone can follow the reasoning or challenge it. Malta is the proof of concept that
+          open-source claim checking is feasible at national scale.</p>
+        <div class="kpis">
+          <div class="kpi"><b>145</b><span>claims recorded</span></div>
+          <div class="kpi"><b>90</b><span>claims checked</span></div>
+          <div class="kpi"><b>82</b><span>bodies and people covered</span></div>
+        </div>
+        <details class="more"><summary>Method</summary>
+        <ul class="points">
+          <li><b>Science first:</b> peer-reviewed studies and independent datasets outrank press releases.</li>
+          <li><b>Same standard for every side:</b> government, opposition, NGOs and developers are checked the same way.</li>
+          <li><b>Evidence, not inference:</b> a claim is called misleading or contradicted only with documents or data that can be shown.</li>
+          <li><b>Right of reply:</b> adverse verdicts stay drafts until the body concerned has been asked to respond, and its response is published.</li>
+        </ul>
+        </details>
+        <div class="btns">
+          <a class="btn primary" href="https://leandergrech.github.io/Mizien/"><svg><use href="#i-web"/></svg>Visit site</a>
+          <a class="btn" href="https://github.com/leandergrech/Mizien"><svg><use href="#i-gh"/></svg>Repository</a>
+        </div>
+      </div>
+      <figure class="viz" style="margin:0">
+        <svg viewBox="0 0 400 200" role="img" aria-label="A public claim is weighed on a balance against peer-reviewed literature and independent data, giving a graded verdict">
+          <rect x="8" y="70" width="104" height="54" rx="8" class="d-box"/>
+          <text x="60" y="92" text-anchor="middle" class="t-ink">public claim</text>
+          <text x="60" y="110" text-anchor="middle">"…"</text>
+          <path d="M114,97 H136" class="d-line" marker-end="url(#arr)"/>
+          <!-- balance -->
+          <path d="M200,40 V160 M176,160 H224" class="d-ink"/>
+          <path d="M150,58 L250,50" class="d-acc"/>
+          <circle cx="200" cy="54" r="5" class="d-fa"/>
+          <path d="M150,58 L136,96 H164 Z" class="d-line"/>
+          <path d="M250,50 L236,88 H264 Z" class="d-line"/>
+          <rect x="140" y="80" width="20" height="10" rx="2" class="d-fa2"/>
+          <rect x="240" y="72" width="20" height="10" rx="2" class="d-fa3"/>
+          <text x="150" y="114" text-anchor="middle">claim</text>
+          <text x="250" y="106" text-anchor="middle">evidence</text>
+          <path d="M268,97 H286" class="d-acc" marker-end="url(#arrA)"/>
+          <rect x="290" y="30" width="104" height="140" rx="8" class="d-box"/>
+          <rect x="296" y="42" width="92" height="18" rx="9" class="d-boxa"/><text x="342" y="55" text-anchor="middle" class="t-ink">supported</text>
+          <rect x="296" y="66" width="92" height="18" rx="9" class="d-box"/><text x="342" y="79" text-anchor="middle">largely</text>
+          <rect x="296" y="90" width="92" height="18" rx="9" class="d-box"/><text x="342" y="103" text-anchor="middle" style="font-size:9px">not substantiated</text>
+          <rect x="296" y="114" width="92" height="18" rx="9" class="d-box"/><text x="342" y="127" text-anchor="middle">misleading</text>
+          <rect x="296" y="138" width="92" height="18" rx="9" class="d-box"/><text x="342" y="151" text-anchor="middle">contradicted</text>
+        </svg>
+        <figcaption>Each claim is weighed against the evidence and given one of five graded verdicts.</figcaption>
+      </figure>
+    </article>
+
     <div class="also" id="eo">
       <div class="mini">
         <div><h4>POLIRURAL · Horizon Europe</h4><p>Three digital tools for Maltese farmers, from specification to training material.</p></div>
+      </div>
+      <div class="mini">
+        <div><h4>PARG · Heritage Malta</h4><p>Persona Adaptive Reply Generator: a RAG assistant that drafts replies to visitor reviews, tested in a blind study where people judge AI and real replies side by side. Paper in preparation.</p></div>
       </div>
     </div>
 

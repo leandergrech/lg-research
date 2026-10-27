@@ -64,7 +64,7 @@ flowchart LR
 |---|---|---|---|
 | **TADA** — Terminal Airspace Digital Assistant: RL arrival sequencing at Milan Malpensa (trombone) and Bergamo (point merge) · [single-agent docs](https://leander-grech.github.io/tada-single-agent-docs/) | Air traffic control | Active · researcher · Best of Session, DASC 2026 | 92.7 % of flights within ±60 s of AMAN target · 63/100 twenty-flight streams solved · 3/100 with a loss of separation; on point merge, no loss of separation on feasible streams |
 | **ASTRA** — en-route hotspot prediction (~1 h ahead) and RL resolution; I designed the prototype RL agent that paved the way for TADA | Air traffic control | Completed · TRL 2 | [Aerospace 2026](https://doi.org/10.3390/aerospace13010054) · [EASN 2025](https://doi.org/10.3390/engproc2025090091); real-time use still needs weather, knock-on effects and live integration |
-| **AICRYSCON** — autonomous alignment of one bent crystal (TCCP) in TWOCRYST | CERN LHC | Beam-tested · paper submitted to EPJ-RI | PPO agent on a data-driven surrogate of beam-test data; replaces 2–4 h manual sweeps with 1–3 min recoveries; real-machine performance paper in preparation (PRAB) |
+| **AICRYSCON** — autonomous alignment of one bent crystal (TCCP) in TWOCRYST | CERN LHC | Beam-tested · EPJ-RI submitted · PRAB in draft | PPO agent on a data-driven surrogate of beam-test data; replaces 2–4 h manual sweeps with 1–3 min recoveries; real-machine performance paper drafted for PRAB, with agent code and results to be released publicly alongside it |
 
 ```mermaid
 flowchart LR
@@ -76,10 +76,15 @@ flowchart LR
 
 ## Earth observation & applied AI
 
-- **Semablu** — Earth-observation startup: super-resolving free 10 m multispectral Sentinel-2 imagery ×4 for mapping farmland, towns, coastlines and seagrass. Unlike bicubic upsampling, which only interpolates existing pixels, super-resolution learns the fine detail behind a coarse pixel from paired low/high-resolution imagery. Clouds, shadows and other perturbations are detected per scene so noisy acquisitions still add coverage across all bands. [semablu.com](https://semablu.com/)
+- **Semablu** — Earth-observation startup: super-resolving free 10 m multispectral Sentinel-2 imagery ×4 for mapping farmland, towns, coastlines and seagrass. Unlike bicubic upsampling, which only interpolates existing pixels, super-resolution learns the fine detail behind a coarse pixel from paired low/high-resolution imagery. Clouds, shadows and other perturbations are detected per scene so noisy acquisitions still add coverage across all bands. A HAT transformer is trained on Sentinel-2 / PlanetScope pairs with sub-pixel co-registration, radiometric harmonisation and a misalignment-robust loss; regression is preferred over diffusion so outputs stay quantitatively faithful. [semablu.com](https://semablu.com/)
 - **ADACE3** — receipt data extraction (University of Malta × PTL, MCST FUSION): multi-engine OCR + layout-aware transformer + rules; 0.98 F1. [Paper](https://doi.org/10.3390/make7040167)
 - **VISTA · Polzify** — privacy-preserving analysis of visitor photos for destination management (Malta's beaches). Best Full Paper, IFITT ENTER 2026.
 - **POLIRURAL · Horizon Europe** — three digital tools for Maltese farmers.
+- **PARG · Heritage Malta** — Persona Adaptive Reply Generator: a RAG assistant that drafts replies to visitor reviews, evaluated in a blind human study of AI vs. real replies. Paper in preparation.
+
+## Open science
+
+- **Miżien** — open, science-first checks of environmental and quality-of-life claims made by Maltese authorities, parties and NGOs: 145 claims recorded, 90 checked, with a right of reply before any adverse verdict is published. CC BY 4.0 content, MIT code. [site](https://leandergrech.github.io/Mizien/) · [repo](https://github.com/leandergrech/Mizien)
 
 ## Teaching
 
